@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Aplikasi | ABYNS STUDIO</title>
+    <meta name="description" content="Jajaran produk aplikasi siap pakai premium untuk kasir (POS), laundry, CRM, akademik sekolah, dan rental buatan ABYNS STUDIO.">
+    
+    <!-- Third Party CSS (Swiper) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="header-nav" style="opacity: 0; transform: translateY(-20px);">
+        <a href="index.html" class="logo-container">
+            <svg class="logo-icon-svg" viewBox="0 0 40 40" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 2L38 34H2L20 2Z" stroke="#d6b77a" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M20 12L31 31H9L20 12Z" fill="#d6b77a" fill-opacity="0.3" stroke="#d6b77a" stroke-width="1.5"/>
+                <circle cx="20" cy="24" r="3" fill="#f6f1eb"/>
+            </svg>
+            <div>
+                <span class="logo-text">ABYNS</span>
+                <span class="logo-sub">STUDIO</span>
+            </div>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="about.html" class="nav-link">Tentang Kami</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-column">
+                            <h4>Profil Studio</h4>
+                            <ul class="mega-menu-list">
+                                <li class="mega-menu-item">
+                                    <a href="about.html#story">
+                                        <span class="mega-menu-title">Cerita Kami</span>
+                                        <span class="mega-menu-desc">Perjalanan membangun solusi digital berkelas.</span>
+                                    </a>
+                                </li>
+                                <li class="mega-menu-item">
+                                    <a href="about.html#founder">
+                                        <span class="mega-menu-title">Profil Founder</span>
+                                        <span class="mega-menu-desc">Visi kreatif dari pemimpin kami.</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h4>Mengapa Kami</h4>
+                            <ul class="mega-menu-list">
+                                <li class="mega-menu-item">
+                                    <a href="gallery.html">
+                                        <span class="mega-menu-title">Behind The Scene</span>
+                                        <span class="mega-menu-desc">Melihat cara kerja tim profesional kami.</span>
+                                    </a>
+                                </li>
+                                <li class="mega-menu-item">
+                                    <a href="testimonials.html">
+                                        <span class="mega-menu-title">Ulasan Klien</span>
+                                        <span class="mega-menu-desc">Apa kata brand ternama tentang kami.</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="services.html" class="nav-link">Layanan</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portofolio</a></li>
+                <li><a href="products.html" class="nav-link active">Produk</a></li>
+                <li><a href="pricing.html" class="nav-link">Harga</a></li>
+                <li><a href="contact.html" class="nav-link">Kontak</a></li>
+            </ul>
+        </nav>
+
+        <a href="contact.html" class="nav-cta-btn magnetic"><span class="magnetic-inner">Konsultasi Gratis</span></a>
+
+        <button class="mobile-menu-trigger" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="about.html" class="mobile-nav-link">Tentang Kami</a></li>
+            <li><a href="services.html" class="mobile-nav-link">Layanan</a></li>
+            <li><a href="portfolio.html" class="mobile-nav-link">Portofolio</a></li>
+            <li><a href="products.html" class="mobile-nav-link active">Produk</a></li>
+            <li><a href="pricing.html" class="mobile-nav-link">Harga</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Kontak</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2rem;">Konsultasi Gratis</a>
+    </div>
+
+    <!-- WebGL Canvas Container for Three.js Backdrop -->
+    <div id="canvas-3d-bg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 1; pointer-events: none; opacity: 0.75;"></div>
+
+    <!-- Inner Page Header -->
+    <section class="section hero" style="min-height: 50vh; display: flex; align-items: center; padding-top: 10rem; z-index: 2;">
+        <div class="container flex" style="flex-direction: column; align-items: center; text-align: center;">
+            <div class="reveal-text-wrap" style="margin-bottom: 1.5rem;">
+                <span class="hero-title-reveal" style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4em; color: var(--color-gold); display: inline-block; transform: translateY(100%);">PRODUK DIGITAL</span>
+            </div>
+            <h1 class="text-reveal">Aplikasi <span class="text-gold font-serif-italic">Siap Pakai</span> Kami</h1>
+            <p class="hero-desc" style="opacity: 0; transform: translateY(30px); max-width: 700px; margin-top: 2rem;">
+                Tingkatkan efisiensi administrasi operasional bisnis Anda melalui jajaran sistem aplikasi SaaS custom premium yang modular dan berkecepatan tinggi.
+            </p>
+        </div>
+    </section>
+
+    <!-- Detailed Products List -->
+    <!-- Product 1: POS -->
+    <section id="pos" class="section" style="z-index: 2; padding-top: 2rem;">
+        <div class="container grid" style="grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 5rem; align-items: center;">
+            <div>
+                <span style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--color-gold); letter-spacing: 0.2em; text-transform: uppercase;">01 / SYSTEM KASIR</span>
+                <h2 style="margin-top: 1rem;">ABYNS POS <span class="text-gold font-serif-italic">(Kasir & Retail)</span></h2>
+                <p style="margin-top: 2rem; font-size: 1.1rem; line-height: 1.8;">
+                    Aplikasi kasir multi-outlet premium untuk kafe, butik mode, toko retail, dan bisnis waralaba yang terhubung secara cloud.
+                </p>
+                <div style="margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>Dashboard Penjualan Real-time</div>
+                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>Inventory Stok & Supplier</div>
+                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>Barcode Scanner Integration</div>
+                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>Support Print Thermal & Bluetooth</div>
+                </div>
+                <a href="contact.html?product=pos" class="btn btn-primary magnetic" style="margin-top: 3rem;"><span class="magnetic-inner">Hubungi Representative</span></a>
+            </div>
+            <div class="img-reveal-mask" style="border-radius: 24px; overflow: hidden; border: 1px solid var(--color-border-glass); aspect-ratio: 16/10;">
+                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop" class="parallax-img" alt="Dasbor kasir ABYNS POS" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Product 2: Laundry -->
+    <section id="laundry" class="section" style="z-index: 2; background: rgba(15, 6, 17, 0.5);">
+        <div class="container grid" style="grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 5rem; align-items: center;">
+            <div class="img-reveal-mask" style="border-radius: 24px; overflow: hidden; border: 1px solid var(--color-border-glass); aspect-ratio: 16/10;">
+                <img src="https://images.unsplash.com/photo-1545173159-bb11fb6002db?q=80&w=800&auto=format&fit=crop" class="parallax-img" alt="Sistem kasir ABYNS Laundry" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div>
+                <span style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--color-gold); letter-spacing: 0.2em; text-transform: uppercase;">02 / OPERASIONAL LAUNDRY</span>
+                <h2 style="margin-top: 1rem;">ABYNS Laundry <span class="text-gold font-serif-italic">(Timbangan & Status)</span></h2>
+                <p style="margin-top: 2rem; font-size: 1.1rem; line-height: 1.8;">
+                    Sistem pemeliharaan kasir laundry kiloan dan satuan. Membantu pelacakan pakaian hilang, timbangan cuci-setrika, dan WhatsApp otomatis ke pelanggan.
+                </p>
+                <div style="margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>Input Timbangan Kiloan</div>
+                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>WhatsApp Gateway Status</div>
+                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>Laporan Omset Bulanan</div>
+                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>Manajemen Karyawan Kasir</div>
+                </div>
+                <a href="contact.html?product=laundry" class="btn btn-primary magnetic" style="margin-top: 3rem;"><span class="magnetic-inner">Hubungi Representative</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product 3: CRM -->
+    <section id="crm" class="section" style="z-index: 2;">
+        <div class="container grid" style="grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 5rem; align-items: center;">
+            <div>
+                <span style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--color-gold); letter-spacing: 0.2em; text-transform: uppercase;">03 / SALES MANAGEMENT</span>
+                <h2 style="margin-top: 1rem;">ABYNS CRM <span class="text-gold font-serif-italic">(Leads & Customer Relation)</span></h2>
+                <p style="margin-top: 2rem; font-size: 1.1rem; line-height: 1.8;">
+                    Dasbor pemantau hubungan pelanggan dan manajemen prospek (leads tracking) penjualan untuk tim marketing korporasi.
+                </p>
+                <div style="margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>Leads Pipeline Kan-ban</div>
+                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>WhatsApp Blast integration</div>
+                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>Target Sales Tracking</div>
+                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>Ekspor Data Excel & PDF</div>
+                </div>
+                <a href="contact.html?product=crm" class="btn btn-primary magnetic" style="margin-top: 3rem;"><span class="magnetic-inner">Hubungi Representative</span></a>
+            </div>
+            <div class="img-reveal-mask" style="border-radius: 24px; overflow: hidden; border: 1px solid var(--color-border-glass); aspect-ratio: 16/10;">
+                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop" class="parallax-img" alt="Manajemen sales marketing ABYNS CRM" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-main">
+        <div class="footer-grid">
+            <div class="footer-logo-col">
+                <a href="index.html" class="logo-container">
+                    <svg class="logo-icon-svg" viewBox="0 0 40 40" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 2L38 34H2L20 2Z" stroke="#d6b77a" stroke-width="2.5" stroke-linejoin="round"/>
+                        <path d="M20 12L31 31H9L20 12Z" fill="#d6b77a" fill-opacity="0.3" stroke="#d6b77a" stroke-width="1.5"/>
+                        <circle cx="20" cy="24" r="3" fill="#f6f1eb"/>
+                    </svg>
+                    <div>
+                        <span class="logo-text">ABYNS</span>
+                        <span class="logo-sub">STUDIO</span>
+                    </div>
+                </a>
+                <p>Membantu brand mewah, korporasi, dan startup menghadirkan karya digital premium yang memukau dan berdampak.</p>
+            </div>
+            <div>
+                <h4 class="footer-title">Navigasi</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="services.html">Layanan</a></li>
+                    <li><a href="portfolio.html">Portofolio</a></li>
+                    <li><a href="products.html">Produk</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-title">Lainnya</h4>
+                <ul class="footer-links">
+                    <li><a href="gallery.html">Behind The Scene</a></li>
+                    <li><a href="pricing.html">Daftar Harga</a></li>
+                    <li><a href="testimonials.html">Ulasan Klien</a></li>
+                    <li><a href="contact.html">Hubungi Kami</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4 class="footer-title">Dapatkan Update</h4>
+                <p>Berlangganan buletin untuk informasi tren digital premium, wawasan desain, dan rilis produk siap pakai kami.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Terima kasih.'); this.reset();">
+                    <input type="email" placeholder="Alamat email Anda" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-submit"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.33334 8H12.6667" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 3.33331L12.6667 7.99998L8 12.6666" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copy">&copy; 2026 ABYNS STUDIO. Hak Cipta Dilindungi Undang-Undang.</div>
+            <div class="footer-socials">
+                <a href="https://instagram.com" class="footer-social-link magnetic" target="_blank" rel="noopener"><span class="magnetic-inner">ig</span></a>
+                <a href="https://linkedin.com" class="footer-social-link magnetic" target="_blank" rel="noopener"><span class="magnetic-inner">in</span></a>
+                <a href="https://youtube.com" class="footer-social-link magnetic" target="_blank" rel="noopener"><span class="magnetic-inner">yt</span></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core Libraries (CDN URLs) -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Logic scripts -->
+    <script src="js/cursor.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/gsap.js"></script>
+    <script src="js/three-bg.js"></script>
+</body>
+</html>

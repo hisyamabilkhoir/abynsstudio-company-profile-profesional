@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Harga | ABYNS STUDIO</title>
+    <meta name="description" content="Pilihan paket investasi pembuatan website premium, mobile app development, dan komersial media produksi ABYNS STUDIO.">
+    
+    <!-- Third Party CSS (Swiper) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="header-nav" style="opacity: 0; transform: translateY(-20px);">
+        <a href="index.html" class="logo-container">
+            <svg class="logo-icon-svg" viewBox="0 0 40 40" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 2L38 34H2L20 2Z" stroke="#d6b77a" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M20 12L31 31H9L20 12Z" fill="#d6b77a" fill-opacity="0.3" stroke="#d6b77a" stroke-width="1.5"/>
+                <circle cx="20" cy="24" r="3" fill="#f6f1eb"/>
+            </svg>
+            <div>
+                <span class="logo-text">ABYNS</span>
+                <span class="logo-sub">STUDIO</span>
+            </div>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="about.html" class="nav-link">Tentang Kami</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-column">
+                            <h4>Profil Studio</h4>
+                            <ul class="mega-menu-list">
+                                <li class="mega-menu-item">
+                                    <a href="about.html#story">
+                                        <span class="mega-menu-title">Cerita Kami</span>
+                                        <span class="mega-menu-desc">Perjalanan membangun solusi digital berkelas.</span>
+                                    </a>
+                                </li>
+                                <li class="mega-menu-item">
+                                    <a href="about.html#founder">
+                                        <span class="mega-menu-title">Profil Founder</span>
+                                        <span class="mega-menu-desc">Visi kreatif dari pemimpin kami.</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h4>Mengapa Kami</h4>
+                            <ul class="mega-menu-list">
+                                <li class="mega-menu-item">
+                                    <a href="gallery.html">
+                                        <span class="mega-menu-title">Behind The Scene</span>
+                                        <span class="mega-menu-desc">Melihat cara kerja tim profesional kami.</span>
+                                    </a>
+                                </li>
+                                <li class="mega-menu-item">
+                                    <a href="testimonials.html">
+                                        <span class="mega-menu-title">Ulasan Klien</span>
+                                        <span class="mega-menu-desc">Apa kata brand ternama tentang kami.</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="services.html" class="nav-link">Layanan</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portofolio</a></li>
+                <li><a href="products.html" class="nav-link">Produk</a></li>
+                <li><a href="pricing.html" class="nav-link active">Harga</a></li>
+                <li><a href="contact.html" class="nav-link">Kontak</a></li>
+            </ul>
+        </nav>
+
+        <a href="contact.html" class="nav-cta-btn magnetic"><span class="magnetic-inner">Konsultasi Gratis</span></a>
+
+        <button class="mobile-menu-trigger" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="about.html" class="mobile-nav-link">Tentang Kami</a></li>
+            <li><a href="services.html" class="mobile-nav-link">Layanan</a></li>
+            <li><a href="portfolio.html" class="mobile-nav-link">Portofolio</a></li>
+            <li><a href="products.html" class="mobile-nav-link">Produk</a></li>
+            <li><a href="pricing.html" class="mobile-nav-link active">Harga</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Kontak</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2rem;">Konsultasi Gratis</a>
+    </div>
+
+    <!-- WebGL Canvas Container for Three.js Backdrop -->
+    <div id="canvas-3d-bg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 1; pointer-events: none; opacity: 0.75;"></div>
+
+    <!-- Inner Page Header -->
+    <section class="section hero" style="min-height: 50vh; display: flex; align-items: center; padding-top: 10rem; z-index: 2;">
+        <div class="container flex" style="flex-direction: column; align-items: center; text-align: center;">
+            <div class="reveal-text-wrap" style="margin-bottom: 1.5rem;">
+                <span class="hero-title-reveal" style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4em; color: var(--color-gold); display: inline-block; transform: translateY(100%);">INVESTASI BRAND</span>
+            </div>
+            <h1 class="text-reveal">Paket Investasi <span class="text-gold font-serif-italic">Terbaik</span></h1>
+            <p class="hero-desc" style="opacity: 0; transform: translateY(30px); max-width: 700px; margin-top: 2rem;">
+                Transparansi penawaran investasi digital premium. Pilih opsi paket yang dirancang khusus untuk memenuhi standar prestise bisnis Anda.
+            </p>
+        </div>
+    </section>
+
+    <!-- Pricing Matrix Cards -->
+    <section class="section" style="z-index: 2; padding-top: 2rem;">
+        <div class="container">
+            
+            <div class="grid pricing-grid">
+                
+                <!-- Package 1: Starter -->
+                <div class="glass-card pricing-card gold-glow-border">
+                    <div class="pricing-card-inner">
+                        <div class="pricing-header">
+                            <span class="pricing-name">Starter</span>
+                            <span class="pricing-subtitle">Website Company Profile</span>
+                            <div class="pricing-price">Rp 4.000.000</div>
+                            <span class="pricing-label">Mulai dari</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li class="pricing-feature">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span>5 Halaman</span>
+                            </li>
+                            <li class="pricing-feature">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span>Desain Premium</span>
+                            </li>
+                            <li class="pricing-feature">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span>Responsif</span>
+                            </li>
+                            <li class="pricing-feature">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span>Domain & Hosting 1 Tahun</span>
+                            </li>
+                            <li class="pricing-feature">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span>Support 1 Bulan</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html?package=starter" class="btn btn-outline magnetic" style="width: 100%; text-align: center; justify-content: center;"><span class="magnetic-inner">PILIH PAKET</span></a>
+                    </div>
+                </div>
+
+                <!-- Package 2: Business -->
+                <div class="glass-card pricing-card popular gold-glow-border">
+                    <span class="pricing-badge">POPULAR</span>
+                    <div class="pricing-card-inner">
+                        <div class="pricing-header">
+                            <span class="pricing-name">Business</span>
+                            <span class="pricing-subtitle">Website & Fitur Lengkap</span>
+                            <div class="pricing-price" style="color: var(--color-gold) !important;">Rp 8.500.000</div>
+                            <span class="pricing-label">Mulai dari</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li class="pricing-feature">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span>10 Halaman</span>
+                            </li>
+                            <li class="pricing-feature">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span>Fitur Custom</span>
+                            </li>
+                            <li class="pricing-feature">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span>CMS / Admin Panel</span>
+                            </li>
+                            <li class="pricing-feature">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span>Domain & Hosting 1 Tahun</span>
+                            </li>
+                            <li class="pricing-feature">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span>Support 3 Bulan</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html?package=business" class="btn btn-primary magnetic" style="width: 100%; text-align: center; justify-content: center;"><span class="magnetic-inner">PILIH PAKET</span></a>
+                    </div>
+                </div>
+
+                <!-- Package 3: Premium -->
+                <div class="glass-card pricing-card gold-glow-border">
+                    <div class="pricing-card-inner">
+                        <div class="pricing-header">
+                            <span class="pricing-name">Premium</span>
+                            <span class="pricing-subtitle">Aplikasi Mobile</span>
+                            <div class="pricing-price">Rp 15.000.000</div>
+                            <span class="pricing-label">Mulai dari</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li class="pricing-feature">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span>Android / iOS</span>
+                            </li>
+                            <li class="pricing-feature">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span>UI/UX Premium</span>
+                            </li>
+                            <li class="pricing-feature">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span>Fitur Lengkap</span>
+                            </li>
+                            <li class="pricing-feature">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span>Source Code</span>
+                            </li>
+                            <li class="pricing-feature">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span>Support 3 Bulan</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html?package=premium" class="btn btn-outline magnetic" style="width: 100%; text-align: center; justify-content: center;"><span class="magnetic-inner">PILIH PAKET</span></a>
+                    </div>
+                </div>
+
+                <!-- Package 4: Enterprise -->
+                <div class="glass-card pricing-card gold-glow-border">
+                    <div class="pricing-card-inner">
+                        <div class="pricing-header">
+                            <span class="pricing-name">Enterprise</span>
+                            <span class="pricing-subtitle">Solusi Custom</span>
+                            <div class="pricing-price" style="color: var(--color-gold) !important;">Custom Price</div>
+                            <span class="pricing-label">Solusi khusus sesuai kebutuhan bisnis Anda.</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li class="pricing-feature">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span>Analisis Kebutuhan</span>
+                            </li>
+                            <li class="pricing-feature">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span>Fitur Custom</span>
+                            </li>
+                            <li class="pricing-feature">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span>Tim Dedicated</span>
+                            </li>
+                            <li class="pricing-feature">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                                <span>Support Prioritas</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html?package=enterprise" class="btn btn-outline magnetic" style="width: 100%; text-align: center; justify-content: center;"><span class="magnetic-inner">KONSULTASI</span></a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <p style="text-align: center; font-size: 0.85rem; opacity: 0.6; margin-top: 3.5rem; color: var(--color-text-secondary);">
+                * Harga dapat berubah sesuai kebutuhan & kompleksitas proyek.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-main">
+        <div class="footer-grid">
+            <div class="footer-logo-col">
+                <a href="index.html" class="logo-container">
+                    <svg class="logo-icon-svg" viewBox="0 0 40 40" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 2L38 34H2L20 2Z" stroke="#d6b77a" stroke-width="2.5" stroke-linejoin="round"/>
+                        <path d="M20 12L31 31H9L20 12Z" fill="#d6b77a" fill-opacity="0.3" stroke="#d6b77a" stroke-width="1.5"/>
+                        <circle cx="20" cy="24" r="3" fill="#f6f1eb"/>
+                    </svg>
+                    <div>
+                        <span class="logo-text">ABYNS</span>
+                        <span class="logo-sub">STUDIO</span>
+                    </div>
+                </a>
+                <p>Membantu brand mewah, korporasi, dan startup menghadirkan karya digital premium yang memukau dan berdampak.</p>
+            </div>
+            <div>
+                <h4 class="footer-title">Navigasi</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="services.html">Layanan</a></li>
+                    <li><a href="portfolio.html">Portofolio</a></li>
+                    <li><a href="products.html">Produk</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-title">Lainnya</h4>
+                <ul class="footer-links">
+                    <li><a href="gallery.html">Behind The Scene</a></li>
+                    <li><a href="pricing.html">Daftar Harga</a></li>
+                    <li><a href="testimonials.html">Ulasan Klien</a></li>
+                    <li><a href="contact.html">Hubungi Kami</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4 class="footer-title">Dapatkan Update</h4>
+                <p>Berlangganan buletin untuk informasi tren digital premium, wawasan desain, dan rilis produk siap pakai kami.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Terima kasih.'); this.reset();">
+                    <input type="email" placeholder="Alamat email Anda" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-submit"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.33334 8H12.6667" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 3.33331L12.6667 7.99998L8 12.6666" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copy">&copy; 2026 ABYNS STUDIO. Hak Cipta Dilindungi Undang-Undang.</div>
+            <div class="footer-socials">
+                <a href="https://instagram.com" class="footer-social-link magnetic" target="_blank" rel="noopener"><span class="magnetic-inner">ig</span></a>
+                <a href="https://linkedin.com" class="footer-social-link magnetic" target="_blank" rel="noopener"><span class="magnetic-inner">in</span></a>
+                <a href="https://youtube.com" class="footer-social-link magnetic" target="_blank" rel="noopener"><span class="magnetic-inner">yt</span></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core Libraries (CDN URLs) -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Logic scripts -->
+    <script src="js/cursor.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/gsap.js"></script>
+    <script src="js/three-bg.js"></script>
+</body>
+</html>

@@ -1,0 +1,3484 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABYNS STUDIO | Premium Digital & Creative Agency</title>
+    <meta
+      name="description"
+      content="ABYNS Studio adalah creative tech studio premium yang berfokus pada pembuatan website, aplikasi, branding, fotografi, dan videografi untuk luxury brand dan korporat."
+    />
+    <meta
+      name="keywords"
+      content="abyns studio, website development, mobile app, ui ux design, luxury branding, photography, videography, company profile premium"
+    />
+
+    <!-- Third Party CSS (Swiper) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <!-- 1. Custom Interactive Cursor Follower -->
+    <!-- (Will be loaded dynamically on desktop viewports via cursor.js) -->
+
+    <!-- 2. Sticky Luxury Navigation Bar -->
+    <header
+      class="header-nav animate-header"
+      style="opacity: 0; transform: translateY(-20px)"
+    >
+      <a href="index.html" class="logo-container">
+        <svg
+          class="logo-icon-svg"
+          viewBox="0 0 40 40"
+          width="36"
+          height="36"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20 2L38 34H2L20 2Z"
+            stroke="#d6b77a"
+            stroke-width="2.5"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M20 12L31 31H9L20 12Z"
+            fill="#d6b77a"
+            fill-opacity="0.3"
+            stroke="#d6b77a"
+            stroke-width="1.5"
+          />
+          <circle cx="20" cy="24" r="3" fill="#f6f1eb" />
+        </svg>
+        <div>
+          <span class="logo-text">ABYNS</span>
+          <span class="logo-sub">STUDIO</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Items -->
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li class="nav-item-dropdown">
+            <a href="about.html" class="nav-link">Tentang Kami</a>
+            <!-- Mega Menu Dropdown -->
+            <div class="mega-menu">
+              <div class="mega-menu-column">
+                <h4>Profil Studio</h4>
+                <ul class="mega-menu-list">
+                  <li class="mega-menu-item">
+                    <a href="about.html#story">
+                      <span class="mega-menu-title">Cerita Kami</span>
+                      <span class="mega-menu-desc"
+                        >Perjalanan membangun solusi digital berkelas.</span
+                      >
+                    </a>
+                  </li>
+                  <li class="mega-menu-item">
+                    <a href="about.html#founder">
+                      <span class="mega-menu-title">Profil Founder</span>
+                      <span class="mega-menu-desc"
+                        >Visi kreatif dari pemimpin kami.</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="mega-menu-column">
+                <h4>Mengapa Kami</h4>
+                <ul class="mega-menu-list">
+                  <li class="mega-menu-item">
+                    <a href="gallery.html">
+                      <span class="mega-menu-title">Behind The Scene</span>
+                      <span class="mega-menu-desc"
+                        >Melihat cara kerja tim profesional kami.</span
+                      >
+                    </a>
+                  </li>
+                  <li class="mega-menu-item">
+                    <a href="testimonials.html">
+                      <span class="mega-menu-title">Ulasan Klien</span>
+                      <span class="mega-menu-desc"
+                        >Apa kata brand ternama tentang kami.</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a href="services.html" class="nav-link">Layanan</a></li>
+          <li><a href="portfolio.html" class="nav-link">Portofolio</a></li>
+          <li><a href="products.html" class="nav-link">Produk</a></li>
+          <li><a href="pricing.html" class="nav-link">Harga</a></li>
+          <li><a href="contact.html" class="nav-link">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <!-- Navigation Action Buttons -->
+      <a href="contact.html" class="nav-cta-btn magnetic"
+        ><span class="magnetic-inner">Konsultasi Gratis</span></a
+      >
+
+      <!-- Mobile Hamburg Menu Trigger -->
+      <button class="mobile-menu-trigger" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+        <li><a href="about.html" class="mobile-nav-link">Tentang Kami</a></li>
+        <li><a href="services.html" class="mobile-nav-link">Layanan</a></li>
+        <li><a href="portfolio.html" class="mobile-nav-link">Portofolio</a></li>
+        <li><a href="products.html" class="mobile-nav-link">Produk</a></li>
+        <li><a href="pricing.html" class="mobile-nav-link">Harga</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Kontak</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2rem"
+        >Konsultasi Gratis</a
+      >
+    </div>
+
+    <!-- 4. Hero Section -->
+    <section
+      class="section hero"
+      style="
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding-top: 8rem;
+        padding-bottom: 4rem;
+        z-index: 2;
+        background: url(&quot;assets/images/banner-fix.png&quot;) no-repeat
+          center center;
+        background-size: cover;
+      "
+    >
+      <div
+        class="container hero-container"
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
+          width: 100%;
+        "
+      >
+        <!-- Left Text & Right Mockup Row -->
+        <div
+          style="
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0rem;
+            flex-wrap: wrap;
+          "
+        >
+          <!-- Hero Text Content (Left Column) -->
+          <div
+            class="hero-content"
+            style="
+              max-width: 650px;
+              flex: 1.2;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+            "
+          >
+            <div class="reveal-text-wrap">
+              <span
+                class="hero-title-reveal hero-badge"
+                style="transform: translateY(100%)"
+                >WE DESIGN • WE CODE • WE CREATE</span
+              >
+            </div>
+
+            <h1 style="margin-bottom: 2rem">
+              <span class="reveal-text-wrap" style="display: block"
+                ><span
+                  class="hero-title-reveal text-white-glow"
+                  style="display: block; transform: translateY(100%)"
+                  >Digital Solutions</span
+                ></span
+              >
+              <span class="reveal-text-wrap" style="display: block"
+                ><span
+                  class="hero-title-reveal text-gold-glow font-serif-italic"
+                  style="display: block; transform: translateY(100%)"
+                  >That Elevate</span
+                ></span
+              >
+              <span class="reveal-text-wrap" style="display: block"
+                ><span
+                  class="hero-title-reveal text-white-glow"
+                  style="display: block; transform: translateY(100%)"
+                  >Your Brand</span
+                ></span
+              >
+            </h1>
+
+            <p
+              class="hero-desc"
+              style="
+                opacity: 0;
+                transform: translateY(30px);
+                margin-bottom: 2.5rem;
+                font-size: 1.25rem;
+              "
+            >
+              ABYNS Studio membantu bisnis Anda tampil profesional di dunia
+              digital melalui website, aplikasi, dan konten visual yang elegan
+              dan berdampak.
+            </p>
+
+            <div
+              class="hero-ctas"
+              style="
+                opacity: 0;
+                transform: translateY(30px);
+                display: flex;
+                gap: 1.5rem;
+                flex-wrap: wrap;
+              "
+            >
+              <a
+                href="portfolio.html"
+                class="btn btn-primary btn-shimmer magnetic"
+              >
+                <span
+                  class="magnetic-inner flex"
+                  style="
+                    align-items: center;
+                    gap: 0.5rem;
+                    text-transform: uppercase;
+                  "
+                >
+                  LIHAT PORTOFOLIO
+                  <svg
+                    class="btn-arrow"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.33334 8H12.6667"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8 3.33331L12.6667 7.99998L8 12.6666"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </a>
+              <a
+                href="contact.html"
+                class="btn btn-outline btn-shimmer magnetic"
+              >
+                <span
+                  class="magnetic-inner flex"
+                  style="
+                    align-items: center;
+                    gap: 0.5rem;
+                    text-transform: uppercase;
+                  "
+                >
+                  KONSULTASI GRATIS
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="margin-left: 2px"
+                  >
+                    <path
+                      d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+
+            <!-- Hero Services Icons row -->
+            <div
+              class="hero-features"
+              style="
+                opacity: 0;
+                transform: translateY(30px);
+                display: flex;
+                gap: 2rem;
+                margin-top: 3.5rem;
+                flex-wrap: wrap;
+              "
+            >
+              <div style="display: flex; align-items: center; gap: 0.75rem">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--color-gold)"
+                  stroke-width="2"
+                >
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+                <span
+                  style="
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    color: var(--color-white);
+                  "
+                  >Website</span
+                >
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.75rem">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--color-gold)"
+                  stroke-width="2"
+                >
+                  <rect x="5" y="2" width="14" height="20" rx="2" />
+                  <line x1="12" y1="18" x2="12" y2="18.01" />
+                </svg>
+                <span
+                  style="
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    color: var(--color-white);
+                  "
+                  >Aplikasi</span
+                >
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.75rem">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--color-gold)"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
+                  />
+                  <circle cx="12" cy="13" r="4" />
+                </svg>
+                <span
+                  style="
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    color: var(--color-white);
+                  "
+                  >Foto & Video</span
+                >
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.75rem">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--color-gold)"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                  />
+                </svg>
+                <span
+                  style="
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    color: var(--color-white);
+                  "
+                  >Branding</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Realistic Mockup (Right Column) -->
+          <div
+            class="hero-visual-container"
+            style="
+              opacity: 0;
+              scale: 0.9;
+              transform: translateY(40px);
+              flex: 1.2;
+              display: flex;
+              justify-content: center;
+              position: relative;
+              min-width: 320px;
+            "
+          >
+            <div
+              class="hero-visual-podium animate-float"
+              style="
+                position: relative;
+                max-width: 650px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <!-- Devices item overlay standing natively on the right side -->
+              <!-- <img
+                src="assets/images/item-banner.png"
+                alt="Devices Showcase"
+                style="
+                  width: 100%;
+                  height: auto;
+                  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.95));
+                  z-index: 5;
+                "
+              /> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Unified Hero Stats Bar -->
+        <div
+          class="hero-stats-bar"
+          style="
+            opacity: 0;
+            transform: translateY(30px);
+            width: 100%;
+            z-index: 3;
+          "
+        >
+          <div class="hero-stats-card hero-stats-grid">
+            <!-- Stat 1 -->
+            <div style="display: flex; align-items: center; gap: 1rem">
+              <div class="stat-icon-wrapper">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--color-gold)"
+                  stroke-width="2.5"
+                >
+                  <path
+                    d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34M12 2a4 4 0 0 1 4 4v5a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div
+                  style="
+                    font-family: var(--font-body);
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    color: var(--color-white);
+                    line-height: 1.2;
+                  "
+                >
+                  50+
+                </div>
+                <div
+                  style="
+                    font-size: 0.75rem;
+                    color: #a390a5;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                  "
+                >
+                  Proyek Selesai
+                </div>
+              </div>
+            </div>
+
+            <!-- Stat 2 -->
+            <div style="display: flex; align-items: center; gap: 1rem">
+              <div class="stat-icon-wrapper">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--color-gold)"
+                  stroke-width="2.5"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01" />
+                </svg>
+              </div>
+              <div>
+                <div
+                  style="
+                    font-family: var(--font-body);
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    color: var(--color-white);
+                    line-height: 1.2;
+                  "
+                >
+                  30+
+                </div>
+                <div
+                  style="
+                    font-size: 0.75rem;
+                    color: #a390a5;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                  "
+                >
+                  Klien Bahagia
+                </div>
+              </div>
+            </div>
+
+            <!-- Stat 3 -->
+            <div style="display: flex; align-items: center; gap: 1rem">
+              <div class="stat-icon-wrapper">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--color-gold)"
+                  stroke-width="2.5"
+                >
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+              </div>
+              <div>
+                <div
+                  style="
+                    font-family: var(--font-body);
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    color: var(--color-white);
+                    line-height: 1.2;
+                  "
+                >
+                  5+
+                </div>
+                <div
+                  style="
+                    font-size: 0.75rem;
+                    color: #a390a5;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                  "
+                >
+                  Tahun Pengalaman
+                </div>
+              </div>
+            </div>
+
+            <!-- Stat 4 -->
+            <div style="display: flex; align-items: center; gap: 1rem">
+              <div class="stat-icon-wrapper">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--color-gold)"
+                  stroke-width="2.5"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <div>
+                <div
+                  style="
+                    font-family: var(--font-body);
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    color: var(--color-white);
+                    line-height: 1.2;
+                  "
+                >
+                  100%
+                </div>
+                <div
+                  style="
+                    font-size: 0.75rem;
+                    color: #a390a5;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                  "
+                >
+                  Komitmen Kualitas
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Client Logo Marquee Wall -->
+    <section class="marquee-container" style="z-index: 2">
+      <div class="marquee-content">
+        <div class="marquee-logo">CUBERTO</div>
+        <div class="marquee-logo">LOCOMOTIVE</div>
+        <div class="marquee-logo">ACTIVE THEORY</div>
+        <div class="marquee-logo">AQUEST</div>
+        <div class="marquee-logo">FANTASY</div>
+        <div class="marquee-logo">DOGSTUDIO</div>
+        <div class="marquee-logo">FIREART</div>
+        <!-- Duplicate for infinite effect -->
+        <div class="marquee-logo">CUBERTO</div>
+        <div class="marquee-logo">LOCOMOTIVE</div>
+        <div class="marquee-logo">ACTIVE THEORY</div>
+        <div class="marquee-logo">AQUEST</div>
+        <div class="marquee-logo">FANTASY</div>
+        <div class="marquee-logo">DOGSTUDIO</div>
+        <div class="marquee-logo">FIREART</div>
+      </div>
+    </section>
+
+    <!-- 7. About ABYNS (Storytelling Section) -->
+    <!-- 7. About ABYNS (Storytelling Section) -->
+    <!-- 7. About ABYNS (Storytelling Section) -->
+    <section
+      id="about"
+      class="section section-about"
+      style="
+        z-index: 2;
+        width: 100%;
+        aspect-ratio: 2100 / 749 !important;
+        min-height: auto !important;
+        background: url(&quot;assets/images/coin-bg.png&quot;) no-repeat center
+          center;
+        background-size: 80% !important;
+        display: flex !important;
+        align-items: center !important;
+        padding: 0 !important;
+        margin: 0;
+        border-top: 1.5px solid rgba(214, 183, 122, 0.25);
+        border-bottom: 1.5px solid rgba(214, 183, 122, 0.25);
+      "
+    >
+      <div class="container about-grid-container">
+        <!-- Column 1 (Left Info Pane) -->
+        <div class="about-info-col">
+          <div class="section-tag">Tentang ABYNS STUDIO</div>
+          <h2
+            class="text-reveal"
+            style="font-size: 2rem; line-height: 1.25; margin-bottom: 1.25rem"
+          >
+            Kami Membangun Solusi Digital Untuk
+            <span class="text-gold font-serif-italic">Masa Depan</span> Anda
+          </h2>
+
+          <p
+            class="about-desc-text"
+            style="
+              font-size: 0.88rem;
+              line-height: 1.65;
+              color: var(--color-text-secondary);
+              margin-bottom: 1.5rem;
+            "
+          >
+            ABYNS Studio adalah creative tech studio yang berfokus pada
+            pembuatan website, aplikasi, serta konten visual premium untuk
+            membantu brand tumbuh dan berdaya saing di era digital.
+          </p>
+
+          <a href="about.html" class="btn btn-primary btn-shimmer magnetic">
+            <span
+              class="magnetic-inner flex"
+              style="
+                align-items: center;
+                gap: 0.5rem;
+                text-transform: uppercase;
+              "
+            >
+              SELENGKAPNYA
+              <svg
+                class="btn-arrow"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.33334 8H12.6667"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M8 3.33331L12.6667 7.99998L8 12.6666"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+
+        <!-- Column 2 (Right Visi & Misi Cards) -->
+        <div class="about-cards-col stagger-container">
+          <!-- Visi Card -->
+          <div class="about-glass-card stagger-item">
+            <div class="stat-icon-wrapper about-card-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="12" r="6" />
+                <circle cx="12" cy="12" r="2" />
+              </svg>
+            </div>
+            <div>
+              <h4 class="about-card-title">VISI</h4>
+              <p class="about-card-desc">
+                Menjadi studio kreatif terdepan yang menghadirkan solusi digital
+                inovatif dan elegan untuk bisnis di Indonesia dan dunia.
+              </p>
+            </div>
+          </div>
+
+          <!-- Misi Card -->
+          <div class="about-glass-card stagger-item">
+            <div class="stat-icon-wrapper about-card-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"
+                />
+                <line x1="4" y1="22" x2="4" y2="15" />
+              </svg>
+            </div>
+            <div>
+              <h4 class="about-card-title">MISI</h4>
+              <ul class="about-misi-list">
+                <li>
+                  <span class="misi-check">✓</span> Menciptakan produk digital
+                  yang fungsional dan estetis
+                </li>
+                <li>
+                  <span class="misi-check">✓</span> Memberikan layanan terbaik
+                  dan pengalaman berkesan
+                </li>
+                <li>
+                  <span class="misi-check">✓</span> Membangun hubungan jangka
+                  panjang dengan klien
+                </li>
+                <li>
+                  <span class="misi-check">✓</span> Terus berinovasi mengikuti
+                  perkembangan teknologi
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Services Grid (Layanan Kami) -->
+    <section id="services" class="section section-services" style="z-index: 2">
+      <div class="container">
+        <div
+          class="section-header text-center"
+          style="margin-left: auto; margin-right: auto"
+        >
+          <div class="section-tag">Layanan Kreatif</div>
+          <h2 class="text-reveal">
+            Keahlian Yang
+            <span class="text-gold font-serif-italic">Elevated</span> Untuk
+            Brand Anda
+          </h2>
+          <p
+            class="section-desc text-center"
+            style="margin-left: auto; margin-right: auto"
+          >
+            Kami menawarkan serangkaian solusi komprehensif berstandar tinggi
+            untuk merevolusi kehadiran digital Anda.
+          </p>
+        </div>
+
+        <div class="grid services-grid stagger-container">
+          <!-- Service 1: Website Development -->
+          <div class="glass-card service-card stagger-item gold-glow-border">
+            <div>
+              <div class="service-icon-box">
+                <svg
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect
+                    x="2"
+                    y="3"
+                    width="20"
+                    height="14"
+                    rx="2"
+                    stroke-width="2"
+                  />
+                  <line x1="8" y1="21" x2="16" y2="21" stroke-width="2" />
+                  <line x1="12" y1="17" x2="12" y2="21" stroke-width="2" />
+                </svg>
+              </div>
+              <h3 class="service-title">Website Development</h3>
+              <p>
+                Website company profile, e-commerce, portal korporat, dan
+                landing page custom premium yang dioptimalkan untuk performa
+                (Lighthouse 95+), SEO, dan keindahan desain visual.
+              </p>
+              <ul class="service-list">
+                <li class="service-list-item">Custom CMS & Web Apps</li>
+                <li class="service-list-item">Pemuatan Instan (60 FPS)</li>
+                <li class="service-list-item">Animasi & Interaksi GSAP</li>
+              </ul>
+            </div>
+            <a
+              href="services.html#web"
+              class="btn btn-outline magnetic"
+              style="margin-top: 1.5rem"
+              ><span class="magnetic-inner">Detail Layanan</span></a
+            >
+          </div>
+
+          <!-- Service 2: Mobile App Development -->
+          <div class="glass-card service-card stagger-item gold-glow-border">
+            <div>
+              <div class="service-icon-box">
+                <svg
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect
+                    x="5"
+                    y="2"
+                    width="14"
+                    height="20"
+                    rx="2"
+                    stroke-width="2"
+                  />
+                  <line x1="12" y1="18" x2="12" y2="18.01" stroke-width="2" />
+                </svg>
+              </div>
+              <h3 class="service-title">Aplikasi Mobile</h3>
+              <p>
+                Pengembangan aplikasi berbasis Android dan iOS berkinerja
+                tinggi, responsif, berfitur lengkap, aman, dan dirancang dengan
+                antarmuka (UI/UX) berkelas dunia.
+              </p>
+              <ul class="service-list">
+                <li class="service-list-item">Aplikasi POS & CRM Custom</li>
+                <li class="service-list-item">Flutter & React Native</li>
+                <li class="service-list-item">Keamanan Terenkripsi</li>
+              </ul>
+            </div>
+            <a
+              href="services.html#app"
+              class="btn btn-outline magnetic"
+              style="margin-top: 1.5rem"
+              ><span class="magnetic-inner">Detail Layanan</span></a
+            >
+          </div>
+
+          <!-- Service 3: UI/UX Design -->
+          <div class="glass-card service-card stagger-item gold-glow-border">
+            <div>
+              <div class="service-icon-box">
+                <svg
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+              <h3 class="service-title">UI/UX Design</h3>
+              <p>
+                Perancangan antarmuka pengguna digital (wireframing,
+                prototyping, user-journey mapping) yang intuitif, mewah, modern,
+                dan memberikan kenyamanan maksimal bagi audiens Anda.
+              </p>
+              <ul class="service-list">
+                <li class="service-list-item">Figma High-Fidelity Mockups</li>
+                <li class="service-list-item">Desain Responsif & Adaptif</li>
+                <li class="service-list-item">
+                  Pengujian Pengguna (User Testing)
+                </li>
+              </ul>
+            </div>
+            <a
+              href="services.html#uiux"
+              class="btn btn-outline magnetic"
+              style="margin-top: 1.5rem"
+              ><span class="magnetic-inner">Detail Layanan</span></a
+            >
+          </div>
+
+          <!-- Service 4: Foto & Video Production -->
+          <div class="glass-card service-card stagger-item gold-glow-border">
+            <div>
+              <div class="service-icon-box">
+                <svg
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
+                    stroke-width="2"
+                  />
+                  <circle cx="12" cy="13" r="4" stroke-width="2" />
+                </svg>
+              </div>
+              <h3 class="service-title">Foto & Video</h3>
+              <p>
+                Produksi visual bermutu tinggi untuk kebutuhan promosi brand,
+                meliputi fotografi produk komersial, video profil perusahaan,
+                aerial drone footage, dan editing sinematik.
+              </p>
+              <ul class="service-list">
+                <li class="service-list-item">Kamera Sinematik 4K/8K</li>
+                <li class="service-list-item">Pilot Drone Bersertifikat</li>
+                <li class="service-list-item">
+                  Lighting & Color Grading Premium
+                </li>
+              </ul>
+            </div>
+            <a
+              href="services.html#photo"
+              class="btn btn-outline magnetic"
+              style="margin-top: 1.5rem"
+              ><span class="magnetic-inner">Detail Layanan</span></a
+            >
+          </div>
+
+          <!-- Service 5: Branding & Identity -->
+          <div class="glass-card service-card stagger-item gold-glow-border">
+            <div>
+              <div class="service-icon-box">
+                <svg
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polygon points="12 2 2 7 12 12 22 7 12 2" stroke-width="2" />
+                  <polygon points="2 17 12 22 22 17" stroke-width="2" />
+                  <polygon points="2 12 12 17 22 12" stroke-width="2" />
+                </svg>
+              </div>
+              <h3 class="service-title">Luxury Branding</h3>
+              <p>
+                Penyusunan identitas merek (logo, tipografi, panduan warna,
+                guidelines) yang memancarkan eksklusivitas, prestise, kemewahan,
+                dan kesan abadi yang melekat kuat di benak audiens.
+              </p>
+              <ul class="service-list">
+                <li class="service-list-item">Desain Logo Kustom Eksklusif</li>
+                <li class="service-list-item">Brand Identity Manual (PDF)</li>
+                <li class="service-list-item">Mockups & Stationery Design</li>
+              </ul>
+            </div>
+            <a
+              href="services.html#branding"
+              class="btn btn-outline magnetic"
+              style="margin-top: 1.5rem"
+              ><span class="magnetic-inner">Detail Layanan</span></a
+            >
+          </div>
+
+          <!-- Service 6: Digital Content Strategy -->
+          <div class="glass-card service-card stagger-item gold-glow-border">
+            <div>
+              <div class="service-icon-box">
+                <svg
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+              <h3 class="service-title">Konten Digital</h3>
+              <p>
+                Pembuatan aset konten media sosial yang konsisten, estetis, dan
+                bernilai jual tinggi untuk meningkatkan audiens serta membangun
+                reputasi digital premium secara bertahap.
+              </p>
+              <ul class="service-list">
+                <li class="service-list-item">Social Media Content Plan</li>
+                <li class="service-list-item">Instagram Feed Aesthetics</li>
+                <li class="service-list-item">Copywriting Promosi Elegan</li>
+              </ul>
+            </div>
+            <a
+              href="services.html#content"
+              class="btn btn-outline magnetic"
+              style="margin-top: 1.5rem"
+              ><span class="magnetic-inner">Detail Layanan</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Portfolios with Category Tabs Filtering -->
+    <section
+      id="portfolio"
+      class="section section-portfolio"
+      style="z-index: 2"
+    >
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Galeri Portofolio</div>
+          <h2 class="text-reveal">
+            2 Bidang Keahlian,
+            <span class="text-gold font-serif-italic">Satu Tujuan</span>
+          </h2>
+          <p class="section-desc">
+            Eksplorasi mahakarya digital dan sinematik yang telah kami rancang
+            untuk brand terkemuka.
+          </p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div
+          class="flex"
+          style="gap: 1rem; margin-bottom: 4rem; flex-wrap: wrap"
+        >
+          <button
+            class="portfolio-filter-btn active"
+            data-filter="all"
+            style="
+              background: none;
+              border: 1px solid var(--color-border-glass);
+              border-radius: 30px;
+              padding: 0.75rem 2rem;
+              color: var(--color-text-primary);
+              font-family: var(--font-body);
+              font-size: 0.85rem;
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 0.1em;
+              cursor: pointer;
+              transition: var(--transition-fast);
+            "
+          >
+            Semua
+          </button>
+          <button
+            class="portfolio-filter-btn"
+            data-filter="web"
+            style="
+              background: none;
+              border: 1px solid var(--color-border-glass);
+              border-radius: 30px;
+              padding: 0.75rem 2rem;
+              color: var(--color-text-primary);
+              font-family: var(--font-body);
+              font-size: 0.85rem;
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 0.1em;
+              cursor: pointer;
+              transition: var(--transition-fast);
+            "
+          >
+            Website
+          </button>
+          <button
+            class="portfolio-filter-btn"
+            data-filter="app"
+            style="
+              background: none;
+              border: 1px solid var(--color-border-glass);
+              border-radius: 30px;
+              padding: 0.75rem 2rem;
+              color: var(--color-text-primary);
+              font-family: var(--font-body);
+              font-size: 0.85rem;
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 0.1em;
+              cursor: pointer;
+              transition: var(--transition-fast);
+            "
+          >
+            Aplikasi
+          </button>
+          <button
+            class="portfolio-filter-btn"
+            data-filter="photo"
+            style="
+              background: none;
+              border: 1px solid var(--color-border-glass);
+              border-radius: 30px;
+              padding: 0.75rem 2rem;
+              color: var(--color-text-primary);
+              font-family: var(--font-body);
+              font-size: 0.85rem;
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 0.1em;
+              cursor: pointer;
+              transition: var(--transition-fast);
+            "
+          >
+            Fotografi
+          </button>
+          <button
+            class="portfolio-filter-btn"
+            data-filter="video"
+            style="
+              background: none;
+              border: 1px solid var(--color-border-glass);
+              border-radius: 30px;
+              padding: 0.75rem 2rem;
+              color: var(--color-text-primary);
+              font-family: var(--font-body);
+              font-size: 0.85rem;
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 0.1em;
+              cursor: pointer;
+              transition: var(--transition-fast);
+            "
+          >
+            Videografi
+          </button>
+        </div>
+
+        <!-- Portfolio Grid Layout -->
+        <div
+          class="grid stagger-container"
+          style="
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+          "
+        >
+          <!-- Portfolio Item 1: Web (Luxury Hotel) -->
+          <div
+            class="portfolio-item stagger-item"
+            data-category="web"
+            data-client="Aurelia Ritz Resort"
+            data-tech="HTML5, GLSL Shader, GSAP, WebGL"
+            data-desc="Website profil dan reservasi interaktif yang dirancang khusus untuk brand resor bintang lima, mengutamakan performa loading cepat dan kemewahan transisi antarmuka."
+          >
+            <div
+              class="glass-card portfolio-card gold-glow-border"
+              style="padding: 0; cursor: pointer"
+            >
+              <div
+                class="img-reveal-mask"
+                style="aspect-ratio: 4/3; width: 100%"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop"
+                  alt="Resor Luxury Hotel Website Mockup ABYNS STUDIO"
+                  class="portfolio-img parallax-img"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.8s ease-out;
+                  "
+                />
+              </div>
+              <div style="padding: 2rem">
+                <span
+                  class="portfolio-category"
+                  style="
+                    font-size: 0.7rem;
+                    color: var(--color-gold);
+                    text-transform: uppercase;
+                    letter-spacing: 0.2em;
+                    font-weight: 700;
+                  "
+                  >Website Development</span
+                >
+                <h3
+                  class="portfolio-title"
+                  style="margin-top: 0.5rem; font-size: 1.25rem"
+                >
+                  Aurelia Ritz Resort
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 2: App (POS E-Commerce) -->
+          <div
+            class="portfolio-item stagger-item"
+            data-category="app"
+            data-client="Veloce Fashion Store"
+            data-tech="Flutter, Dart, Firebase, Node.js"
+            data-desc="Aplikasi kasir (POS) premium yang terintegrasi dengan dasbor manajemen inventory toko butik mode kelas atas. Memiliki sinkronisasi data instan."
+          >
+            <div
+              class="glass-card portfolio-card gold-glow-border"
+              style="padding: 0; cursor: pointer"
+            >
+              <div
+                class="img-reveal-mask"
+                style="aspect-ratio: 4/3; width: 100%"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800&auto=format&fit=crop"
+                  alt="Butik Luxury Retail POS Mobile App ABYNS STUDIO"
+                  class="portfolio-img parallax-img"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.8s ease-out;
+                  "
+                />
+              </div>
+              <div style="padding: 2rem">
+                <span
+                  class="portfolio-category"
+                  style="
+                    font-size: 0.7rem;
+                    color: var(--color-gold);
+                    text-transform: uppercase;
+                    letter-spacing: 0.2em;
+                    font-weight: 700;
+                  "
+                  >Mobile App</span
+                >
+                <h3
+                  class="portfolio-title"
+                  style="margin-top: 0.5rem; font-size: 1.25rem"
+                >
+                  Veloce Retail POS
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 3: Photo (Fashion Editorial) -->
+          <div
+            class="portfolio-item stagger-item"
+            data-category="photo"
+            data-client="Opal Luxury Jewelry"
+            data-tech="Sony A7R V, Studio lighting setup"
+            data-desc="Sesi photoshoot produk eksklusif perhiasan berlian dengan penataan pencahayaan presisi yang menangkap kilauan logam mulia secara natural."
+          >
+            <div
+              class="glass-card portfolio-card gold-glow-border"
+              style="padding: 0; cursor: pointer"
+            >
+              <div
+                class="img-reveal-mask"
+                style="aspect-ratio: 4/3; width: 100%"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800&auto=format&fit=crop"
+                  alt="High Fashion Jewelry Editorial Photoshoot ABYNS STUDIO"
+                  class="portfolio-img parallax-img"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.8s ease-out;
+                  "
+                />
+              </div>
+              <div style="padding: 2rem">
+                <span
+                  class="portfolio-category"
+                  style="
+                    font-size: 0.7rem;
+                    color: var(--color-gold);
+                    text-transform: uppercase;
+                    letter-spacing: 0.2em;
+                    font-weight: 700;
+                  "
+                  >Photography</span
+                >
+                <h3
+                  class="portfolio-title"
+                  style="margin-top: 0.5rem; font-size: 1.25rem"
+                >
+                  Opal Editorial Photoshoot
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 4: Video (Commercial Promo) -->
+          <div
+            class="portfolio-item stagger-item"
+            data-category="video"
+            data-client="Estate Developer Group"
+            data-tech="Red V-Raptor 8K, DJI Inspire 3 Drone"
+            data-desc="Video komersial properti mewah yang menangkap keindahan arsitektur villa modern melalui aerial drone footage dan color grading sinematik kelas atas."
+          >
+            <div
+              class="glass-card portfolio-card gold-glow-border"
+              style="padding: 0; cursor: pointer"
+            >
+              <div
+                class="img-reveal-mask"
+                style="aspect-ratio: 4/3; width: 100%"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop"
+                  alt="Modern Properti Villa Video Cinematic Promosi ABYNS STUDIO"
+                  class="portfolio-img parallax-img"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.8s ease-out;
+                  "
+                />
+              </div>
+              <div style="padding: 2rem">
+                <span
+                  class="portfolio-category"
+                  style="
+                    font-size: 0.7rem;
+                    color: var(--color-gold);
+                    text-transform: uppercase;
+                    letter-spacing: 0.2em;
+                    font-weight: 700;
+                  "
+                  >Videography</span
+                >
+                <h3
+                  class="portfolio-title"
+                  style="margin-top: 0.5rem; font-size: 1.25rem"
+                >
+                  The Horizon Villa Promo
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- View All CTA -->
+        <div class="text-center" style="margin-top: 5rem">
+          <a href="portfolio.html" class="btn btn-primary magnetic"
+            ><span class="magnetic-inner">Lihat Semua Karya</span></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Portfolio Detail Lightbox Modal (Dynamic) -->
+    <div
+      class="portfolio-modal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(15, 6, 17, 0.95);
+        backdrop-filter: blur(25px);
+        z-index: 10000;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        padding: 2rem;
+      "
+    >
+      <div
+        class="modal-content-wrapper glass-card"
+        style="
+          max-width: 900px;
+          width: 100%;
+          max-height: 85vh;
+          overflow-y: auto;
+          padding: 3rem;
+          display: grid;
+          grid-template-columns: 1.2fr 1fr;
+          gap: 3rem;
+          border-color: var(--color-gold);
+        "
+      >
+        <!-- Left Side visual mockup -->
+        <div>
+          <img
+            class="modal-main-img"
+            src=""
+            alt="Project mockup large display"
+            style="
+              width: 100%;
+              border-radius: 12px;
+              border: 1px solid var(--color-border-glass);
+              object-fit: cover;
+            "
+          />
+        </div>
+
+        <!-- Right Side details pane -->
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          "
+        >
+          <div>
+            <h3
+              class="modal-project-title"
+              style="
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+                color: var(--color-white);
+              "
+            >
+              Project Title
+            </h3>
+
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+                margin-bottom: 2rem;
+              "
+            >
+              <div
+                class="flex"
+                style="
+                  justify-content: space-between;
+                  border-bottom: 1px solid var(--color-border-glass);
+                  padding-bottom: 0.5rem;
+                "
+              >
+                <span
+                  style="font-size: 0.85rem; color: var(--color-text-secondary)"
+                  >Klien</span
+                >
+                <span
+                  class="modal-client-val"
+                  style="
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    color: var(--color-gold);
+                  "
+                  >Client Name</span
+                >
+              </div>
+              <div
+                class="flex"
+                style="
+                  justify-content: space-between;
+                  border-bottom: 1px solid var(--color-border-glass);
+                  padding-bottom: 0.5rem;
+                "
+              >
+                <span
+                  style="font-size: 0.85rem; color: var(--color-text-secondary)"
+                  >Teknologi / Kamera</span
+                >
+                <span
+                  class="modal-tech-val"
+                  style="
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    color: var(--color-white);
+                  "
+                  >Tools Name</span
+                >
+              </div>
+            </div>
+
+            <p
+              class="modal-project-desc"
+              style="font-size: 0.95rem; line-height: 1.8"
+            >
+              Description text here...
+            </p>
+          </div>
+
+          <div class="flex" style="gap: 1rem; margin-top: 3rem">
+            <a
+              href="contact.html"
+              class="btn btn-primary magnetic"
+              style="padding: 0.85rem 1.85rem"
+              ><span class="magnetic-inner">Hubungi Kami</span></a
+            >
+            <button
+              class="modal-close-btn btn btn-outline"
+              style="padding: 0.85rem 1.85rem"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11. Ready-To-Use Digital Products Gallery Slider -->
+    <section id="products" class="section section-products" style="z-index: 2">
+      <div class="container">
+        <div
+          class="section-header text-center"
+          style="margin-left: auto; margin-right: auto"
+        >
+          <div class="section-tag">Produk Aplikasi Kami</div>
+          <h2 class="text-reveal">
+            Solusi Aplikasi
+            <span class="text-gold font-serif-italic">Siap Pakai</span>
+          </h2>
+          <p
+            class="section-desc text-center"
+            style="margin-left: auto; margin-right: auto"
+          >
+            Akselerasi performa bisnis operasional Anda menggunakan produk
+            sistem digital yang canggih dan modular.
+          </p>
+        </div>
+
+        <!-- Swiper Slider Container -->
+        <div
+          class="swiper products-swiper stagger-container"
+          style="padding: 2rem 0 4rem"
+        >
+          <div class="swiper-wrapper">
+            <!-- Product 1: POS Kasir -->
+            <div
+              class="swiper-slide glass-card product-card stagger-item gold-glow-border"
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: auto;
+              "
+            >
+              <div>
+                <div
+                  style="
+                    background: rgba(214, 183, 122, 0.1);
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 1.5rem;
+                    border: 1px solid rgba(214, 183, 122, 0.2);
+                  "
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="var(--color-gold)"
+                    stroke-width="2"
+                  >
+                    <rect x="2" y="2" width="20" height="20" rx="2" />
+                    <rect x="6" y="6" width="12" height="12" rx="1" />
+                  </svg>
+                </div>
+                <h3 style="font-size: 1.35rem; margin-bottom: 1rem">
+                  ABYNS POS
+                </h3>
+                <p style="font-size: 0.95rem">
+                  Sistem aplikasi kasir kas untuk retail butik, restoran, dan
+                  kafe yang dinamis, responsif, serta mendukung laporan
+                  inventory real-time.
+                </p>
+              </div>
+              <a
+                href="products.html#pos"
+                class="btn btn-outline magnetic"
+                style="margin-top: 2rem; padding: 0.75rem 1.5rem"
+                ><span class="magnetic-inner">Lihat Detail</span></a
+              >
+            </div>
+
+            <!-- Product 2: Laundry App -->
+            <div
+              class="swiper-slide glass-card product-card stagger-item gold-glow-border"
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: auto;
+              "
+            >
+              <div>
+                <div
+                  style="
+                    background: rgba(214, 183, 122, 0.1);
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 1.5rem;
+                    border: 1px solid rgba(214, 183, 122, 0.2);
+                  "
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="var(--color-gold)"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <circle cx="12" cy="12" r="4" />
+                    <path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                    />
+                  </svg>
+                </div>
+                <h3 style="font-size: 1.35rem; margin-bottom: 1rem">
+                  ABYNS Laundry
+                </h3>
+                <p style="font-size: 0.95rem">
+                  Manajemen sistem operasional gerai laundry terintegrasi dengan
+                  dasbor pelacakan timbangan pakaian, status cuci, dan WhatsApp
+                  otomatis.
+                </p>
+              </div>
+              <a
+                href="products.html#laundry"
+                class="btn btn-outline magnetic"
+                style="margin-top: 2rem; padding: 0.75rem 1.5rem"
+                ><span class="magnetic-inner">Lihat Detail</span></a
+              >
+            </div>
+
+            <!-- Product 3: School Management -->
+            <div
+              class="swiper-slide glass-card product-card stagger-item gold-glow-border"
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: auto;
+              "
+            >
+              <div>
+                <div
+                  style="
+                    background: rgba(214, 183, 122, 0.1);
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 1.5rem;
+                    border: 1px solid rgba(214, 183, 122, 0.2);
+                  "
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="var(--color-gold)"
+                    stroke-width="2"
+                  >
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c0 2 2.5 3 6 3s6-1 6-3v-5" />
+                  </svg>
+                </div>
+                <h3 style="font-size: 1.35rem; margin-bottom: 1rem">
+                  ABYNS School
+                </h3>
+                <p style="font-size: 0.95rem">
+                  Sistem informasi akademik sekolah, administrasi pembayaran SPP
+                  siswa, presensi kehadiran guru, hingga platform kelas daring
+                  terpadu.
+                </p>
+              </div>
+              <a
+                href="products.html#school"
+                class="btn btn-outline magnetic"
+                style="margin-top: 2rem; padding: 0.75rem 1.5rem"
+                ><span class="magnetic-inner">Lihat Detail</span></a
+              >
+            </div>
+
+            <!-- Product 4: CRM Management -->
+            <div
+              class="swiper-slide glass-card product-card stagger-item gold-glow-border"
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: auto;
+              "
+            >
+              <div>
+                <div
+                  style="
+                    background: rgba(214, 183, 122, 0.1);
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 1.5rem;
+                    border: 1px solid rgba(214, 183, 122, 0.2);
+                  "
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="var(--color-gold)"
+                    stroke-width="2"
+                  >
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                </div>
+                <h3 style="font-size: 1.35rem; margin-bottom: 1rem">
+                  ABYNS CRM
+                </h3>
+                <p style="font-size: 0.95rem">
+                  Sistem dasbor pemeliharaan hubungan pelanggan, manajemen leads
+                  tim sales marketing, serta pelacakan performa deal pipeline
+                  otomatis.
+                </p>
+              </div>
+              <a
+                href="products.html#crm"
+                class="btn btn-outline magnetic"
+                style="margin-top: 2rem; padding: 0.75rem 1.5rem"
+                ><span class="magnetic-inner">Lihat Detail</span></a
+              >
+            </div>
+          </div>
+          <!-- Pagination bullets -->
+          <div
+            class="swiper-pagination products-pagination"
+            style="bottom: 0"
+          ></div>
+        </div>
+
+        <!-- View All CTA -->
+        <div class="text-center">
+          <a href="products.html" class="btn btn-primary magnetic"
+            ><span class="magnetic-inner">Lihat Semua Produk</span></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Project Development Process (Storytelling Timeline) -->
+    <section
+      class="section section-process"
+      style="z-index: 2; background: rgba(15, 6, 17, 0.5)"
+    >
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Tahapan Kerja Kami</div>
+          <h2 class="text-reveal">
+            Sistematis &
+            <span class="text-gold font-serif-italic">Terstruktur</span>
+          </h2>
+          <p class="section-desc">
+            Dari pemetaan ide dasar hingga peluncuran sistem digital eksklusif
+            Anda.
+          </p>
+        </div>
+
+        <!-- Timeline Row -->
+        <div
+          class="process-timeline flex"
+          style="
+            position: relative;
+            justify-content: space-between;
+            border-top: 1px solid var(--color-border-glass);
+            padding-top: 4rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+          "
+        >
+          <!-- Dynamic drawing gold line (desktop only) -->
+          <div
+            class="process-progress-bar"
+            style="
+              position: absolute;
+              top: -1px;
+              left: 0;
+              height: 2px;
+              width: 100%;
+              background: linear-gradient(
+                90deg,
+                #140917 0%,
+                var(--color-gold) 50%,
+                #140917 100%
+              );
+              transform: scaleX(0);
+              transition: none;
+              z-index: 5;
+            "
+          ></div>
+
+          <!-- Step 1: Discovery -->
+          <div class="process-step" style="width: 18%; position: relative">
+            <div
+              style="
+                font-size: 0.8rem;
+                font-weight: 700;
+                color: var(--color-gold);
+                margin-bottom: 0.5rem;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+              "
+            >
+              01 Discovery
+            </div>
+            <h3
+              style="
+                font-size: 1.15rem;
+                margin-bottom: 1rem;
+                color: var(--color-white);
+              "
+            >
+              Konsultasi Awal
+            </h3>
+            <p style="font-size: 0.85rem">
+              Pemetaan visi brand, kebutuhan fungsional sistem, target audiens,
+              dan analisis kompetitor utama.
+            </p>
+          </div>
+
+          <!-- Step 2: Research -->
+          <div class="process-step" style="width: 18%; position: relative">
+            <div
+              style="
+                font-size: 0.8rem;
+                font-weight: 700;
+                color: var(--color-gold);
+                margin-bottom: 0.5rem;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+              "
+            >
+              02 Research
+            </div>
+            <h3
+              style="
+                font-size: 1.15rem;
+                margin-bottom: 1rem;
+                color: var(--color-white);
+              "
+            >
+              Analisis Pasar
+            </h3>
+            <p style="font-size: 0.85rem">
+              Penyusunan peta perjalanan pengguna (user journey), kebutuhan
+              arsitektur sistem, dan kerangka desain.
+            </p>
+          </div>
+
+          <!-- Step 3: Design -->
+          <div class="process-step" style="width: 18%; position: relative">
+            <div
+              style="
+                font-size: 0.8rem;
+                font-weight: 700;
+                color: var(--color-gold);
+                margin-bottom: 0.5rem;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+              "
+            >
+              03 Design
+            </div>
+            <h3
+              style="
+                font-size: 1.15rem;
+                margin-bottom: 1rem;
+                color: var(--color-white);
+              "
+            >
+              Mendesain Mockups
+            </h3>
+            <p style="font-size: 0.85rem">
+              Pembuatan desain mockups visual beresolusi tinggi (Figma mockups)
+              yang mewah dengan transisi animasi visual.
+            </p>
+          </div>
+
+          <!-- Step 4: Development -->
+          <div class="process-step" style="width: 18%; position: relative">
+            <div
+              style="
+                font-size: 0.8rem;
+                font-weight: 700;
+                color: var(--color-gold);
+                margin-bottom: 0.5rem;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+              "
+            >
+              04 Development
+            </div>
+            <h3
+              style="
+                font-size: 1.15rem;
+                margin-bottom: 1rem;
+                color: var(--color-white);
+              "
+            >
+              Coding & Pengujian
+            </h3>
+            <p style="font-size: 0.85rem">
+              Penulisan baris kode pemrograman clean code, optimasi performa
+              (Lighthouse 95+), dan debugging.
+            </p>
+          </div>
+
+          <!-- Step 5: Launch -->
+          <div class="process-step" style="width: 18%; position: relative">
+            <div
+              style="
+                font-size: 0.8rem;
+                font-weight: 700;
+                color: var(--color-gold);
+                margin-bottom: 0.5rem;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+              "
+            >
+              05 Launch
+            </div>
+            <h3
+              style="
+                font-size: 1.15rem;
+                margin-bottom: 1rem;
+                color: var(--color-white);
+              "
+            >
+              Peluncuran Sistem
+            </h3>
+            <p style="font-size: 0.85rem">
+              Penyebaran file sistem ke shared hosting premium (Hostinger),
+              monitoring kestabilan server, dan penyerahan aset.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. Behind the Scenes Workshop Gallery -->
+    <section id="gallery" class="section section-gallery" style="z-index: 2">
+      <div class="container">
+        <div
+          class="section-header flex"
+          style="
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 2rem;
+          "
+        >
+          <div>
+            <div class="section-tag">Galeri Kegiatan</div>
+            <h2 class="text-reveal">
+              Momen Di Balik Layar
+              <span class="text-gold font-serif-italic">ABYNS</span>
+            </h2>
+            <p class="section-desc">
+              Melihat aktivitas tim kami dalam mendiskusikan konsep visual dan
+              meretas baris kode.
+            </p>
+          </div>
+          <a href="gallery.html" class="btn btn-outline magnetic"
+            ><span class="magnetic-inner">Lihat Semua Foto</span></a
+          >
+        </div>
+
+        <!-- Pinterest-style Masonry Gallery Layout -->
+        <div
+          class="gallery-masonry stagger-container"
+          style="column-count: 3; column-gap: 2rem; margin-top: 4rem"
+        >
+          <div
+            class="glass-card stagger-item img-reveal-mask"
+            style="
+              padding: 0;
+              margin-bottom: 2rem;
+              break-inside: avoid;
+              border-radius: 20px;
+              overflow: hidden;
+              cursor: pointer;
+            "
+          >
+            <img
+              src="https://images.unsplash.com/photo-1531535934027-667f687cada1?q=80&w=600&auto=format&fit=crop"
+              alt="Tim ABYNS Studio melakukan meeting perumusan visual mockup"
+              style="
+                width: 100%;
+                display: block;
+                transition: transform 0.6s ease;
+              "
+              onmouseover="this.style.transform = 'scale(1.05)'"
+              onmouseout="this.style.transform = 'scale(1)'"
+            />
+          </div>
+
+          <div
+            class="glass-card stagger-item img-reveal-mask"
+            style="
+              padding: 0;
+              margin-bottom: 2rem;
+              break-inside: avoid;
+              border-radius: 20px;
+              overflow: hidden;
+              cursor: pointer;
+            "
+          >
+            <img
+              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600&auto=format&fit=crop"
+              alt="Front-end Engineer ABYNS Studio menulis baris clean code"
+              style="
+                width: 100%;
+                display: block;
+                transition: transform 0.6s ease;
+              "
+              onmouseover="this.style.transform = 'scale(1.05)'"
+              onmouseout="this.style.transform = 'scale(1)'"
+            />
+          </div>
+
+          <div
+            class="glass-card stagger-item img-reveal-mask"
+            style="
+              padding: 0;
+              margin-bottom: 2rem;
+              break-inside: avoid;
+              border-radius: 20px;
+              overflow: hidden;
+              cursor: pointer;
+            "
+          >
+            <img
+              src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=600&auto=format&fit=crop"
+              alt="Sesi pemotretan produk komersial fashion mewah"
+              style="
+                width: 100%;
+                display: block;
+                transition: transform 0.6s ease;
+              "
+              onmouseover="this.style.transform = 'scale(1.05)'"
+              onmouseout="this.style.transform = 'scale(1)'"
+            />
+          </div>
+
+          <div
+            class="glass-card stagger-item img-reveal-mask"
+            style="
+              padding: 0;
+              margin-bottom: 2rem;
+              break-inside: avoid;
+              border-radius: 20px;
+              overflow: hidden;
+              cursor: pointer;
+            "
+          >
+            <img
+              src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=600&auto=format&fit=crop"
+              alt="Sesi editing video dan color grading footage premium properti"
+              style="
+                width: 100%;
+                display: block;
+                transition: transform 0.6s ease;
+              "
+              onmouseover="this.style.transform = 'scale(1.05)'"
+              onmouseout="this.style.transform = 'scale(1)'"
+            />
+          </div>
+
+          <div
+            class="glass-card stagger-item img-reveal-mask"
+            style="
+              padding: 0;
+              margin-bottom: 2rem;
+              break-inside: avoid;
+              border-radius: 20px;
+              overflow: hidden;
+              cursor: pointer;
+            "
+          >
+            <img
+              src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=600&auto=format&fit=crop"
+              alt="Developer berdiskusi di workspace mewah berarsitektur minimalis"
+              style="
+                width: 100%;
+                display: block;
+                transition: transform 0.6s ease;
+              "
+              onmouseover="this.style.transform = 'scale(1.05)'"
+              onmouseout="this.style.transform = 'scale(1)'"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. Luxury Pricing Packages Matrix -->
+    <section
+      id="pricing"
+      class="section section-pricing"
+      style="z-index: 2; background: rgba(15, 6, 17, 0.5)"
+    >
+      <div class="container">
+        <div
+          class="section-header text-center"
+          style="margin-left: auto; margin-right: auto"
+        >
+          <div class="section-tag">Daftar Harga Paket</div>
+          <h2 class="text-reveal">
+            Investasi Terbaik Untuk
+            <span class="text-gold font-serif-italic">Bisnis</span> Anda
+          </h2>
+          <p
+            class="section-desc text-center"
+            style="margin-left: auto; margin-right: auto"
+          >
+            Pilih paket investasi digital yang paling sesuai untuk meningkatkan
+            skala branding brand Anda.
+          </p>
+        </div>
+
+        <!-- Pricing Grid -->
+        <div
+          class="grid pricing-grid stagger-container"
+          style="margin-top: 4rem"
+        >
+          <!-- Package 1: Starter -->
+          <div class="glass-card pricing-card stagger-item gold-glow-border">
+            <div class="pricing-header">
+              <span class="pricing-name">STARTER</span>
+              <div class="pricing-price">Rp 4 Juta<span> / proyek</span></div>
+              <p style="font-size: 0.85rem; margin-top: 0.5rem">
+                Sangat cocok untuk portofolio personal atau landing page
+                sederhana.
+              </p>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Maksimal 5 Halaman Utama</span>
+              </li>
+              <li class="pricing-feature">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Desain Layout Modern Responsif</span>
+              </li>
+              <li class="pricing-feature">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Integrasi Form Kontak</span>
+              </li>
+              <li class="pricing-feature" style="opacity: 0.4">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+                <span>Animasi GSAP Custom Premium</span>
+              </li>
+            </ul>
+            <a
+              href="contact.html?package=starter"
+              class="btn btn-outline magnetic"
+              style="width: 100%; text-align: center; justify-content: center"
+              ><span class="magnetic-inner">Pilih Paket</span></a
+            >
+          </div>
+
+          <!-- Package 2: Business (Featured) -->
+          <div
+            class="glass-card pricing-card popular stagger-item gold-glow-border"
+          >
+            <span class="pricing-badge">POPULER</span>
+            <div class="pricing-header">
+              <span class="pricing-name" style="color: var(--color-gold)"
+                >BUSINESS</span
+              >
+              <div class="pricing-price">Rp 8.5 Juta<span> / proyek</span></div>
+              <p style="font-size: 0.85rem; margin-top: 0.5rem">
+                Pilihan utama untuk profil korporat, UMKM naik kelas, dan
+                agensi.
+              </p>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Maksimal 15 Halaman Premium</span>
+              </li>
+              <li class="pricing-feature">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Animasi GSAP Smooth (60 FPS)</span>
+              </li>
+              <li class="pricing-feature">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>SEO Setup & Google Search Console</span>
+              </li>
+              <li class="pricing-feature">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Free Domain & Hosting 1 Tahun</span>
+              </li>
+            </ul>
+            <a
+              href="contact.html?package=business"
+              class="btn btn-primary magnetic"
+              style="width: 100%; text-align: center; justify-content: center"
+              ><span class="magnetic-inner">Pilih Paket</span></a
+            >
+          </div>
+
+          <!-- Package 3: Premium App -->
+          <div class="glass-card pricing-card stagger-item gold-glow-border">
+            <div class="pricing-header">
+              <span class="pricing-name">PREMIUM (App)</span>
+              <div class="pricing-price">Rp 15 Juta<span> / proyek</span></div>
+              <p style="font-size: 0.85rem; margin-top: 0.5rem">
+                Solusi sistem aplikasi multiplatform Android dan iOS.
+              </p>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>App Android / iOS Ready</span>
+              </li>
+              <li class="pricing-feature">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>UX Design Intuitif & Interaktif</span>
+              </li>
+              <li class="pricing-feature">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Free Upload ke Google Play & App Store</span>
+              </li>
+              <li class="pricing-feature">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Bantuan Teknis & Update 3 Bulan</span>
+              </li>
+            </ul>
+            <a
+              href="contact.html?package=premium"
+              class="btn btn-outline magnetic"
+              style="width: 100%; text-align: center; justify-content: center"
+              ><span class="magnetic-inner">Pilih Paket</span></a
+            >
+          </div>
+
+          <!-- Package 4: Enterprise Custom -->
+          <div class="glass-card pricing-card stagger-item gold-glow-border">
+            <div class="pricing-header">
+              <span class="pricing-name">ENTERPRISE</span>
+              <div class="pricing-price">Custom Price</div>
+              <p style="font-size: 0.85rem; margin-top: 0.5rem">
+                Sistem digital skala besar dengan arsitektur kompleks dan
+                kustomisasi total.
+              </p>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Fitur & Alur Sistem Kustom Total</span>
+              </li>
+              <li class="pricing-feature">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Dukungan Database Skala Besar</span>
+              </li>
+              <li class="pricing-feature">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Integrasi Sistem Eksternal (API)</span>
+              </li>
+              <li class="pricing-feature">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Dedicated Developer & Maintenance</span>
+              </li>
+            </ul>
+            <a
+              href="contact.html?package=enterprise"
+              class="btn btn-outline magnetic"
+              style="width: 100%; text-align: center; justify-content: center"
+              ><span class="magnetic-inner">Konsultasi</span></a
+            >
+          </div>
+        </div>
+
+        <p
+          class="text-center"
+          style="
+            font-size: 0.85rem;
+            margin-top: 2rem;
+            color: var(--color-text-secondary);
+          "
+        >
+          *Harga investasi dapat disesuaikan kembali tergantung tingkat
+          kompleksitas fungsionalitas sistem digital yang diinginkan.
+        </p>
+      </div>
+    </section>
+
+    <!-- 15. Founder Highlight Section -->
+    <section class="section section-founder" style="z-index: 2">
+      <div
+        class="container flex"
+        style="
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 4rem;
+        "
+      >
+        <!-- Founder Editorial Portrait (Left) -->
+        <div
+          class="founder-img-box"
+          style="flex: 1; max-width: 450px; position: relative"
+        >
+          <div
+            style="
+              border-radius: 50%;
+              overflow: hidden;
+              aspect-ratio: 1/1;
+              border: 4px solid var(--color-gold);
+              box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            "
+          >
+            <img
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"
+              alt="Annisa Hanif, Founder & Creative Director ABYNS Studio"
+              style="width: 100%; height: 100%; object-fit: cover"
+            />
+          </div>
+          <!-- Glowing Orb Backdrop -->
+          <div
+            class="animate-glow"
+            style="
+              position: absolute;
+              top: -10%;
+              left: -10%;
+              width: 120%;
+              height: 120%;
+              border-radius: 50%;
+              background: radial-gradient(
+                circle,
+                rgba(214, 183, 122, 0.15) 0%,
+                rgba(20, 9, 23, 0) 70%
+              );
+              filter: blur(40px);
+              z-index: -1;
+            "
+          ></div>
+        </div>
+
+        <!-- Founder Story Details (Right) -->
+        <div
+          class="glass-card founder-story-card"
+          style="flex: 1.2; max-width: 650px"
+        >
+          <div class="section-tag" style="margin-bottom: 0.5rem">
+            Mengenal Lebih Dekat
+          </div>
+          <h3
+            style="
+              font-size: 2.25rem;
+              margin-bottom: 0.25rem;
+              color: var(--color-white);
+            "
+          >
+            Annisa Hanif
+          </h3>
+          <span
+            style="
+              font-size: 0.85rem;
+              color: var(--color-gold);
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.2em;
+              display: block;
+              margin-bottom: 2rem;
+            "
+            >Founder & Creative Director</span
+          >
+
+          <p
+            style="
+              font-size: 1.05rem;
+              line-height: 1.8;
+              font-style: italic;
+              margin-bottom: 1.5rem;
+            "
+          >
+            "Kami percaya, setiap brand premium memiliki cerita unik dan
+            eksklusif yang patut diceritakan. Tugas ABYNS Studio adalah merajut
+            cerita berkelas tersebut menjadi maha karya digital yang intuitif,
+            fungsional, memukau, dan berdampak bagi skala bisnis Anda."
+          </p>
+          <p>
+            Annisa Hanif memiliki rekam jejak lebih dari 4 tahun memimpin
+            pengembangan proyek digital untuk hotel bintang lima, perumahan
+            elit, dan brand butik mode. Fokus beliau adalah memastikan kualitas
+            visual dan performa pemrograman berada di standar tertinggi.
+          </p>
+
+          <div
+            class="flex"
+            style="gap: 1.5rem; margin-top: 2.5rem; align-items: center"
+          >
+            <a
+              href="https://linkedin.com"
+              class="footer-social-link magnetic"
+              target="_blank"
+              rel="noopener"
+              ><span class="magnetic-inner">in</span></a
+            >
+            <a
+              href="https://instagram.com"
+              class="footer-social-link magnetic"
+              target="_blank"
+              rel="noopener"
+              ><span class="magnetic-inner">ig</span></a
+            >
+            <a
+              href="https://youtube.com"
+              class="footer-social-link magnetic"
+              target="_blank"
+              rel="noopener"
+              ><span class="magnetic-inner">yt</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 16. Luxury Testimonials Slider -->
+    <section
+      id="testimonials"
+      class="section section-testimonials"
+      style="z-index: 2; background: rgba(15, 6, 17, 0.5)"
+    >
+      <div class="container">
+        <div
+          class="section-header flex"
+          style="
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 2rem;
+          "
+        >
+          <div>
+            <div class="section-tag">Ulasan Klien Kami</div>
+            <h2 class="text-reveal">
+              Apa Kata <span class="text-gold font-serif-italic">Mereka</span>?
+            </h2>
+            <p class="section-desc">
+              Testimoni nyata dari para pimpinan bisnis dan brand yang
+              mempercayakan platform digitalnya kepada kami.
+            </p>
+          </div>
+          <a href="testimonials.html" class="btn btn-outline magnetic"
+            ><span class="magnetic-inner">Lihat Semua Ulasan</span></a
+          >
+        </div>
+
+        <!-- Swiper Container -->
+        <div class="swiper testimonials-swiper" style="padding: 3rem 0 4rem">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div
+              class="swiper-slide glass-card"
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: auto;
+              "
+            >
+              <div>
+                <div
+                  class="flex"
+                  style="
+                    color: var(--color-gold);
+                    gap: 0.25rem;
+                    margin-bottom: 1.5rem;
+                  "
+                >
+                  <span>★</span><span>★</span><span>★</span><span>★</span
+                  ><span>★</span>
+                </div>
+                <p
+                  style="font-size: 1rem; line-height: 1.8; font-style: italic"
+                >
+                  "ABYNS Studio menghadirkan tingkat keprofesionalan dan
+                  ketelitian desain yang sangat luar biasa. Website resort kami
+                  terlihat mewah, modern, dan sangat responsif di semua
+                  perangkat."
+                </p>
+              </div>
+              <div
+                class="flex"
+                style="
+                  margin-top: 2rem;
+                  align-items: center;
+                  gap: 1rem;
+                  border-top: 1px solid var(--color-border-glass);
+                  padding-top: 1.5rem;
+                "
+              >
+                <div
+                  style="
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    border: 1px solid var(--color-gold);
+                  "
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop"
+                    alt="Diana Pratiwi CEO Luxury Store"
+                    style="width: 100%; height: 100%; object-fit: cover"
+                  />
+                </div>
+                <div>
+                  <h4 style="font-size: 0.95rem; color: var(--color-white)">
+                    Diana Pratiwi
+                  </h4>
+                  <span
+                    style="
+                      font-size: 0.75rem;
+                      color: var(--color-gold);
+                      font-weight: 500;
+                    "
+                    >CEO, Luxury Store</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div
+              class="swiper-slide glass-card"
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: auto;
+              "
+            >
+              <div>
+                <div
+                  class="flex"
+                  style="
+                    color: var(--color-gold);
+                    gap: 0.25rem;
+                    margin-bottom: 1.5rem;
+                  "
+                >
+                  <span>★</span><span>★</span><span>★</span><span>★</span
+                  ><span>★</span>
+                </div>
+                <p
+                  style="font-size: 1rem; line-height: 1.8; font-style: italic"
+                >
+                  "Pengerjaan sistem POS kasir butik kami diselesaikan tepat
+                  waktu dengan performa coding yang sangat cepat dan teruji.
+                  WhatsApp notifikasi berjalan otomatis dengan mulus."
+                </p>
+              </div>
+              <div
+                class="flex"
+                style="
+                  margin-top: 2rem;
+                  align-items: center;
+                  gap: 1rem;
+                  border-top: 1px solid var(--color-border-glass);
+                  padding-top: 1.5rem;
+                "
+              >
+                <div
+                  style="
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    border: 1px solid var(--color-gold);
+                  "
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"
+                    alt="Rizky Maulana Owner RM Cafe"
+                    style="width: 100%; height: 100%; object-fit: cover"
+                  />
+                </div>
+                <div>
+                  <h4 style="font-size: 0.95rem; color: var(--color-white)">
+                    Rizky Maulana
+                  </h4>
+                  <span
+                    style="
+                      font-size: 0.75rem;
+                      color: var(--color-gold);
+                      font-weight: 500;
+                    "
+                    >Owner, RM Cafe</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div
+              class="swiper-slide glass-card"
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: auto;
+              "
+            >
+              <div>
+                <div
+                  class="flex"
+                  style="
+                    color: var(--color-gold);
+                    gap: 0.25rem;
+                    margin-bottom: 1.5rem;
+                  "
+                >
+                  <span>★</span><span>★</span><span>★</span><span>★</span
+                  ><span>★</span>
+                </div>
+                <p
+                  style="font-size: 1rem; line-height: 1.8; font-style: italic"
+                >
+                  "Tim kreatif ABYNS sangat kooperatif, tanggap, dan
+                  berorientasi hasil yang presisi. Sesi pemotretan foto dan
+                  videografi udara resort dikerjakan dengan sangat mengagumkan."
+                </p>
+              </div>
+              <div
+                class="flex"
+                style="
+                  margin-top: 2rem;
+                  align-items: center;
+                  gap: 1rem;
+                  border-top: 1px solid var(--color-border-glass);
+                  padding-top: 1.5rem;
+                "
+              >
+                <div
+                  style="
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    border: 1px solid var(--color-gold);
+                  "
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop"
+                    alt="Salsa Amanda Marketing Manager Villa"
+                    style="width: 100%; height: 100%; object-fit: cover"
+                  />
+                </div>
+                <div>
+                  <h4 style="font-size: 0.95rem; color: var(--color-white)">
+                    Salsa Amanda
+                  </h4>
+                  <span
+                    style="
+                      font-size: 0.75rem;
+                      color: var(--color-gold);
+                      font-weight: 500;
+                    "
+                    >Marketing Manager</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Controls and Paginations -->
+          <div class="swiper-pagination" style="bottom: 0"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 17. Accordion FAQs Section -->
+    <section class="section section-faq" style="z-index: 2">
+      <div class="container">
+        <div
+          class="section-header text-center"
+          style="margin-left: auto; margin-right: auto"
+        >
+          <div class="section-tag">Tanya Jawab</div>
+          <h2 class="text-reveal">
+            Pertanyaan Yang Sering
+            <span class="text-gold font-serif-italic">Diajukan</span>
+          </h2>
+          <p
+            class="section-desc text-center"
+            style="margin-left: auto; margin-right: auto"
+          >
+            Berikut beberapa informasi mendasar mengenai mekanisme kolaborasi
+            dan pengembangan sistem di studio kami.
+          </p>
+        </div>
+
+        <div class="faq-list" style="margin-top: 4rem">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Berapa lama proses pembuatan website profil perusahaan?</h4>
+              <div class="faq-icon-toggle"></div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Pembuatan website profil perusahaan premium standar berkisar
+                antara 2 hingga 4 minggu. Waktu pengerjaan mencakup tahapan
+                riset kompetitor, perancangan layout kustom Figma, pengembangan
+                kode pemrograman, hingga proses optimasi loading (Lighthouse
+                95+).
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>
+                Apakah website buatan ABYNS Studio mudah dikelola sendiri?
+              </h4>
+              <div class="faq-icon-toggle"></div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Ya. Seluruh website kami dirancang menggunakan struktur kode
+                yang modular, bersih, dan berorientasi pengguna. Kami juga
+                menyediakan panduan dokumentasi panduan admin (PDF/Video) untuk
+                mempermudah Anda melakukan modifikasi teks, logo, maupun konten
+                visual secara mandiri.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Bagaimana cara mengupload file website ke Hostinger?</h4>
+              <div class="faq-icon-toggle"></div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Karena kami membangun website tanpa build terminal (menggunakan
+                HTML, CSS, Vanilla JS), file proyek website Anda dapat langsung
+                diupload dengan mudah ke direktori public_html Hostinger melalui
+                panel File Manager Hostinger atau menggunakan aplikasi FTP
+                Client seperti FileZilla.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Apakah ABYNS Studio melayani pengerjaan luar kota/pulau?</h4>
+              <div class="faq-icon-toggle"></div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Ya. Kami melayani klien dari seluruh wilayah Indonesia maupun
+                mancanegara. Sesi diskusi, rapat kerja, dan penyerahan
+                perkembangan progres proyek dapat dilaksanakan secara daring
+                menggunakan platform Google Meet, Zoom, dan email secara
+                intensif dan profesional.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 18. Luxury Interactive Contact Form -->
+    <section
+      id="contact"
+      class="section section-contact"
+      style="z-index: 2; background: rgba(15, 6, 17, 0.5)"
+    >
+      <div
+        class="container grid"
+        style="
+          grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+          gap: 5rem;
+          align-items: start;
+        "
+      >
+        <!-- Left Info Panel -->
+        <div>
+          <div class="section-tag">Mulai Diskusi</div>
+          <h2 class="text-reveal">
+            Hubungi <span class="text-gold font-serif-italic">Studio</span> Kami
+          </h2>
+          <p style="margin-top: 2rem; font-size: 1.15rem; line-height: 1.8">
+            Ingin menghadirkan kehadiran digital premium bagi brand Anda? Kirim
+            pesan singkat atau hubungi kontak representatif kami di bawah ini.
+            Kami selalu siap melayani konsultasi ide besar Anda.
+          </p>
+
+          <div
+            style="
+              margin-top: 3.5rem;
+              display: flex;
+              flex-direction: column;
+              gap: 2rem;
+            "
+          >
+            <div class="flex" style="align-items: center; gap: 1.5rem">
+              <div
+                style="
+                  width: 48px;
+                  height: 48px;
+                  border-radius: 50%;
+                  border: 1px solid var(--color-border-glass);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: var(--color-gold);
+                "
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <span
+                  style="
+                    font-size: 0.75rem;
+                    color: var(--color-text-secondary);
+                    text-transform: uppercase;
+                    letter-spacing: 0.1em;
+                    display: block;
+                  "
+                  >Telepon / WhatsApp</span
+                >
+                <a
+                  href="https://wa.me/6281234567890"
+                  target="_blank"
+                  rel="noopener"
+                  style="
+                    font-size: 1.1rem;
+                    color: var(--color-white);
+                    text-decoration: none;
+                    font-weight: 600;
+                  "
+                  >+62 812-3456-7890</a
+                >
+              </div>
+            </div>
+
+            <div class="flex" style="align-items: center; gap: 1.5rem">
+              <div
+                style="
+                  width: 48px;
+                  height: 48px;
+                  border-radius: 50%;
+                  border: 1px solid var(--color-border-glass);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: var(--color-gold);
+                "
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <div>
+                <span
+                  style="
+                    font-size: 0.75rem;
+                    color: var(--color-text-secondary);
+                    text-transform: uppercase;
+                    letter-spacing: 0.1em;
+                    display: block;
+                  "
+                  >Kirim Email</span
+                >
+                <a
+                  href="mailto:hello@abynsstudio.com"
+                  style="
+                    font-size: 1.1rem;
+                    color: var(--color-white);
+                    text-decoration: none;
+                    font-weight: 600;
+                  "
+                  >hello@abynsstudio.com</a
+                >
+              </div>
+            </div>
+
+            <div class="flex" style="align-items: center; gap: 1.5rem">
+              <div
+                style="
+                  width: 48px;
+                  height: 48px;
+                  border-radius: 50%;
+                  border: 1px solid var(--color-border-glass);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: var(--color-gold);
+                "
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div>
+                <span
+                  style="
+                    font-size: 0.75rem;
+                    color: var(--color-text-secondary);
+                    text-transform: uppercase;
+                    letter-spacing: 0.1em;
+                    display: block;
+                  "
+                  >Alamat Studio</span
+                >
+                <span
+                  style="
+                    font-size: 1.1rem;
+                    color: var(--color-white);
+                    font-weight: 600;
+                  "
+                  >Bandung, Jawa Barat, Indonesia</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Interactive Form -->
+        <div class="glass-card">
+          <form
+            class="contact-form"
+            action="#"
+            method="POST"
+            onsubmit="
+              event.preventDefault();
+              alert(
+                'Terima kasih atas pesan Anda. Kami akan segera menghubungi Anda dalam waktu 24 jam.',
+              );
+              this.reset();
+            "
+          >
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-input"
+                placeholder=" "
+                required
+              />
+              <label for="name" class="form-label">Nama Lengkap</label>
+              <div class="form-border-focus"></div>
+            </div>
+
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input"
+                placeholder=" "
+                required
+              />
+              <label for="email" class="form-label">Alamat Email</label>
+              <div class="form-border-focus"></div>
+            </div>
+
+            <div class="form-group">
+              <input
+                type="text"
+                id="brand"
+                name="brand"
+                class="form-input"
+                placeholder=" "
+              />
+              <label for="brand" class="form-label"
+                >Nama Brand / Perusahaan</label
+              >
+              <div class="form-border-focus"></div>
+            </div>
+
+            <div class="form-group">
+              <textarea
+                id="message"
+                name="message"
+                class="form-input"
+                rows="4"
+                placeholder=" "
+                required
+                style="resize: none"
+              ></textarea>
+              <label for="message" class="form-label"
+                >Ceritakan Singkat Rencana Anda</label
+              >
+              <div class="form-border-focus"></div>
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-primary magnetic"
+              style="margin-top: 1rem; width: 100%; justify-content: center"
+            >
+              <span class="magnetic-inner">Kirim Pesan</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 19. Big Luxury Footer -->
+    <footer class="footer-main">
+      <div class="footer-grid">
+        <div class="footer-logo-col">
+          <a href="index.html" class="logo-container">
+            <svg
+              class="logo-icon-svg"
+              viewBox="0 0 40 40"
+              width="36"
+              height="36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 2L38 34H2L20 2Z"
+                stroke="#d6b77a"
+                stroke-width="2.5"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M20 12L31 31H9L20 12Z"
+                fill="#d6b77a"
+                fill-opacity="0.3"
+                stroke="#d6b77a"
+                stroke-width="1.5"
+              />
+              <circle cx="20" cy="24" r="3" fill="#f6f1eb" />
+            </svg>
+            <div>
+              <span class="logo-text">ABYNS</span>
+              <span class="logo-sub">STUDIO</span>
+            </div>
+          </a>
+          <p>
+            Membantu brand mewah, korporasi, dan startup menghadirkan karya
+            digital premium yang memukau dan berdampak.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="services.html">Layanan</a></li>
+            <li><a href="portfolio.html">Portofolio</a></li>
+            <li><a href="products.html">Produk</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Lainnya</h4>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Behind The Scene</a></li>
+            <li><a href="pricing.html">Daftar Harga</a></li>
+            <li><a href="testimonials.html">Ulasan Klien</a></li>
+            <li><a href="contact.html">Hubungi Kami</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4 class="footer-title">Dapatkan Update</h4>
+          <p>
+            Berlangganan buletin untuk informasi tren digital premium, wawasan
+            desain, dan rilis produk siap pakai kami.
+          </p>
+
+          <form
+            class="newsletter-form"
+            onsubmit="
+              event.preventDefault();
+              alert('Terima kasih telah berlangganan buletin kami.');
+              this.reset();
+            "
+          >
+            <input
+              type="email"
+              placeholder="Alamat email Anda"
+              class="newsletter-input"
+              required
+              aria-label="Alamat email buletin"
+            />
+            <button
+              type="submit"
+              class="newsletter-submit magnetic"
+              aria-label="Langganan"
+            >
+              <svg
+                class="magnetic-inner"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.33334 8H12.6667"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M8 3.33331L12.6667 7.99998L8 12.6666"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; 2026 ABYNS STUDIO. Hak Cipta Dilindungi Undang-Undang.
+        </div>
+
+        <div class="footer-socials">
+          <a
+            href="https://instagram.com"
+            class="footer-social-link magnetic"
+            target="_blank"
+            rel="noopener"
+            ><span class="magnetic-inner">ig</span></a
+          >
+          <a
+            href="https://linkedin.com"
+            class="footer-social-link magnetic"
+            target="_blank"
+            rel="noopener"
+            ><span class="magnetic-inner">in</span></a
+          >
+          <a
+            href="https://youtube.com"
+            class="footer-social-link magnetic"
+            target="_blank"
+            rel="noopener"
+            ><span class="magnetic-inner">yt</span></a
+          >
+          <a
+            href="https://facebook.com"
+            class="footer-social-link magnetic"
+            target="_blank"
+            rel="noopener"
+            ><span class="magnetic-inner">fb</span></a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Core Libraries (CDN URLs) -->
+    <!-- 1. Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+
+    <!-- 2. GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- 3. Swiper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- 4. Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Project Logic Scripts -->
+    <script src="js/cursor.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/gsap.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/portfolio.js"></script>
+  </body>
+</html>
