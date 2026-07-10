@@ -1360,3 +1360,35 @@
   color: var(--color-gold) !important;
   font-weight: 800 !important;
 }
+
+/* 13. Metallic Button Styling */
+.btn-metallic {
+  padding: 0.65rem 1.5rem !important;
+  border-radius: 5px !important;
+  background: linear-gradient(180deg, #ebd19e 0%, #cfae70 40%, #a68446 70%, #ebd19e 100%) !important;
+  color: #140917 !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.5), 
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 0 10px rgba(214, 183, 122, 0.1) !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-metallic:hover {
+  background: linear-gradient(180deg, #f5e2ba 0%, #dfbf82 40%, #bd9959 70%, #f5e2ba 100%) !important;
+  border-color: rgba(255, 255, 255, 0.45) !important;
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.6), 
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 0 15px rgba(214, 183, 122, 0.25) !important;
+  transform: translateY(-2px) !important;
+}
+
+.btn-metallic:active {
+  transform: translateY(0) !important;
+  box-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.5), 
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
