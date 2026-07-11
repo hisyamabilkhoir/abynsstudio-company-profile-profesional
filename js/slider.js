@@ -82,12 +82,43 @@ document.addEventListener('DOMContentLoaded', () => {
     const annisaTexts = document.querySelectorAll('.annisa-text');
     
     if (sliderInput && annisaAvatar && sliderHandle) {
+        const ring1 = document.querySelector('.founder-ring.ring-1');
+        const ring2 = document.querySelector('.founder-ring.ring-2');
+        const sliderButton = sliderHandle.querySelector('.founder-slider-button');
+        
+        const clipRect = document.getElementById('clip-rect');
+        
         function updateSlider() {
             const val = sliderInput.value;
-            // Update clip path of overlay (Annisa)
-            annisaAvatar.style.clipPath = `polygon(0 0, ${val}% 0, ${val}% 100%, 0 100%)`;
-            // Move slider handle line
+            
+            // 360 degree angle mapping (0 to 360 degrees)
+            const angle = val * 3.6;
+            
+            // Translate the split line horizontally (avatar width is 170px)
+            const translateX = (val / 100) * 170;
+            
+            // Update SVG clipPath rect transform
+            if (clipRect) {
+                clipRect.setAttribute('transform', `translate(${translateX}, 0) rotate(${angle}, 0, 85)`);
+            }
+            
+            // Move slider handle line horizontally and rotate it 360 degrees
             sliderHandle.style.left = `${val}%`;
+            sliderHandle.style.transform = `translateX(-50%) rotate(${angle}deg)`;
+            
+            // Spin the center button (dot) on its own axis as it slides
+            if (sliderButton) {
+                const rotationAngle = (val - 50) * 7.2; // full 720 deg rotation
+                sliderButton.style.transform = `translate(-50%, -50%) rotate(${rotationAngle}deg)`;
+            }
+            
+            // Spin the decorative outer rings like mechanical dials
+            if (ring1) {
+                ring1.style.transform = `rotate(${val * 3.6}deg)`;
+            }
+            if (ring2) {
+                ring2.style.transform = `rotate(${-val * 3.6}deg)`;
+            }
             
             // Toggle active texts based on slider position (threshold 50%)
             if (val > 50) {

@@ -1125,6 +1125,14 @@
           <div class="founder-profile-col">
             <!-- Avatar Comparison Slider -->
             <div class="founder-avatar-wrapper" id="founderAvatarSlider">
+              <!-- SVG ClipPath for 360 degree translating & rotating division -->
+              <svg width="0" height="0" style="position: absolute;">
+                <defs>
+                  <clipPath id="avatar-clip-path" clipPathUnits="userSpaceOnUse">
+                    <rect id="clip-rect" x="-500" y="-500" width="500" height="1170" transform="translate(85, 0) rotate(0, 0, 85)" />
+                  </clipPath>
+                </defs>
+              </svg>
               <div class="founder-ring ring-1"></div>
               <div class="founder-ring ring-2"></div>
               
@@ -2292,6 +2300,8 @@
       </div>
     </section>
 
+     <div class="gold-divider-ring"></div>
+
     <!-- 13. Pricing Section (Paket Harga) -->
     <section
       id="pricing"
@@ -2493,6 +2503,8 @@
       </div>
     </section>
 
+    <div class="gold-divider-ring"></div>
+
     <!-- 17. Accordion FAQs Section -->
     <section class="section section-faq" style="z-index: 2">
       <div class="container">
@@ -2501,10 +2513,11 @@
           style="margin-left: auto; margin-right: auto"
         >
           <div class="section-tag">Tanya Jawab</div>
-          <h2 class="text-reveal">
-            Pertanyaan Yang Sering
-            <span class="text-gold font-serif-italic">Diajukan</span>
+          <h2 class="faq-title text-reveal">
+            Pertanyaan Yang <br>
+            Sering <span class="font-serif-italic text-gold">Diajukan</span>
           </h2>
+          <div class="faq-divider"></div>
           <p
             class="section-desc text-center"
             style="margin-left: auto; margin-right: auto"
@@ -2517,78 +2530,97 @@
         <div class="faq-list" style="margin-top: 4rem">
           <div class="faq-item">
             <div class="faq-question">
-              <h4>Berapa lama proses pembuatan website profil perusahaan?</h4>
+              <div class="faq-question-content">
+                <div class="faq-number-sphere">01</div>
+                <h4>Berapa lama proses pembuatan website profil perusahaan?</h4>
+              </div>
               <div class="faq-icon-toggle"></div>
             </div>
             <div class="faq-answer">
-              <p>
-                Pembuatan website profil perusahaan premium standar berkisar
-                antara 2 hingga 4 minggu. Waktu pengerjaan mencakup tahapan
-                riset kompetitor, perancangan layout kustom Figma, pengembangan
-                kode pemrograman, hingga proses optimasi loading (Lighthouse
-                95+).
-              </p>
+              <div class="faq-answer-content">
+                <p>
+                  Pembuatan website profil perusahaan premium standar berkisar
+                  antara 2 hingga 4 minggu. Waktu pengerjaan mencakup tahapan
+                  riset kompetitor, perancangan layout kustom Figma, pengembangan
+                  kode pemrograman, hingga proses optimasi loading (Lighthouse
+                  95+).
+                </p>
+              </div>
             </div>
           </div>
 
           <div class="faq-item">
             <div class="faq-question">
-              <h4>
-                Apakah website buatan ABYNS Studio mudah dikelola sendiri?
-              </h4>
+              <div class="faq-question-content">
+                <div class="faq-number-sphere">02</div>
+                <h4>Apakah website buatan ABYNS Studio mudah dikelola sendiri?</h4>
+              </div>
               <div class="faq-icon-toggle"></div>
             </div>
             <div class="faq-answer">
-              <p>
-                Ya. Seluruh website kami dirancang menggunakan struktur kode
-                yang modular, bersih, dan berorientasi pengguna. Kami juga
-                menyediakan panduan dokumentasi panduan admin (PDF/Video) untuk
-                mempermudah Anda melakukan modifikasi teks, logo, maupun konten
-                visual secara mandiri.
-              </p>
+              <div class="faq-answer-content">
+                <p>
+                  Ya. Seluruh website kami dirancang menggunakan struktur kode
+                  yang modular, bersih, dan berorientasi pengguna. Kami juga
+                  menyediakan panduan dokumentasi panduan admin (PDF/Video) untuk
+                  mempermudah Anda melakukan modifikasi teks, logo, maupun konten
+                  visual secara mandiri.
+                </p>
+              </div>
             </div>
           </div>
 
           <div class="faq-item">
             <div class="faq-question">
-              <h4>Bagaimana cara mengupload file website ke Hostinger?</h4>
+              <div class="faq-question-content">
+                <div class="faq-number-sphere">03</div>
+                <h4>Bagaimana cara mengupload file website ke Hostinger?</h4>
+              </div>
               <div class="faq-icon-toggle"></div>
             </div>
             <div class="faq-answer">
-              <p>
-                Karena kami membangun website tanpa build terminal (menggunakan
-                HTML, CSS, Vanilla JS), file proyek website Anda dapat langsung
-                diupload dengan mudah ke direktori public_html Hostinger melalui
-                panel File Manager Hostinger atau menggunakan aplikasi FTP
-                Client seperti FileZilla.
-              </p>
+              <div class="faq-answer-content">
+                <p>
+                  Karena kami membangun website tanpa build terminal (menggunakan
+                  HTML, CSS, Vanilla JS), file proyek website Anda dapat langsung
+                  diupload dengan mudah ke direktori public_html Hostinger melalui
+                  panel File Manager Hostinger atau menggunakan aplikasi FTP
+                  Client seperti FileZilla.
+                </p>
+              </div>
             </div>
           </div>
 
           <div class="faq-item">
             <div class="faq-question">
-              <h4>Apakah ABYNS Studio melayani pengerjaan luar kota/pulau?</h4>
+              <div class="faq-question-content">
+                <div class="faq-number-sphere">04</div>
+                <h4>Apakah ABYNS Studio melayani pengerjaan luar kota/pulau?</h4>
+              </div>
               <div class="faq-icon-toggle"></div>
             </div>
             <div class="faq-answer">
-              <p>
-                Ya. Kami melayani klien dari seluruh wilayah Indonesia maupun
-                mancanegara. Sesi diskusi, rapat kerja, dan penyerahan
-                perkembangan progres proyek dapat dilaksanakan secara daring
-                menggunakan platform Google Meet, Zoom, dan email secara
-                intensif dan profesional.
-              </p>
+              <div class="faq-answer-content">
+                <p>
+                  Ya. Kami melayani klien dari seluruh wilayah Indonesia maupun
+                  mancanegara. Sesi diskusi, rapat kerja, dan penyerahan
+                  perkembangan progres proyek dapat dilaksanakan secara daring
+                  menggunakan platform Google Meet, Zoom, dan email secara
+                  intensif dan profesional.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+     <div class="gold-divider-ring"></div>
+
     <!-- 18. Luxury Interactive Contact Form -->
     <section
       id="contact"
       class="section section-contact"
-      style="z-index: 2; background: rgba(15, 6, 17, 0.5)"
     >
       <div
         class="container grid"
@@ -2601,36 +2633,20 @@
         <!-- Left Info Panel -->
         <div>
           <div class="section-tag">Mulai Diskusi</div>
-          <h2 class="text-reveal">
-            Hubungi <span class="text-gold font-serif-italic">Studio</span> Kami
+          <h2 class="contact-title text-reveal">
+            Hubungi <br>
+            <span class="font-serif-italic text-gold">Studio</span> Kami
           </h2>
+          <div class="contact-divider"></div>
           <p style="margin-top: 2rem; font-size: 1.15rem; line-height: 1.8">
             Ingin menghadirkan kehadiran digital premium bagi brand Anda? Kirim
             pesan singkat atau hubungi kontak representatif kami di bawah ini.
-            Kami selalu siap melayani konsultasi ide besar Anda.
+            Kami selalu siap melayani konsultasi terbaik untuk kebutuhan Anda.
           </p>
 
-          <div
-            style="
-              margin-top: 3.5rem;
-              display: flex;
-              flex-direction: column;
-              gap: 2rem;
-            "
-          >
-            <div class="flex" style="align-items: center; gap: 1.5rem">
-              <div
-                style="
-                  width: 48px;
-                  height: 48px;
-                  border-radius: 50%;
-                  border: 1px solid var(--color-border-glass);
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  color: var(--color-gold);
-                "
-              >
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="contact-info-orb">
                 <svg
                   width="20"
                   height="20"
@@ -2644,45 +2660,20 @@
                   />
                 </svg>
               </div>
-              <div>
-                <span
-                  style="
-                    font-size: 0.75rem;
-                    color: var(--color-text-secondary);
-                    text-transform: uppercase;
-                    letter-spacing: 0.1em;
-                    display: block;
-                  "
-                  >Telepon / WhatsApp</span
-                >
+              <div class="contact-info-text">
+                <span class="contact-info-label">Telepon / WhatsApp</span>
                 <a
                   href="https://wa.me/6281234567890"
                   target="_blank"
                   rel="noopener"
-                  style="
-                    font-size: 1.1rem;
-                    color: var(--color-white);
-                    text-decoration: none;
-                    font-weight: 600;
-                  "
+                  class="contact-info-value"
                   >+62 812-3456-7890</a
                 >
               </div>
             </div>
 
-            <div class="flex" style="align-items: center; gap: 1.5rem">
-              <div
-                style="
-                  width: 48px;
-                  height: 48px;
-                  border-radius: 50%;
-                  border: 1px solid var(--color-border-glass);
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  color: var(--color-gold);
-                "
-              >
+            <div class="contact-info-item">
+              <div class="contact-info-orb">
                 <svg
                   width="20"
                   height="20"
@@ -2697,43 +2688,18 @@
                   <polyline points="22,6 12,13 2,6" />
                 </svg>
               </div>
-              <div>
-                <span
-                  style="
-                    font-size: 0.75rem;
-                    color: var(--color-text-secondary);
-                    text-transform: uppercase;
-                    letter-spacing: 0.1em;
-                    display: block;
-                  "
-                  >Kirim Email</span
-                >
+              <div class="contact-info-text">
+                <span class="contact-info-label">Kirim Email</span>
                 <a
                   href="mailto:hello@abynsstudio.com"
-                  style="
-                    font-size: 1.1rem;
-                    color: var(--color-white);
-                    text-decoration: none;
-                    font-weight: 600;
-                  "
+                  class="contact-info-value"
                   >hello@abynsstudio.com</a
                 >
               </div>
             </div>
 
-            <div class="flex" style="align-items: center; gap: 1.5rem">
-              <div
-                style="
-                  width: 48px;
-                  height: 48px;
-                  border-radius: 50%;
-                  border: 1px solid var(--color-border-glass);
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  color: var(--color-gold);
-                "
-              >
+            <div class="contact-info-item">
+              <div class="contact-info-orb">
                 <svg
                   width="20"
                   height="20"
@@ -2746,23 +2712,9 @@
                   <circle cx="12" cy="10" r="3" />
                 </svg>
               </div>
-              <div>
-                <span
-                  style="
-                    font-size: 0.75rem;
-                    color: var(--color-text-secondary);
-                    text-transform: uppercase;
-                    letter-spacing: 0.1em;
-                    display: block;
-                  "
-                  >Alamat Studio</span
-                >
-                <span
-                  style="
-                    font-size: 1.1rem;
-                    color: var(--color-white);
-                    font-weight: 600;
-                  "
+              <div class="contact-info-text">
+                <span class="contact-info-label">Alamat Studio</span>
+                <span class="contact-info-value"
                   >Bandung, Jawa Barat, Indonesia</span
                 >
               </div>
@@ -2771,7 +2723,7 @@
         </div>
 
         <!-- Right Interactive Form -->
-        <div class="glass-card">
+        <div class="contact-card">
           <form
             class="contact-form"
             action="#"
@@ -2785,67 +2737,59 @@
             "
           >
             <div class="form-group">
+              <label for="name" class="form-label">Nama Lengkap</label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 class="form-input"
-                placeholder=" "
+                placeholder="Masukkan nama lengkap Anda"
                 required
               />
-              <label for="name" class="form-label">Nama Lengkap</label>
-              <div class="form-border-focus"></div>
             </div>
 
             <div class="form-group">
+              <label for="email" class="form-label">Alamat Email</label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 class="form-input"
-                placeholder=" "
+                placeholder="Masukkan alamat email Anda"
                 required
               />
-              <label for="email" class="form-label">Alamat Email</label>
-              <div class="form-border-focus"></div>
             </div>
 
             <div class="form-group">
+              <label for="brand" class="form-label">Nama Brand / Perusahaan</label>
               <input
                 type="text"
                 id="brand"
                 name="brand"
                 class="form-input"
-                placeholder=" "
+                placeholder="Masukkan nama brand atau perusahaan"
               />
-              <label for="brand" class="form-label"
-                >Nama Brand / Perusahaan</label
-              >
-              <div class="form-border-focus"></div>
             </div>
 
             <div class="form-group">
+              <label for="message" class="form-label">Ceritakan Singkat Rencana Anda</label>
               <textarea
                 id="message"
                 name="message"
                 class="form-input"
                 rows="4"
-                placeholder=" "
+                placeholder="Ceritakan rencana, kebutuhan, atau ide proyek Anda..."
                 required
                 style="resize: none"
               ></textarea>
-              <label for="message" class="form-label"
-                >Ceritakan Singkat Rencana Anda</label
-              >
-              <div class="form-border-focus"></div>
             </div>
 
             <button
               type="submit"
-              class="btn btn-primary magnetic"
-              style="margin-top: 1rem; width: 100%; justify-content: center"
+              class="contact-submit-btn magnetic"
+              style="margin-top: 1rem;"
             >
-              <span class="magnetic-inner">Kirim Pesan</span>
+              <span class="magnetic-inner">Kirim Pesan &nbsp;&nbsp; →</span>
             </button>
           </form>
         </div>
