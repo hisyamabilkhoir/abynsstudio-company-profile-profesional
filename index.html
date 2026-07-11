@@ -1096,34 +1096,71 @@
       </div>
     </section>
 
-    <!-- Founder Section - Hisyam Abilkhoir -->
-    <section id="founder-hisyam" class="section section-founder" style="z-index: 2; position: relative; border-bottom: 1.5px solid rgba(214, 183, 122, 0.25); background: rgba(15, 6, 17, 0.3);">
+    <!-- Founder Section - Interactive Curtain Slider (Hisyam & Annisa) -->
+    <section id="founder-slider-section" class="section section-founder" style="z-index: 2; position: relative; border-bottom: 1.5px solid rgba(214, 183, 122, 0.25); background: rgba(15, 6, 17, 0.3); padding: 5rem 0;">
       <div class="container">
-        <div class="founder-rows stagger-container">
-          <!-- Founder 1: Hisyam Abilkhoir -->
-          <div class="founder-row stagger-item" style="border-bottom: none; padding: 1rem 0;">
-            <!-- Left: Header Column -->
-            <div class="founder-header-col">
+        <div class="founder-row" style="border-bottom: none; padding: 1rem 0;">
+          
+          <!-- Left: Header Column -->
+          <div class="founder-header-col">
+            <!-- Hisyam Header Block -->
+            <div class="founder-header-block hisyam-text active">
               <div class="section-tag">FOUNDER</div>
               <h2>
                 Tentang
                 <span class="text-gold font-serif-italic">Founder</span>
               </h2>
             </div>
+            <!-- Annisa Header Block -->
+            <div class="founder-header-block annisa-text">
+              <div class="section-tag">FOUNDER</div>
+              <h2>
+                Tentang
+                <span class="text-gold font-serif-italic">Founder</span>
+              </h2>
+            </div>
+          </div>
 
-            <!-- Middle: Profile Column -->
-            <div class="founder-profile-col">
-              <div class="founder-avatar-wrapper">
-                <div class="founder-ring ring-1"></div>
-                <div class="founder-ring ring-2"></div>
-                <div class="founder-avatar-inner">
-                  <img
-                    src="assets/images/hisyam_profile.jpg"
-                    alt="Hisyam Abilkhoir - Founder & CEO ABYNS STUDIO"
-                  />
+          <!-- Middle: Avatar & Bio Column -->
+          <div class="founder-profile-col">
+            <!-- Avatar Comparison Slider -->
+            <div class="founder-avatar-wrapper" id="founderAvatarSlider">
+              <div class="founder-ring ring-1"></div>
+              <div class="founder-ring ring-2"></div>
+              
+              <!-- Hisyam Photo (Base) -->
+              <div class="founder-avatar-inner hisyam-avatar">
+                <img
+                  src="assets/images/hisyam_profile.jpg"
+                  alt="Hisyam Abilkhoir - Founder & CEO ABYNS STUDIO"
+                />
+              </div>
+              
+              <!-- Annisa Photo (Overlay) -->
+              <div class="founder-avatar-inner annisa-avatar">
+                <img
+                  src="assets/images/annisa_profile.jpeg"
+                  alt="Annisa Hanif - Founder & Creative Director ABYNS STUDIO"
+                />
+              </div>
+
+              <!-- Slider Input & Handle Line -->
+              <input type="range" min="0" max="100" value="50" class="founder-slider-input" aria-label="Founder Slider" />
+              <div class="founder-slider-handle">
+                <div class="founder-slider-line"></div>
+                <div class="founder-slider-button">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
                 </div>
               </div>
-              <div class="founder-info">
+            </div>
+
+            <!-- Bios Container -->
+            <div class="founder-bio-container" style="position: relative; width: 100%;">
+              <!-- Hisyam Bio -->
+              <div class="founder-bio-block hisyam-text active">
                 <h3 class="founder-name">Hisyam Abilkhoir</h3>
                 <span class="founder-role">Founder & Chief Executive Officer</span>
                 <p class="founder-bio">
@@ -1156,10 +1193,48 @@
                   >
                 </div>
               </div>
-            </div>
 
-            <!-- Right: Signature & Quote Column -->
-            <div class="founder-quote-col">
+              <!-- Annisa Bio -->
+              <div class="founder-bio-block annisa-text">
+                <h3 class="founder-name">Annisa Hanif</h3>
+                <span class="founder-role">Founder & Creative Director</span>
+                <p class="founder-bio">
+                  Berpengalaman lebih dari 4 tahun di bidang digital kreatif dan
+                  luxury branding. Memiliki passion mendalam untuk membantu brand
+                  berkembang melalui sentuhan visual estetis dan teknologi
+                  interaktif.
+                </p>
+                <div class="founder-socials">
+                  <a
+                    href="https://linkedin.com"
+                    class="founder-social-link magnetic"
+                    target="_blank"
+                    rel="noopener"
+                    ><span class="magnetic-inner">in</span></a
+                  >
+                  <a
+                    href="https://instagram.com"
+                    class="founder-social-link magnetic"
+                    target="_blank"
+                    rel="noopener"
+                    ><span class="magnetic-inner">ig</span></a
+                  >
+                  <a
+                    href="https://dribbble.com"
+                    class="founder-social-link magnetic"
+                    target="_blank"
+                    rel="noopener"
+                    ><span class="magnetic-inner">db</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Signature & Quote Column -->
+          <div class="founder-quote-col" style="position: relative;">
+            <!-- Hisyam Quote -->
+            <div class="founder-quote-block hisyam-text active">
               <div class="founder-signature">Hisyam Abilkhoir</div>
               <div class="founder-quote-box">
                 <span class="quote-mark open">“</span>
@@ -1174,131 +1249,284 @@
                 <span class="quote-mark close">”</span>
               </div>
             </div>
+
+            <!-- Annisa Quote -->
+            <div class="founder-quote-block annisa-text">
+              <div class="founder-signature">Annisa Hanif</div>
+              <div class="founder-quote-box">
+                <span class="quote-mark open">“</span>
+                <p class="founder-quote-text">
+                  Kami percaya, setiap brand punya cerita. Tugas kami adalah
+                  membantu Anda menyampaikannya dengan
+                  <span class="text-gold-metallic">cara yang indah</span>,
+                  <span class="text-gold-metallic">fungsional</span>, dan
+                  <span class="text-gold-metallic">berdampak</span>.
+                </p>
+                <span class="quote-mark close">”</span>
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- 9. Workflow Section (Tahapan Kerja) -->
-    <section id="workflow" class="section section-workflow-new" style="z-index: 2; background-image: url('assets/images/workflow-bg.png') !important; background-size: cover !important; background-repeat: no-repeat !important; background-position: center !important;">
-      <div class="container">
-        <div class="workflow-header">
-          <div class="workflow-tag-new">
-            <span style="color: #d6b77a;">✦</span> — TAHAPAN KERJA KAMI
+    <!-- 9. Workflow Section (Tahapan Kerja) - Curtain Slider -->
+    <section id="workflow" class="section" style="z-index: 2; position: relative; overflow: hidden; padding: 0 !important;">
+      
+      <!-- Workflow Curtain Slider Wrapper -->
+      <div class="workflow-curtain-wrapper" id="workflowCurtainSlider">
+
+        <!-- Slide 1: Developer / Digital (Base) -->
+        <div class="workflow-curtain-slide workflow-slide-dev" style="background-image: url('assets/images/workflow-bg.png'); background-size: 100% 100%; background-repeat: no-repeat; background-position: center;">
+          <div class="container">
+            <div class="workflow-header">
+              <div class="workflow-tag-new">
+                <span style="color: #d6b77a;">✦</span> — TAHAPAN KERJA KAMI
+              </div>
+              <h2 class="workflow-title-new text-reveal">
+                SISTEMATIS &<br>
+                <span class="text-gold font-serif-italic">Terstruktur</span>
+              </h2>
+              <p class="workflow-desc-new">
+                Dari pemetaan ide dasar hingga peluncuran sistem digital eksklusif Anda.
+              </p>
+            </div>
+
+            <div class="workflow-timeline-container">
+              <div class="workflow-timeline-track"></div>
+              <div class="workflow-timeline-grid stagger-container">
+                <!-- Step 1 -->
+                <div class="workflow-step-new stagger-item">
+                  <div class="workflow-num-wrapper">
+                    <span class="workflow-num-bg">01</span>
+                    <span class="workflow-num-fg">01</span>
+                  </div>
+                  <div class="workflow-circle-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                  </div>
+                  <div class="workflow-step-tag">DISCOVERY</div>
+                  <h3 class="workflow-step-title">KONSULTASI AWAL</h3>
+                  <p class="workflow-step-desc">
+                    Pemahaman visi brand, kebutuhan fungsional sistem, target audiens, dan analisis kompetitor utama.
+                  </p>
+                </div>
+                <!-- Step 2 -->
+                <div class="workflow-step-new stagger-item">
+                  <div class="workflow-num-wrapper">
+                    <span class="workflow-num-bg">02</span>
+                    <span class="workflow-num-fg">02</span>
+                  </div>
+                  <div class="workflow-circle-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                      <line x1="16" y1="13" x2="8" y2="13"></line>
+                      <line x1="16" y1="17" x2="8" y2="17"></line>
+                      <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                  </div>
+                  <div class="workflow-step-tag">RESEARCH</div>
+                  <h3 class="workflow-step-title">ANALISIS PASAR</h3>
+                  <p class="workflow-step-desc">
+                    Penyusunan riset mendalam mengenai tren, kebutuhan pengguna, alur sistem, dan kerangka desain.
+                  </p>
+                </div>
+                <!-- Step 3 -->
+                <div class="workflow-step-new stagger-item">
+                  <div class="workflow-num-wrapper">
+                    <span class="workflow-num-bg">03</span>
+                    <span class="workflow-num-fg">03</span>
+                  </div>
+                  <div class="workflow-circle-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                      <path d="M12 8v8M9 11h6"></path>
+                    </svg>
+                  </div>
+                  <div class="workflow-step-tag">DESIGN</div>
+                  <h3 class="workflow-step-title">MENDESAIN MOCKUPS</h3>
+                  <p class="workflow-step-desc">
+                    Pembuatan desain mockups visual berdasarkan riset & pengalaman terbaik untuk memberikan visual yang memukau.
+                  </p>
+                </div>
+                <!-- Step 4 -->
+                <div class="workflow-step-new stagger-item">
+                  <div class="workflow-num-wrapper">
+                    <span class="workflow-num-bg">04</span>
+                    <span class="workflow-num-fg">04</span>
+                  </div>
+                  <div class="workflow-circle-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="16 18 22 12 16 6"></polyline>
+                      <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                  </div>
+                  <div class="workflow-step-tag">DEVELOPMENT</div>
+                  <h3 class="workflow-step-title">CODING & PENGUJIAN</h3>
+                  <p class="workflow-step-desc">
+                    Pengkodean sistem dengan standar clean code, optimasi performa, Lighthouse 95+, dan debugging.
+                  </p>
+                </div>
+                <!-- Step 5 -->
+                <div class="workflow-step-new stagger-item">
+                  <div class="workflow-num-wrapper">
+                    <span class="workflow-num-bg">05</span>
+                    <span class="workflow-num-fg">05</span>
+                  </div>
+                  <div class="workflow-circle-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path>
+                    </svg>
+                  </div>
+                  <div class="workflow-step-tag">LAUNCH</div>
+                  <h3 class="workflow-step-title">PELUNCURAN SISTEM</h3>
+                  <p class="workflow-step-desc">
+                    Penyebaran sistem ke server hosting premium, monitoring kestabilan server, dan penyempurnaan aset.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <h2 class="workflow-title-new text-reveal">
-            SISTEMATIS &<br>
-            <span class="text-gold font-serif-italic">Terstruktur</span>
-          </h2>
-          <p class="workflow-desc-new">
-            Dari pemetaan ide dasar hingga peluncuran sistem digital eksklusif Anda.
-          </p>
         </div>
 
-        <div class="workflow-timeline-container">
-          <!-- Timeline Connecting Line -->
-          <div class="workflow-timeline-track"></div>
-
-          <div class="workflow-timeline-grid stagger-container">
-            <!-- Step 1 -->
-            <div class="workflow-step-new stagger-item">
-              <div class="workflow-num-wrapper">
-                <span class="workflow-num-bg">01</span>
-                <span class="workflow-num-fg">01</span>
+        <!-- Slide 2: Fotografer & Videografer (Overlay with clip-path) -->
+        <div class="workflow-curtain-slide workflow-slide-cam" style="background-image: url('assets/images/bg-workflow-kamera.png'); background-size: 100% 100%; background-repeat: no-repeat; background-position: center;">
+          <div class="container">
+            <div class="workflow-header">
+              <div class="workflow-tag-new">
+                <span style="color: #d6b77a;">✦</span> — TAHAPAN KERJA KAMI
               </div>
-              <div class="workflow-circle-icon-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-              </div>
-              <div class="workflow-step-tag">DISCOVERY</div>
-              <h3 class="workflow-step-title">KONSULTASI AWAL</h3>
-              <p class="workflow-step-desc">
-                Pemahaman visi brand, kebutuhan fungsional sistem, target audiens, dan analisis kompetitor utama.
+              <h2 class="workflow-title-new text-reveal">
+                SISTEMATIS &<br>
+                <span class="text-gold font-serif-italic">Terstruktur</span>
+              </h2>
+              <p class="workflow-desc-new">
+                Dari pemetaan ide hingga hasil visual yang memukau, setiap proses kami rancang dengan detail dan presisi.
               </p>
             </div>
 
-            <!-- Step 2 -->
-            <div class="workflow-step-new stagger-item">
-              <div class="workflow-num-wrapper">
-                <span class="workflow-num-bg">02</span>
-                <span class="workflow-num-fg">02</span>
+            <div class="workflow-timeline-container">
+              <div class="workflow-timeline-track"></div>
+              <div class="workflow-timeline-grid stagger-container">
+                <!-- Step 1 -->
+                <div class="workflow-step-new stagger-item">
+                  <div class="workflow-num-wrapper">
+                    <span class="workflow-num-bg">01</span>
+                    <span class="workflow-num-fg">01</span>
+                  </div>
+                  <div class="workflow-circle-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                      <circle cx="12" cy="13" r="4"></circle>
+                    </svg>
+                  </div>
+                  <div class="workflow-step-tag">DISCOVERY</div>
+                  <h3 class="workflow-step-title">KONSULTASI AWAL</h3>
+                  <p class="workflow-step-desc">
+                    Memahami kebutuhan, konsep, gaya visual, dan tujuan dari setiap proyek secara mendalam.
+                  </p>
+                </div>
+                <!-- Step 2 -->
+                <div class="workflow-step-new stagger-item">
+                  <div class="workflow-num-wrapper">
+                    <span class="workflow-num-bg">02</span>
+                    <span class="workflow-num-fg">02</span>
+                  </div>
+                  <div class="workflow-circle-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                  </div>
+                  <div class="workflow-step-tag">RESEARCH</div>
+                  <h3 class="workflow-step-title">ANALISIS KONSEP</h3>
+                  <p class="workflow-step-desc">
+                    Riset referensi, tren, dan karakter visual yang relevan untuk menyusun konsep terbaik.
+                  </p>
+                </div>
+                <!-- Step 3 -->
+                <div class="workflow-step-new stagger-item">
+                  <div class="workflow-num-wrapper">
+                    <span class="workflow-num-bg">03</span>
+                    <span class="workflow-num-fg">03</span>
+                  </div>
+                  <div class="workflow-circle-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                      <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                      <polyline points="21 15 16 10 5 21"></polyline>
+                    </svg>
+                  </div>
+                  <div class="workflow-step-tag">PRE-PRODUCTION</div>
+                  <h3 class="workflow-step-title">PERENCANAAN VISUAL</h3>
+                  <p class="workflow-step-desc">
+                    Penyusunan moodboard, shotlist, storyboard, dan penjadwalan produksi secara detail.
+                  </p>
+                </div>
+                <!-- Step 4 -->
+                <div class="workflow-step-new stagger-item">
+                  <div class="workflow-num-wrapper">
+                    <span class="workflow-num-bg">04</span>
+                    <span class="workflow-num-fg">04</span>
+                  </div>
+                  <div class="workflow-circle-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M2 22h20V8H2v14zM2 8l4-4h16l-4 4H2z"></path>
+                      <path d="M6 8l4-4M12 8l4-4M18 8l4-4"></path>
+                    </svg>
+                  </div>
+                  <div class="workflow-step-tag">PRODUCTION</div>
+                  <h3 class="workflow-step-title">EKSEKUSI SHOOT</h3>
+                  <p class="workflow-step-desc">
+                    Proses pengambilan foto/video dengan peralatan profesional dan eksekusi sesuai konsep.
+                  </p>
+                </div>
+                <!-- Step 5 -->
+                <div class="workflow-step-new stagger-item">
+                  <div class="workflow-num-wrapper">
+                    <span class="workflow-num-bg">05</span>
+                    <span class="workflow-num-fg">05</span>
+                  </div>
+                  <div class="workflow-circle-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                      <path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"></path>
+                    </svg>
+                  </div>
+                  <div class="workflow-step-tag">POST-PRODUCTION</div>
+                  <h3 class="workflow-step-title">EDITING & FINISHING</h3>
+                  <p class="workflow-step-desc">
+                    Editing color, retouch, sound (jika diperlukan), hingga hasil akhir siap digunakan.
+                  </p>
+                </div>
               </div>
-              <div class="workflow-circle-icon-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-              </div>
-              <div class="workflow-step-tag">RESEARCH</div>
-              <h3 class="workflow-step-title">ANALISIS PASAR</h3>
-              <p class="workflow-step-desc">
-                Penyusunan riset mendalam mengenai tren, kebutuhan pengguna, alur sistem, dan kerangka desain.
-              </p>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="workflow-step-new stagger-item">
-              <div class="workflow-num-wrapper">
-                <span class="workflow-num-bg">03</span>
-                <span class="workflow-num-fg">03</span>
-              </div>
-              <div class="workflow-circle-icon-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  <path d="M12 8v8M9 11h6"></path>
-                </svg>
-              </div>
-              <div class="workflow-step-tag">DESIGN</div>
-              <h3 class="workflow-step-title">MENDESAIN MOCKUPS</h3>
-              <p class="workflow-step-desc">
-                Pembuatan desain mockups visual berdasarkan riset & pengalaman terbaik untuk memberikan visual yang memukau.
-              </p>
-            </div>
-
-            <!-- Step 4 -->
-            <div class="workflow-step-new stagger-item">
-              <div class="workflow-num-wrapper">
-                <span class="workflow-num-bg">04</span>
-                <span class="workflow-num-fg">04</span>
-              </div>
-              <div class="workflow-circle-icon-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="16 18 22 12 16 6"></polyline>
-                  <polyline points="8 6 2 12 8 18"></polyline>
-                </svg>
-              </div>
-              <div class="workflow-step-tag">DEVELOPMENT</div>
-              <h3 class="workflow-step-title">CODING & PENGUJIAN</h3>
-              <p class="workflow-step-desc">
-                Pengkodean sistem dengan standar clean code, optimasi performa, Lighthouse 95+, dan debugging.
-              </p>
-            </div>
-
-            <!-- Step 5 -->
-            <div class="workflow-step-new stagger-item">
-              <div class="workflow-num-wrapper">
-                <span class="workflow-num-bg">05</span>
-                <span class="workflow-num-fg">05</span>
-              </div>
-              <div class="workflow-circle-icon-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path>
-                </svg>
-              </div>
-              <div class="workflow-step-tag">LAUNCH</div>
-              <h3 class="workflow-step-title">PELUNCURAN SISTEM</h3>
-              <p class="workflow-step-desc">
-                Penyebaran sistem ke server hosting premium, monitoring kestabilan server, dan penyempurnaan aset.
-              </p>
             </div>
           </div>
+        </div>
+
+        <!-- Slider Range Input & Handle -->
+        <input type="range" min="0" max="100" value="0" class="workflow-slider-input" aria-label="Workflow Slider" />
+        <div class="workflow-slider-handle">
+          <div class="workflow-slider-line"></div>
+          <div class="workflow-slider-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Division Label Tabs -->
+        <div class="workflow-division-tabs">
+          <span class="workflow-tab active" data-tab="dev">💻 Developer</span>
+          <span class="workflow-tab" data-tab="cam">📷 Fotografer & Videografer</span>
         </div>
       </div>
+
     </section>
 
     <!-- 10. Portfolios with Category Tabs Filtering -->
@@ -1682,266 +1910,6 @@
       </div>
     </div>
 
-    <!-- 11. Ready-To-Use Digital Products Gallery Slider -->
-    <section id="products" class="section section-products" style="z-index: 2">
-      <div class="container">
-        <div
-          class="section-header text-center"
-          style="margin-left: auto; margin-right: auto"
-        >
-          <div class="section-tag">Produk Aplikasi Kami</div>
-          <h2 class="text-reveal">
-            Solusi Aplikasi
-            <span class="text-gold font-serif-italic">Siap Pakai</span>
-          </h2>
-          <p
-            class="section-desc text-center"
-            style="margin-left: auto; margin-right: auto"
-          >
-            Akselerasi performa bisnis operasional Anda menggunakan produk
-            sistem digital yang canggih dan modular.
-          </p>
-        </div>
-
-        <!-- Swiper Slider Container -->
-        <div
-          class="swiper products-swiper stagger-container"
-          style="padding: 2rem 0 4rem"
-        >
-          <div class="swiper-wrapper">
-            <!-- Product 1: POS Kasir -->
-            <div
-              class="swiper-slide glass-card product-card stagger-item gold-glow-border"
-              style="
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                height: auto;
-              "
-            >
-              <div>
-                <div
-                  style="
-                    background: rgba(214, 183, 122, 0.1);
-                    width: 48px;
-                    height: 48px;
-                    border-radius: 12px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin-bottom: 1.5rem;
-                    border: 1px solid rgba(214, 183, 122, 0.2);
-                  "
-                >
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="var(--color-gold)"
-                    stroke-width="2"
-                  >
-                    <rect x="2" y="2" width="20" height="20" rx="2" />
-                    <rect x="6" y="6" width="12" height="12" rx="1" />
-                  </svg>
-                </div>
-                <h3 style="font-size: 1.35rem; margin-bottom: 1rem">
-                  ABYNS POS
-                </h3>
-                <p style="font-size: 0.95rem">
-                  Sistem aplikasi kasir kas untuk retail butik, restoran, dan
-                  kafe yang dinamis, responsif, serta mendukung laporan
-                  inventory real-time.
-                </p>
-              </div>
-              <a
-                href="products.html#pos"
-                class="btn btn-outline magnetic"
-                style="margin-top: 2rem; padding: 0.75rem 1.5rem"
-                ><span class="magnetic-inner">Lihat Detail</span></a
-              >
-            </div>
-
-            <!-- Product 2: Laundry App -->
-            <div
-              class="swiper-slide glass-card product-card stagger-item gold-glow-border"
-              style="
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                height: auto;
-              "
-            >
-              <div>
-                <div
-                  style="
-                    background: rgba(214, 183, 122, 0.1);
-                    width: 48px;
-                    height: 48px;
-                    border-radius: 12px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin-bottom: 1.5rem;
-                    border: 1px solid rgba(214, 183, 122, 0.2);
-                  "
-                >
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="var(--color-gold)"
-                    stroke-width="2"
-                  >
-                    <circle cx="12" cy="12" r="10" />
-                    <circle cx="12" cy="12" r="4" />
-                    <path
-                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                    />
-                  </svg>
-                </div>
-                <h3 style="font-size: 1.35rem; margin-bottom: 1rem">
-                  ABYNS Laundry
-                </h3>
-                <p style="font-size: 0.95rem">
-                  Manajemen sistem operasional gerai laundry terintegrasi dengan
-                  dasbor pelacakan timbangan pakaian, status cuci, dan WhatsApp
-                  otomatis.
-                </p>
-              </div>
-              <a
-                href="products.html#laundry"
-                class="btn btn-outline magnetic"
-                style="margin-top: 2rem; padding: 0.75rem 1.5rem"
-                ><span class="magnetic-inner">Lihat Detail</span></a
-              >
-            </div>
-
-            <!-- Product 3: School Management -->
-            <div
-              class="swiper-slide glass-card product-card stagger-item gold-glow-border"
-              style="
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                height: auto;
-              "
-            >
-              <div>
-                <div
-                  style="
-                    background: rgba(214, 183, 122, 0.1);
-                    width: 48px;
-                    height: 48px;
-                    border-radius: 12px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin-bottom: 1.5rem;
-                    border: 1px solid rgba(214, 183, 122, 0.2);
-                  "
-                >
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="var(--color-gold)"
-                    stroke-width="2"
-                  >
-                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                    <path d="M6 12v5c0 2 2.5 3 6 3s6-1 6-3v-5" />
-                  </svg>
-                </div>
-                <h3 style="font-size: 1.35rem; margin-bottom: 1rem">
-                  ABYNS School
-                </h3>
-                <p style="font-size: 0.95rem">
-                  Sistem informasi akademik sekolah, administrasi pembayaran SPP
-                  siswa, presensi kehadiran guru, hingga platform kelas daring
-                  terpadu.
-                </p>
-              </div>
-              <a
-                href="products.html#school"
-                class="btn btn-outline magnetic"
-                style="margin-top: 2rem; padding: 0.75rem 1.5rem"
-                ><span class="magnetic-inner">Lihat Detail</span></a
-              >
-            </div>
-
-            <!-- Product 4: CRM Management -->
-            <div
-              class="swiper-slide glass-card product-card stagger-item gold-glow-border"
-              style="
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                height: auto;
-              "
-            >
-              <div>
-                <div
-                  style="
-                    background: rgba(214, 183, 122, 0.1);
-                    width: 48px;
-                    height: 48px;
-                    border-radius: 12px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin-bottom: 1.5rem;
-                    border: 1px solid rgba(214, 183, 122, 0.2);
-                  "
-                >
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="var(--color-gold)"
-                    stroke-width="2"
-                  >
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                    <circle cx="9" cy="7" r="4" />
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                  </svg>
-                </div>
-                <h3 style="font-size: 1.35rem; margin-bottom: 1rem">
-                  ABYNS CRM
-                </h3>
-                <p style="font-size: 0.95rem">
-                  Sistem dasbor pemeliharaan hubungan pelanggan, manajemen leads
-                  tim sales marketing, serta pelacakan performa deal pipeline
-                  otomatis.
-                </p>
-              </div>
-              <a
-                href="products.html#crm"
-                class="btn btn-outline magnetic"
-                style="margin-top: 2rem; padding: 0.75rem 1.5rem"
-                ><span class="magnetic-inner">Lihat Detail</span></a
-              >
-            </div>
-          </div>
-          <!-- Pagination bullets -->
-          <div
-            class="swiper-pagination products-pagination"
-            style="bottom: 0"
-          ></div>
-        </div>
-
-        <!-- View All CTA -->
-        <div class="text-center">
-          <a href="products.html" class="btn btn-primary magnetic"
-            ><span class="magnetic-inner">Lihat Semua Produk</span></a
-          >
-        </div>
-      </div>
-    </section>
-
     <!-- 13. Behind the Scenes Workshop Gallery -->
     <section id="gallery" class="section section-gallery-new" style="z-index: 2">
       <div class="container">
@@ -2002,11 +1970,333 @@
       </div>
     </section>
 
+    <!-- 11. Ready-To-Use Digital Products Section -->
+    <section id="products" class="section section-products" style="z-index: 2; padding: 5rem 0; background-image: url('assets/images/bng-produk-app.png') !important; background-size: 100% 100% !important; background-repeat: no-repeat !important; background-position: center !important;">
+      <div class="container">
+        <div class="section-header text-center" style="margin-left: auto; margin-right: auto;">
+          <div class="section-tag" style="letter-spacing: 0.25em;">— PRODUK KAMI —</div>
+          <h2 class="text-reveal" style="font-size: 2.5rem; font-weight: 700;">
+            SOLUSI APLIKASI <span class="text-gold font-serif-italic">Siap Pakai</span>
+          </h2>
+          <p class="section-desc text-center" style="margin-left: auto; margin-right: auto; max-width: 600px; margin-top: 1.5rem;">
+            Akselerasi performa bisnis operasional Anda menggunakan produk sistem digital yang canggih dan modular.
+          </p>
+        </div>
+
+        <!-- Products Horizontal Grid -->
+        <div class="products-grid-new stagger-container">
+          
+          <!-- Card 1: POS -->
+          <div class="product-card-new stagger-item">
+            <div class="product-image-wrapper-new">
+              <!-- Floating Icon -->
+              <div class="product-icon-badge-new">
+                <svg viewBox="0 0 24 24">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=500&auto=format&fit=crop" alt="ABYNS POS Mockup" class="product-mockup-img-new" />
+            </div>
+            <h3 class="product-title-new">ABYNS POS</h3>
+            <p class="product-desc-new">
+              Sistem aplikasi kasir untuk retail butik, restoran, dan kafe yang dinamis, responsif, serta mendukung laporan inventory real-time.
+            </p>
+            <ul class="product-features-list-new">
+              <li class="product-feature-item-new">
+                <span class="product-feature-check-new">✓</span> Multi-outlet & Multi-device
+              </li>
+              <li class="product-feature-item-new">
+                <span class="product-feature-check-new">✓</span> Laporan Penjualan Real-time
+              </li>
+              <li class="product-feature-item-new">
+                <span class="product-feature-check-new">✓</span> Manajemen Produk & Stok
+              </li>
+            </ul>
+            <a href="products.html#pos" class="product-btn-new magnetic">
+              <span class="magnetic-inner">LIHAT DETAIL</span>
+              <svg viewBox="0 0 24 24">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Card 2: Laundry -->
+          <div class="product-card-new stagger-item">
+            <div class="product-image-wrapper-new">
+              <!-- Floating Icon -->
+              <div class="product-icon-badge-new">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=500&auto=format&fit=crop" alt="ABYNS LAUNDRY Mockup" class="product-mockup-img-new" />
+            </div>
+            <h3 class="product-title-new">ABYNS LAUNDRY</h3>
+            <p class="product-desc-new">
+              Manajemen sistem operasional gerai laundry terintegrasi dengan dasbor pelacakan timbangan pakaian, status cuci, dan WhatsApp otomatis.
+            </p>
+            <ul class="product-features-list-new">
+              <li class="product-feature-item-new">
+                <span class="product-feature-check-new">✓</span> Tracking Laundry Real-time
+              </li>
+              <li class="product-feature-item-new">
+                <span class="product-feature-check-new">✓</span> Notifikasi WhatsApp Otomatis
+              </li>
+              <li class="product-feature-item-new">
+                <span class="product-feature-check-new">✓</span> Manajemen Paket & Member
+              </li>
+            </ul>
+            <a href="products.html#laundry" class="product-btn-new magnetic">
+              <span class="magnetic-inner">LIHAT DETAIL</span>
+              <svg viewBox="0 0 24 24">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Card 3: School -->
+          <div class="product-card-new stagger-item">
+            <div class="product-image-wrapper-new">
+              <!-- Floating Icon -->
+              <div class="product-icon-badge-new">
+                <svg viewBox="0 0 24 24">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5-10 5z"></path>
+                  <path d="M6 12v5c0 2 2.5 3 6 3s6-1 6-3v-5"></path>
+                </svg>
+              </div>
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=500&auto=format&fit=crop" alt="ABYNS SCHOOL Mockup" class="product-mockup-img-new" />
+            </div>
+            <h3 class="product-title-new">ABYNS SCHOOL</h3>
+            <p class="product-desc-new">
+              Sistem informasi akademik sekolah, administrasi pembayaran SPP siswa, presensi kehadiran guru, hingga platform kelas daring terpadu.
+            </p>
+            <ul class="product-features-list-new">
+              <li class="product-feature-item-new">
+                <span class="product-feature-check-new">✓</span> Akademik & Pembayaran
+              </li>
+              <li class="product-feature-item-new">
+                <span class="product-feature-check-new">✓</span> Presensi Guru & Siswa
+              </li>
+              <li class="product-feature-item-new">
+                <span class="product-feature-check-new">✓</span> Kelas Daring Terintegrasi
+              </li>
+            </ul>
+            <a href="products.html#school" class="product-btn-new magnetic">
+              <span class="magnetic-inner">LIHAT DETAIL</span>
+              <svg viewBox="0 0 24 24">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Card 4: CRM -->
+          <div class="product-card-new stagger-item">
+            <div class="product-image-wrapper-new">
+              <!-- Floating Icon -->
+              <div class="product-icon-badge-new">
+                <svg viewBox="0 0 24 24">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500&auto=format&fit=crop" alt="ABYNS CRM Mockup" class="product-mockup-img-new" />
+            </div>
+            <h3 class="product-title-new">ABYNS CRM</h3>
+            <p class="product-desc-new">
+              Sistem dasbor pemeliharaan hubungan pelanggan, manajemen leads tim sales marketing, serta pelacakan performa deal pipeline otomatis.
+            </p>
+            <ul class="product-features-list-new">
+              <li class="product-feature-item-new">
+                <span class="product-feature-check-new">✓</span> Manajemen Leads
+              </li>
+              <li class="product-feature-item-new">
+                <span class="product-feature-check-new">✓</span> Pipeline & Deal Tracking
+              </li>
+              <li class="product-feature-item-new">
+                <span class="product-feature-check-new">✓</span> Laporan Performa Tim
+              </li>
+            </ul>
+            <a href="products.html#crm" class="product-btn-new magnetic">
+              <span class="magnetic-inner">LIHAT DETAIL</span>
+              <svg viewBox="0 0 24 24">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- View All CTA -->
+        <div class="text-center" style="margin-top: 3.5rem;">
+          <a href="products.html" class="btn btn-gold-metallic magnetic" style="padding: 1rem 2.5rem; font-weight: 700; letter-spacing: 0.15em;">
+            <span class="magnetic-inner">LIHAT SEMUA PRODUK <span style="margin-left: 0.5rem;">➔</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+        <!-- 16. Luxury Testimonials & Features Section -->
+    <section
+      id="testimonials"
+      class="section section-testimonials-new"
+      style="z-index: 2;"
+    >
+      <div class="container">
+        <!-- Separate Aligned Headers -->
+        <div class="testimonials-header-flex">
+          <div class="testimonials-header-left">
+            <div class="section-tag" style="margin-bottom: 0.5rem;"><span style="color: #d6b77a;">✦</span> TESTIMONI</div>
+            <h2 class="text-reveal" style="font-size: 2.2rem; font-weight: 700; color: #ffffff; margin: 0; text-align: left;">
+              Apa Kata Mereka?
+            </h2>
+          </div>
+          <div class="testimonials-header-right">
+            <div class="section-tag" style="margin: 0; color: #d6b77a; letter-spacing: 0.1em; font-weight: 700; font-size: 0.75rem;">MENGAPA MEMILIH ABYNS STUDIO?</div>
+          </div>
+        </div>
+
+        <!-- Separate Aligned Content Grids -->
+        <div class="testimonials-split-container">
+          <!-- Left Column: Customer Testimonials -->
+          <div class="testimonials-left-col">
+            <div class="testimonials-cards-row stagger-container">
+              <!-- Card 1: Diana Pratiwi -->
+              <div class="testimonial-card-new stagger-item">
+                <div class="testimonial-card-top">
+                  <div class="testimonial-avatar-box">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop" alt="Diana Pratiwi" />
+                  </div>
+                  <div class="testimonial-meta">
+                    <div class="testimonial-stars">
+                      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <span class="testimonial-name-new">Diana Pratiwi</span>
+                    <span class="testimonial-title-new">CEO, Luxury Store</span>
+                  </div>
+                </div>
+                <p class="testimonial-text-new">
+                  "ABYNS Studio sangat profesional dan hasilnya melampaui ekspektasi."
+                </p>
+              </div>
+
+              <!-- Card 2: Rizky Maulana -->
+              <div class="testimonial-card-new stagger-item">
+                <div class="testimonial-card-top">
+                  <div class="testimonial-avatar-box">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="Rizky Maulana" />
+                  </div>
+                  <div class="testimonial-meta">
+                    <div class="testimonial-stars">
+                      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <span class="testimonial-name-new">Rizky Maulana</span>
+                    <span class="testimonial-title-new">Owner, RM Cafe</span>
+                  </div>
+                </div>
+                <p class="testimonial-text-new">
+                  "Prosesnya cepat, komunikasi jelas, dan hasil akhirnya sangat memuaskan."
+                </p>
+              </div>
+
+              <!-- Card 3: Salma Amanda -->
+              <div class="testimonial-card-new stagger-item">
+                <div class="testimonial-card-top">
+                  <div class="testimonial-avatar-box">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" alt="Salma Amanda" />
+                  </div>
+                  <div class="testimonial-meta">
+                    <div class="testimonial-stars">
+                      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <span class="testimonial-name-new">Salma Amanda</span>
+                    <span class="testimonial-title-new">Marketing Manager</span>
+                  </div>
+                </div>
+                <p class="testimonial-text-new">
+                  "Tim yang kreatif dan detail oriented. Konten foto dan video yang dibuat benar-benar berkualitas."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Why Choose Us -->
+          <div class="testimonials-right-col">
+            <div class="features-grid-new stagger-container">
+              <!-- Feature 1: Desain Premium -->
+              <div class="feature-item-new stagger-item">
+                <div class="feature-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <div class="feature-info">
+                  <span class="feature-title-new">Desain Premium</span>
+                  <span class="feature-desc-new">Tampilan elegan & eksklusif</span>
+                </div>
+              </div>
+
+              <!-- Feature 2: Tim Profesional -->
+              <div class="feature-item-new stagger-item">
+                <div class="feature-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <div class="feature-info">
+                  <span class="feature-title-new">Tim Profesional</span>
+                  <span class="feature-desc-new">Berpengalaman & terpercaya</span>
+                </div>
+              </div>
+
+              <!-- Feature 3: Hasil Berkualitas -->
+              <div class="feature-item-new stagger-item">
+                <div class="feature-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <div class="feature-info">
+                  <span class="feature-title-new">Hasil Berkualitas</span>
+                  <span class="feature-desc-new">Detail, rapi & berdampak</span>
+                </div>
+              </div>
+
+              <!-- Feature 4: Support Responsif -->
+              <div class="feature-item-new stagger-item">
+                <div class="feature-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                </div>
+                <div class="feature-info">
+                  <span class="feature-title-new">Support Responsif</span>
+                  <span class="feature-desc-new">Siap membantu Anda</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- 13. Pricing Section (Paket Harga) -->
     <section
       id="pricing"
       class="section section-pricing"
-      style="z-index: 2; background: rgba(15, 6, 17, 0.5)"
+      style="z-index: 2; background-image: url('assets/images/bg-harga.png') !important; background-size: 100% 100% !important; background-repeat: no-repeat !important; background-position: center !important;"
     >
       <div class="container">
         <div
@@ -2199,150 +2489,7 @@
           "
         >
           * Harga dapat berubah sesuai kebutuhan & kompleksitas proyek
-    <!-- 16. Luxury Testimonials & Features Section -->
-    <section
-      id="testimonials"
-      class="section section-testimonials-new"
-      style="z-index: 2;"
-    >
-      <div class="container">
-        <!-- Separate Aligned Headers -->
-        <div class="testimonials-header-flex">
-          <div class="testimonials-header-left">
-            <div class="section-tag" style="margin-bottom: 0.5rem;"><span style="color: #d6b77a;">✦</span> TESTIMONI</div>
-            <h2 class="text-reveal" style="font-size: 2.2rem; font-weight: 700; color: #ffffff; margin: 0; text-align: left;">
-              Apa Kata Mereka?
-            </h2>
-          </div>
-          <div class="testimonials-header-right">
-            <div class="section-tag" style="margin: 0; color: #d6b77a; letter-spacing: 0.1em; font-weight: 700; font-size: 0.75rem;">MENGAPA MEMILIH ABYNS STUDIO?</div>
-          </div>
-        </div>
-
-        <!-- Separate Aligned Content Grids -->
-        <div class="testimonials-split-container">
-          <!-- Left Column: Customer Testimonials -->
-          <div class="testimonials-left-col">
-            <div class="testimonials-cards-row stagger-container">
-              <!-- Card 1: Diana Pratiwi -->
-              <div class="testimonial-card-new stagger-item">
-                <div class="testimonial-card-top">
-                  <div class="testimonial-avatar-box">
-                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop" alt="Diana Pratiwi" />
-                  </div>
-                  <div class="testimonial-meta">
-                    <div class="testimonial-stars">
-                      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                    </div>
-                    <span class="testimonial-name-new">Diana Pratiwi</span>
-                    <span class="testimonial-title-new">CEO, Luxury Store</span>
-                  </div>
-                </div>
-                <p class="testimonial-text-new">
-                  "ABYNS Studio sangat profesional dan hasilnya melampaui ekspektasi."
-                </p>
-              </div>
-
-              <!-- Card 2: Rizky Maulana -->
-              <div class="testimonial-card-new stagger-item">
-                <div class="testimonial-card-top">
-                  <div class="testimonial-avatar-box">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="Rizky Maulana" />
-                  </div>
-                  <div class="testimonial-meta">
-                    <div class="testimonial-stars">
-                      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                    </div>
-                    <span class="testimonial-name-new">Rizky Maulana</span>
-                    <span class="testimonial-title-new">Owner, RM Cafe</span>
-                  </div>
-                </div>
-                <p class="testimonial-text-new">
-                  "Prosesnya cepat, komunikasi jelas, dan hasil akhirnya sangat memuaskan."
-                </p>
-              </div>
-
-              <!-- Card 3: Salma Amanda -->
-              <div class="testimonial-card-new stagger-item">
-                <div class="testimonial-card-top">
-                  <div class="testimonial-avatar-box">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" alt="Salma Amanda" />
-                  </div>
-                  <div class="testimonial-meta">
-                    <div class="testimonial-stars">
-                      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                    </div>
-                    <span class="testimonial-name-new">Salma Amanda</span>
-                    <span class="testimonial-title-new">Marketing Manager</span>
-                  </div>
-                </div>
-                <p class="testimonial-text-new">
-                  "Tim yang kreatif dan detail oriented. Konten foto dan video yang dibuat benar-benar berkualitas."
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Column: Why Choose Us -->
-          <div class="testimonials-right-col">
-            <div class="features-grid-new stagger-container">
-              <!-- Feature 1: Desain Premium -->
-              <div class="feature-item-new stagger-item">
-                <div class="feature-icon-box">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  </svg>
-                </div>
-                <div class="feature-info">
-                  <span class="feature-title-new">Desain Premium</span>
-                  <span class="feature-desc-new">Tampilan elegan & eksklusif</span>
-                </div>
-              </div>
-
-              <!-- Feature 2: Tim Profesional -->
-              <div class="feature-item-new stagger-item">
-                <div class="feature-icon-box">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                  </svg>
-                </div>
-                <div class="feature-info">
-                  <span class="feature-title-new">Tim Profesional</span>
-                  <span class="feature-desc-new">Berpengalaman & terpercaya</span>
-                </div>
-              </div>
-
-              <!-- Feature 3: Hasil Berkualitas -->
-              <div class="feature-item-new stagger-item">
-                <div class="feature-icon-box">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <div class="feature-info">
-                  <span class="feature-title-new">Hasil Berkualitas</span>
-                  <span class="feature-desc-new">Detail, rapi & berdampak</span>
-                </div>
-              </div>
-
-              <!-- Feature 4: Support Responsif -->
-              <div class="feature-item-new stagger-item">
-                <div class="feature-icon-box">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                  </svg>
-                </div>
-                <div class="feature-info">
-                  <span class="feature-title-new">Support Responsif</span>
-                  <span class="feature-desc-new">Siap membantu Anda</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </p>
       </div>
     </section>
 
@@ -2705,87 +2852,7 @@
       </div>
     </section>
 
-    <!-- Founder Section Profile -->
-    <section id="founder" class="section section-founder" style="z-index: 2; position: relative; border-bottom: 1.5px solid rgba(214, 183, 122, 0.25);">
-      <div class="container">
-        <div class="founder-rows stagger-container">
-          <!-- Founder 2: Annisa Hanif -->
-          <div class="founder-row stagger-item" style="border-bottom: none; padding: 1rem 0;">
-            <!-- Left: Header Column -->
-            <div class="founder-header-col">
-              <div class="section-tag">FOUNDER</div>
-              <h2>
-                Tentang
-                <span class="text-gold font-serif-italic">Founder</span>
-              </h2>
-            </div>
 
-            <!-- Middle: Profile Column -->
-            <div class="founder-profile-col">
-              <div class="founder-avatar-wrapper">
-                <div class="founder-ring ring-1"></div>
-                <div class="founder-ring ring-2"></div>
-                <div class="founder-avatar-inner">
-                  <img
-                    src="assets/images/annisa_profile.jpg"
-                    alt="Annisa Hanif - Founder & Creative Director ABYNS STUDIO"
-                  />
-                </div>
-              </div>
-              <div class="founder-info">
-                <h3 class="founder-name">Annisa Hanif</h3>
-                <span class="founder-role">Founder & Creative Director</span>
-                <p class="founder-bio">
-                  Berpengalaman lebih dari 4 tahun di bidang digital kreatif dan
-                  luxury branding. Memiliki passion mendalam untuk membantu brand
-                  berkembang melalui sentuhan visual estetis dan teknologi
-                  interaktif.
-                </p>
-                <div class="founder-socials">
-                  <a
-                    href="https://linkedin.com"
-                    class="founder-social-link magnetic"
-                    target="_blank"
-                    rel="noopener"
-                    ><span class="magnetic-inner">in</span></a
-                  >
-                  <a
-                    href="https://instagram.com"
-                    class="founder-social-link magnetic"
-                    target="_blank"
-                    rel="noopener"
-                    ><span class="magnetic-inner">ig</span></a
-                  >
-                  <a
-                    href="https://dribbble.com"
-                    class="founder-social-link magnetic"
-                    target="_blank"
-                    rel="noopener"
-                    ><span class="magnetic-inner">db</span></a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- Right: Signature & Quote Column -->
-            <div class="founder-quote-col">
-              <div class="founder-signature">Annisa Hanif</div>
-              <div class="founder-quote-box">
-                <span class="quote-mark open">“</span>
-                <p class="founder-quote-text">
-                  Kami percaya, setiap brand punya cerita. Tugas kami adalah
-                  membantu Anda menyampaikannya dengan
-                  <span class="text-gold-metallic">cara yang indah</span>,
-                  <span class="text-gold-metallic">fungsional</span>, dan
-                  <span class="text-gold-metallic">berdampak</span>.
-                </p>
-                <span class="quote-mark close">”</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- 19. Big Luxury Footer -->
     <footer class="footer-main">

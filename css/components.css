@@ -2348,6 +2348,181 @@
   }
 }
 
+/* 19b. Workflow Curtain Slider */
+.workflow-curtain-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+
+.workflow-curtain-slide {
+  padding: 12rem 0;
+  position: relative;
+  border-bottom: 1.5px solid rgba(214, 183, 122, 0.25);
+}
+
+.workflow-slide-dev {
+  position: relative;
+  z-index: 1;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+.workflow-slide-cam {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0s linear;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+/* Slider Input (invisible full-area range inside the gold card border) */
+.workflow-slider-input {
+  position: absolute;
+  top: 0;
+  left: 2%;
+  width: 96%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+  cursor: ew-resize;
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Slider Handle (vertical line + button) */
+.workflow-slider-handle {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 3px;
+  height: 100%;
+  z-index: 8;
+  pointer-events: none;
+  transition: left 0s linear;
+}
+
+.workflow-slider-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, 
+    transparent 0%, 
+    rgba(214, 183, 122, 0.3) 10%, 
+    #d6b77a 30%, 
+    #d6b77a 70%, 
+    rgba(214, 183, 122, 0.3) 90%, 
+    transparent 100%
+  );
+  box-shadow: 0 0 12px rgba(214, 183, 122, 0.3);
+}
+
+.workflow-slider-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fceebd 0%, #cfae70 25%, #fceebd 50%, #b89755 75%, #fceebd 100%);
+  background-size: 200% auto;
+  animation: gold-shine 4s linear infinite;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(214, 183, 122, 0.5), 0 0 25px rgba(214, 183, 122, 0.2);
+}
+
+.workflow-slider-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke: #130314;
+  fill: none;
+}
+
+/* Division Tabs at Bottom */
+.workflow-division-tabs {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 12;
+  display: flex;
+  gap: 0.5rem;
+  background: rgba(19, 3, 20, 0.85);
+  border: 1px solid rgba(214, 183, 122, 0.3);
+  border-radius: 50px;
+  padding: 4px;
+  backdrop-filter: blur(10px);
+}
+
+.workflow-tab {
+  padding: 0.5rem 1.2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.workflow-tab.active {
+  background: linear-gradient(135deg, rgba(214, 183, 122, 0.25), rgba(214, 183, 122, 0.1));
+  color: #d6b77a;
+  border: 1px solid rgba(214, 183, 122, 0.4);
+}
+
+.workflow-tab:hover:not(.active) {
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 992px) {
+  .workflow-curtain-slide {
+    padding: 5rem 0 6rem;
+  }
+  .workflow-slide-cam {
+    position: relative;
+    clip-path: none !important;
+    display: none;
+  }
+  .workflow-slide-cam.mobile-active {
+    display: block;
+  }
+  .workflow-slide-dev.mobile-hidden {
+    display: none;
+  }
+  .workflow-slider-input,
+  .workflow-slider-handle {
+    display: none;
+  }
+  .workflow-division-tabs {
+    position: relative;
+    bottom: auto;
+    margin: -2rem auto 2rem;
+    transform: none;
+    left: auto;
+    justify-content: center;
+  }
+}
+
 /* 20. Premium Portfolio Section */
 .section-portfolio-new {
   background-image: url('../assets/images/bg-portofolio.png') !important;
@@ -2875,3 +3050,364 @@
     scroll-snap-align: start;
   }
 }
+
+/* 23. Premium Interactive Founder Avatar Curtain Slider */
+.founder-avatar-wrapper {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: visible; /* Let rings and handle show beyond */
+}
+
+/* Base avatar: Hisyam */
+.hisyam-avatar {
+  position: relative;
+  z-index: 3;
+}
+
+/* Clipped overlay avatar: Annisa */
+.annisa-avatar {
+  position: absolute !important;
+  top: 5px;
+  left: 5px;
+  z-index: 5;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--color-gold);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(214, 183, 122, 0.1);
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  pointer-events: none;
+  transition: border-color 0.5s ease;
+}
+
+/* Slider Line & Button Inside Avatar Frame */
+.founder-slider-handle {
+  position: absolute;
+  top: -20px;
+  bottom: -20px;
+  left: 50%;
+  width: 2px;
+  z-index: 10;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.founder-slider-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #d6b77a;
+  box-shadow: 
+    0 0 8px rgba(214, 183, 122, 0.8),
+    0 0 15px rgba(214, 183, 122, 0.4);
+}
+
+.founder-slider-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #130314;
+  border: 1.5px solid #d6b77a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d6b77a;
+  box-shadow: 0 0 12px rgba(214, 183, 122, 0.5);
+  pointer-events: none;
+}
+
+.founder-slider-button svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Transparent Range Input Overlay over Avatar Area */
+.founder-slider-input {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 220px;
+  height: 220px;
+  opacity: 0;
+  cursor: ew-resize;
+  z-index: 15;
+  margin: 0;
+}
+
+.founder-slider-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 36px;
+  height: 220px;
+}
+
+.founder-slider-input::-moz-range-thumb {
+  width: 36px;
+  height: 220px;
+}
+
+/* Active Drag States for Button */
+.founder-slider-input:active ~ .founder-slider-handle .founder-slider-button {
+  transform: translate(-50%, -50%) scale(1.15);
+  background: linear-gradient(135deg, #fceebd 0%, #cfae70 25%, #fceebd 50%, #b89755 75%, #fceebd 100%) !important;
+  color: #130314 !important;
+  box-shadow: 0 0 20px rgba(214, 183, 122, 0.9) !important;
+}
+
+/* Active / Inactive Transitioning Text Blocks */
+.founder-header-block,
+.founder-bio-block,
+.founder-quote-block {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.founder-header-block.active,
+.founder-bio-block.active,
+.founder-quote-block.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  position: relative;
+  pointer-events: auto;
+}
+
+/* Adjust layout on mobile */
+@media (max-width: 992px) {
+  .annisa-avatar {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    clip-path: none !important;
+    pointer-events: auto !important;
+    margin-top: 2rem;
+  }
+  .founder-slider-handle,
+  .founder-slider-input {
+    display: none !important;
+  }
+  .founder-header-block,
+  .founder-bio-block,
+  .founder-quote-block {
+    position: relative !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    pointer-events: auto !important;
+  }
+  .founder-bio-block.annisa-text,
+  .founder-quote-block.annisa-text,
+  .founder-header-block.annisa-text {
+    margin-top: 3rem;
+    border-top: 1.5px solid rgba(214, 183, 122, 0.15);
+    padding-top: 3rem;
+  }
+}
+
+/* 24. Premium Ready-To-Use Products Section */
+.products-grid-new {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.product-card-new {
+  background: #130314 !important;
+  border: 1.5px solid rgba(214, 183, 122, 0.5) !important;
+  border-radius: 16px !important;
+  padding: 1.5rem !important;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.05),
+    0 10px 25px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  animation: border-glow-pulse 4s infinite alternate ease-in-out;
+}
+
+.product-card-new:hover {
+  transform: translateY(-8px);
+  border-color: rgba(214, 183, 122, 0.8) !important;
+  box-shadow: 
+    inset 0 1px 2px rgba(255, 255, 255, 0.15),
+    0 20px 40px rgba(0, 0, 0, 0.8),
+    0 0 25px rgba(214, 183, 122, 0.2) !important;
+}
+
+.product-image-wrapper-new {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(214, 183, 122, 0.1);
+  background: rgba(15, 6, 17, 0.5);
+}
+
+.product-mockup-img-new {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.product-card-new:hover .product-mockup-img-new {
+  transform: scale(1.08);
+}
+
+.product-icon-badge-new {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 5;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #fceebd 0%, #cfae70 25%, #fceebd 50%, #b89755 75%, #fceebd 100%) !important;
+  background-size: 200% auto !important;
+  animation: gold-shine 4s linear infinite !important;
+  border: 1.2px solid rgba(214, 183, 122, 0.6) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #130314 !important;
+  box-shadow: 0 4px 12px rgba(214, 183, 122, 0.3) !important;
+  transition: all 0.3s ease;
+}
+
+.product-card-new:hover .product-icon-badge-new {
+  background: linear-gradient(135deg, #fceebd 0%, #cfae70 25%, #fceebd 50%, #b89755 75%, #fceebd 100%) !important;
+  background-size: 200% auto !important;
+  animation: gold-shine 4s linear infinite !important;
+  color: #130314 !important;
+  border-color: transparent !important;
+  transform: scale(1.05);
+}
+
+.product-icon-badge-new svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2px;
+}
+
+.product-title-new {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.product-desc-new {
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.product-features-list-new {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.product-feature-item-new {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.product-feature-check-new {
+  color: #d6b77a;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-right: 0.2rem;
+}
+
+.product-btn-new {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1.2px solid rgba(214, 183, 122, 0.4) !important;
+  background: transparent;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-decoration: none;
+}
+
+.product-card-new:hover .product-btn-new {
+  background: linear-gradient(135deg, #fceebd 0%, #cfae70 25%, #fceebd 50%, #b89755 75%, #fceebd 100%) !important;
+  background-size: 200% auto !important;
+  animation: gold-shine 4s linear infinite !important;
+  color: #130314 !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 15px rgba(214, 183, 122, 0.3) !important;
+}
+
+.product-btn-new svg {
+  width: 12px;
+  height: 12px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2.5px;
+  transition: transform 0.3s ease;
+}
+
+.product-card-new:hover .product-btn-new svg {
+  transform: translateX(3px);
+}
+
+@media (max-width: 1200px) {
+  .products-grid-new {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid-new {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
