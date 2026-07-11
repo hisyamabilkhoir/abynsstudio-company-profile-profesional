@@ -108,16 +108,37 @@
     <!-- WebGL Canvas Container for Three.js Backdrop -->
     <div id="canvas-3d-bg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 1; pointer-events: none; opacity: 0.75;"></div>
 
-    <!-- Inner Page Header -->
-    <section class="section hero" style="min-height: 50vh; display: flex; align-items: center; padding-top: 10rem; z-index: 2;">
-        <div class="container flex" style="flex-direction: column; align-items: center; text-align: center;">
-            <div class="reveal-text-wrap" style="margin-bottom: 1.5rem;">
-                <span class="hero-title-reveal" style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4em; color: var(--color-gold); display: inline-block; transform: translateY(100%);">PROFIL AGENCY</span>
+    <!-- Inner Page Header with Custom Background -->
+    <section class="about-hero-section hero">
+        <div class="container" style="position: relative; z-index: 5;">
+            <div style="max-width: 600px; text-align: left; margin-left: 0; margin-right: auto;">
+                <div class="reveal-text-wrap" style="margin-bottom: 1.2rem; overflow: hidden;">
+                    <span class="hero-title-reveal" style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--color-gold); letter-spacing: 0.3em; text-transform: uppercase; display: inline-block; transform: translateY(100%);">— TENTANG KAMI</span>
+                </div>
+                <h1 class="text-reveal" style="font-family: var(--font-heading); font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; font-weight: 400; text-transform: uppercase; letter-spacing: 0.05em; color: #ffffff; margin-bottom: 1rem;">
+                    ABYNS <span class="text-gold">STUDIO</span>
+                </h1>
+                <h2 class="hero-desc" style="opacity: 0; transform: translateY(30px); font-family: var(--font-heading); font-size: clamp(1.5rem, 3.2vw, 2.2rem) !important; line-height: 1.35 !important; font-weight: 400; color: #ffffff; margin-bottom: 1.5rem; letter-spacing: 0.02em;">
+                    MEMBANGUN SOLUSI DIGITAL <br> UNTUK <span class="text-gold font-serif-italic" style="text-transform: none;">Masa Depan Anda</span>
+                </h2>
+                <p class="hero-desc" style="opacity: 0; transform: translateY(30px); font-size: 0.95rem; color: rgba(255, 255, 255, 0.7); line-height: 1.8; max-width: 520px;">
+                    ABYNS Studio adalah creative tech studio yang berfokus pada pembuatan website, aplikasi, serta konten visual premium untuk membantu brand tumbuh dan berdaya saing di era digital.
+                </p>
             </div>
-            <h1 class="text-reveal">Tentang <span class="text-gold font-serif-italic">ABYNS STUDIO</span></h1>
-            <p class="hero-desc" style="opacity: 0; transform: translateY(30px); max-width: 700px; margin-top: 2rem;">
-                Membangun standar baru keindahan digital melalui perpaduan seni desain visual yang mewah dan ketangkasan rekayasa kode tingkat tinggi.
-            </p>
+        </div>
+
+        <!-- Gold Separator Curve at the bottom with ring dot badge -->
+        <div class="services-hero-separator">
+            <!-- Curved SVG overlay curving downwards in the center -->
+            <svg viewBox="0 0 1440 40" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 40px; z-index: 1;">
+                <path d="M 0 15 L 696 15 C 708 15, 708 35, 720 35 C 732 35, 732 15, 744 15 L 1440 15 L 1440 40 L 0 40 Z" fill="#07020a" />
+                <path d="M 0 15 L 696 15 C 708 15, 708 35, 720 35 C 732 35, 732 15, 744 15 L 1440 15" stroke="rgba(214, 183, 122, 0.45)" stroke-width="1.5" />
+            </svg>
+            <div class="separator-badge">
+                <div class="badge-circle">
+                    <div class="badge-dot"></div>
+                </div>
+            </div>
         </div>
     </section>
 

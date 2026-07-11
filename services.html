@@ -108,86 +108,193 @@
     <!-- WebGL Canvas Container for Three.js Backdrop -->
     <div id="canvas-3d-bg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 1; pointer-events: none; opacity: 0.75;"></div>
 
-    <!-- Inner Page Header -->
-    <section class="section hero" style="min-height: 50vh; display: flex; align-items: center; padding-top: 10rem; z-index: 2;">
-        <div class="container flex" style="flex-direction: column; align-items: center; text-align: center;">
-            <div class="reveal-text-wrap" style="margin-bottom: 1.5rem;">
-                <span class="hero-title-reveal" style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4em; color: var(--color-gold); display: inline-block; transform: translateY(100%);">LAYANAN KAMI</span>
+    <!-- Hero Section with Custom Background -->
+    <section class="services-hero-section hero">
+        <div class="container text-center" style="position: relative; z-index: 5;">
+            <!-- Subtitle with arrow decorations -->
+            <div class="reveal-text-wrap" style="margin-bottom: 1.5rem; overflow: hidden;">
+                <span class="hero-title-reveal" style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--color-gold); letter-spacing: 0.4em; text-transform: uppercase; display: inline-block; transform: translateY(100%);">➔ LAYANAN KAMI ➔</span>
             </div>
-            <h1 class="text-reveal">Keahlian <span class="text-gold font-serif-italic">Eksklusif</span> Kami</h1>
-            <p class="hero-desc" style="opacity: 0; transform: translateY(30px); max-width: 700px; margin-top: 2rem;">
-                Menghadirkan serangkaian solusi desain dan pemrograman berstandar tinggi yang disesuaikan secara khusus untuk menunjang skala reputasi bisnis premium Anda.
-            </p>
+            <!-- Main Page Title -->
+            <h1 class="text-reveal" style="font-family: var(--font-heading); font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.15; font-weight: 400; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff; margin-bottom: 1.5rem;">
+                SEMUA LAYANAN
+            </h1>
+            <!-- Small gold diamond under title -->
+            <div class="hero-desc" style="opacity: 0; transform: translateY(20px); display: flex; justify-content: center; align-items: center; margin: 1rem auto 0 !important; max-width: none !important; width: fit-content !important;">
+                <div style="width: 100px; height: 1px; background: linear-gradient(to right, transparent, var(--color-gold));"></div>
+                <div style="width: 8px; height: 8px; transform: rotate(45deg); background: var(--color-gold); margin: 0 12px; box-shadow: 0 0 8px var(--color-gold);"></div>
+                <div style="width: 100px; height: 1px; background: linear-gradient(to left, transparent, var(--color-gold));"></div>
+            </div>
+        </div>
+
+        <!-- Gold Separator Curve at the bottom with ring dot badge -->
+        <div class="services-hero-separator">
+            <!-- Curved SVG overlay curving downwards in the center -->
+            <svg viewBox="0 0 1440 40" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 40px; z-index: 1;">
+                <path d="M 0 15 L 696 15 C 708 15, 708 35, 720 35 C 732 35, 732 15, 744 15 L 1440 15 L 1440 40 L 0 40 Z" fill="#07020a" />
+                <path d="M 0 15 L 696 15 C 708 15, 708 35, 720 35 C 732 35, 732 15, 744 15 L 1440 15" stroke="rgba(214, 183, 122, 0.45)" stroke-width="1.5" />
+            </svg>
+            <div class="separator-badge">
+                <div class="badge-circle">
+                    <div class="badge-dot"></div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Services Detailed Breakdown Sections -->
-    <!-- Service 1: Web Development -->
-    <section id="web" class="section" style="z-index: 2; padding-top: 2rem;">
-        <div class="container grid" style="grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 5rem; align-items: center;">
+    <!-- Services Grid Container Page -->
+    <section class="services-page-container">
+        <div class="container">
             
-            <div>
-                <span style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--color-gold); letter-spacing: 0.2em; text-transform: uppercase;">01 / CORE WEB ENGINEERING</span>
-                <h2 style="margin-top: 1rem;">Website Development <span class="text-gold font-serif-italic">Premium</span></h2>
-                <p style="margin-top: 2rem; font-size: 1.1rem; line-height: 1.8;">
-                    Kami mengembangkan website company profile, landing page, dan e-commerce eksklusif menggunakan framework modern termutakhir (HTML5, CSS3, ES6+ Vanilla JS, GSAP, WebGL).
-                </p>
-                <p style="margin-top: 1rem;">
-                    Setiap baris kode ditulis secara manual (no-builder) untuk memastikan performa loading yang instan (skor Lighthouse 95+), optimasi SEO Google maksimal, serta kehalusan visual transisi antarmuka berkecepatan 60 FPS.
-                </p>
-                <a href="contact.html?service=web" class="btn btn-primary magnetic" style="margin-top: 3rem;"><span class="magnetic-inner">Pesan Website Premium</span></a>
+            <!-- Breadcrumbs Row (Filters Removed) -->
+            <div class="services-filter-row" style="margin-bottom: 3.5rem; justify-content: flex-start;">
+                <!-- Left: Breadcrumbs -->
+                <div class="services-breadcrumb">
+                    <a href="index.html">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 14px; height: 14px; margin-right: 0.25rem; display: inline-block; vertical-align: middle;">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        Beranda
+                    </a>
+                    <span>&gt;</span>
+                    <span class="current">Layanan</span>
+                </div>
             </div>
 
-            <div class="img-reveal-mask" style="border-radius: 24px; overflow: hidden; border: 1px solid var(--color-border-glass); aspect-ratio: 4/3;">
-                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop" class="parallax-img" alt="Proyek website premium buatan ABYNS Studio" style="width: 100%; height: 100%; object-fit: cover;">
+            <!-- Horizontal Cards Grid -->
+            <div class="services-page-grid stagger-container">
+                <!-- Service 1: Website Development -->
+                <div class="services-page-card stagger-item">
+                    <div class="services-page-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <div class="services-page-content">
+                        <span class="services-page-num">01</span>
+                        <h3 class="services-page-title">Website Development</h3>
+                        <p class="services-page-desc">
+                            Solusi pembuatan website profesional yang cepat, aman, dan SEO friendly.
+                        </p>
+                        <a href="contact.html?service=web" class="services-page-link">
+                            Lihat Detail <span style="margin-left: 0.15rem;">➔</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2: Aplikasi Mobile -->
+                <div class="services-page-card stagger-item">
+                    <div class="services-page-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <div class="services-page-content">
+                        <span class="services-page-num">02</span>
+                        <h3 class="services-page-title">Aplikasi Mobile</h3>
+                        <p class="services-page-desc">
+                            Aplikasi mobile Android & iOS dengan performa tinggi dan pengalaman terbaik.
+                        </p>
+                        <a href="contact.html?service=app" class="services-page-link">
+                            Lihat Detail <span style="margin-left: 0.15rem;">➔</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3: Foto & Video -->
+                <div class="services-page-card stagger-item">
+                    <div class="services-page-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                            <circle cx="12" cy="13" r="4"></circle>
+                        </svg>
+                    </div>
+                    <div class="services-page-content">
+                        <span class="services-page-num">03</span>
+                        <h3 class="services-page-title">Foto & Video</h3>
+                        <p class="services-page-desc">
+                            Produksi foto & video berkualitas tinggi untuk kebutuhan promosi & branding.
+                        </p>
+                        <a href="contact.html?service=media" class="services-page-link">
+                            Lihat Detail <span style="margin-left: 0.15rem;">➔</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4: Luxury Branding -->
+                <div class="services-page-card stagger-item">
+                    <div class="services-page-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <path d="M12 8l1.5 3h3.5l-2.5 2 1 3.5-3.5-2-3.5 2 1-3.5-2.5-2h3.5z"></path>
+                        </svg>
+                    </div>
+                    <div class="services-page-content">
+                        <span class="services-page-num">04</span>
+                        <h3 class="services-page-title">Luxury Branding</h3>
+                        <p class="services-page-desc">
+                            Membangun identitas brand premium yang berkesan, konsisten, dan bernilai tinggi.
+                        </p>
+                        <a href="contact.html?service=branding" class="services-page-link">
+                            Lihat Detail <span style="margin-left: 0.15rem;">➔</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 5: Konten Digital -->
+                <div class="services-page-card stagger-item">
+                    <div class="services-page-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <line x1="10" y1="9" x2="8" y2="9"></line>
+                        </svg>
+                    </div>
+                    <div class="services-page-content">
+                        <span class="services-page-num">05</span>
+                        <h3 class="services-page-title">Konten Digital</h3>
+                        <p class="services-page-desc">
+                            Konten kreatif strategis untuk media sosial, website, dan kebutuhan digital lainnya.
+                        </p>
+                        <a href="contact.html?service=content" class="services-page-link">
+                            Lihat Detail <span style="margin-left: 0.15rem;">➔</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 6: UI/UX Design -->
+                <div class="services-page-card stagger-item">
+                    <div class="services-page-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20h9"></path>
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                        </svg>
+                    </div>
+                    <div class="services-page-content">
+                        <span class="services-page-num">06</span>
+                        <h3 class="services-page-title">UI/UX Design</h3>
+                        <p class="services-page-desc">
+                            Desain antarmuka intuitif dan pengalaman pengguna yang nyaman dan efektif.
+                        </p>
+                        <a href="contact.html?service=uiux" class="services-page-link">
+                            Lihat Detail <span style="margin-left: 0.15rem;">➔</span>
+                        </a>
+                    </div>
+                </div>
             </div>
 
-        </div>
-    </section>
-
-    <!-- Service 2: Mobile Apps -->
-    <section id="app" class="section" style="z-index: 2; background: rgba(15, 6, 17, 0.5);">
-        <div class="container grid" style="grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 5rem; align-items: center;">
-            
-            <div class="img-reveal-mask" style="border-radius: 24px; overflow: hidden; border: 1px solid var(--color-border-glass); aspect-ratio: 4/3;">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" class="parallax-img" alt="Pengembangan aplikasi mobile premium ABYNS STUDIO" style="width: 100%; height: 100%; object-fit: cover;">
+            <!-- Bottom gold divider decoration -->
+            <div style="display: flex; justify-content: center; align-items: center; margin-top: 6rem;">
+                <div style="width: 60px; height: 1px; background: linear-gradient(to right, transparent, rgba(214, 183, 122, 0.45));"></div>
+                <div style="width: 6px; height: 6px; transform: rotate(45deg); border: 1px solid var(--color-gold); margin: 0 12px;"></div>
+                <div style="width: 60px; height: 1px; background: linear-gradient(to left, transparent, rgba(214, 183, 122, 0.45));"></div>
             </div>
-
-            <div>
-                <span style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--color-gold); letter-spacing: 0.2em; text-transform: uppercase;">02 / APPLICATIONS</span>
-                <h2 style="margin-top: 1rem;">Mobile App <span class="text-gold font-serif-italic">Development</span></h2>
-                <p style="margin-top: 2rem; font-size: 1.1rem; line-height: 1.8;">
-                    Pengembangan aplikasi berbasis Android dan iOS (native & hybrid Flutter/React Native) dengan integrasi fungsionalitas yang andal, aman, dan berkecepatan tinggi.
-                </p>
-                <p style="margin-top: 1rem;">
-                    Kami memiliki spesialisasi membangun sistem custom untuk operasional bisnis ritel, Point of Sale (POS), CRM Leads Manajemen, akademik sekolah, sistem reservasi hotel, hingga absensi karyawan yang terhubung ke cloud server aman.
-                </p>
-                <a href="contact.html?service=app" class="btn btn-primary magnetic" style="margin-top: 3rem;"><span class="magnetic-inner">Bangun Sistem Aplikasi</span></a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Service 3: Photo & Video -->
-    <section id="photo" class="section" style="z-index: 2;">
-        <div class="container grid" style="grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 5rem; align-items: center;">
-            
-            <div>
-                <span style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--color-gold); letter-spacing: 0.2em; text-transform: uppercase;">03 / VISUAL PRODUCTION</span>
-                <h2 style="margin-top: 1rem;">Fotografi & <span class="text-gold font-serif-italic">Videografi</span> Komersial</h2>
-                <p style="margin-top: 2rem; font-size: 1.1rem; line-height: 1.8;">
-                    Menyajikan aset visual sinematik berkualitas 4K/8K untuk menaikkan prestige produk dan entitas brand mewah Anda secara visual.
-                </p>
-                <p style="margin-top: 1rem;">
-                    Layanan kami mencakup photoshoot produk komersial studio lighting, video profil perusahaan berskala sinematik, visualisasi perumahan elit lewat udara (drone), hingga pascaproduksi editing dan color grading premium.
-                </p>
-                <a href="contact.html?service=media" class="btn btn-primary magnetic" style="margin-top: 3rem;"><span class="magnetic-inner">Pesan Sesi Produksi</span></a>
-            </div>
-
-            <div class="img-reveal-mask" style="border-radius: 24px; overflow: hidden; border: 1px solid var(--color-border-glass); aspect-ratio: 4/3;">
-                <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=800&auto=format&fit=crop" class="parallax-img" alt="Sesi photoshoot produk perhiasan mewah ABYNS STUDIO" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-
         </div>
     </section>
 
