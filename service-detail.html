@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Development | ABYNS STUDIO</title>
+    <meta name="description" content="Detail layanan pembuatan website premium, profesional, cepat, aman, dan SEO Friendly oleh ABYNS STUDIO.">
+    
+    <!-- Third Party CSS (Swiper) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <style>
+        body {
+            background-color: #0c0510 !important;
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+
+        /* Detail page specific styles */
+        .breadcrumbs {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 2rem;
+            padding-top: 1rem;
+            justify-content: flex-start;
+        }
+
+        .breadcrumbs a {
+            color: rgba(255, 255, 255, 0.6);
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumbs a:hover {
+            color: var(--color-gold);
+        }
+
+        .breadcrumbs span {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Detail Hero */
+        .detail-header-wrapper {
+            background: url('assets/images/bg-list-produk.png') no-repeat center top / cover !important;
+            position: relative;
+            z-index: 2;
+            padding-top: 9rem;
+            padding-bottom: 5rem;
+        }
+
+        .detail-hero-section {
+            position: relative;
+            z-index: 5;
+        }
+
+        .detail-badge-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            border: 1px solid rgba(214, 183, 122, 0.3);
+            background: rgba(214, 183, 122, 0.05);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .detail-badge-icon {
+            color: var(--color-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .detail-badge-text {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--color-gold);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .mini-features-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .mini-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 0.75rem 1.25rem;
+            border-radius: 30px;
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+        }
+
+        .mini-feature-item:hover {
+            border-color: rgba(214, 183, 122, 0.3);
+            background: rgba(214, 183, 122, 0.05);
+        }
+
+        .mini-feature-icon {
+            color: var(--color-gold);
+            display: flex;
+            align-items: center;
+        }
+
+        /* Features & Benefits Section */
+        .features-section {
+            padding: 7rem 0;
+            position: relative;
+            background: radial-gradient(circle at 15% 50%, rgba(138, 43, 226, 0.08) 0%, transparent 60%);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 3fr;
+            gap: 4rem;
+            align-items: flex-start;
+        }
+
+        .features-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            background: rgba(18, 7, 23, 0.45);
+            border: 1px solid rgba(214, 183, 122, 0.08);
+            padding: 2.25rem 2rem;
+            border-radius: 16px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(214, 183, 122, 0.25);
+            background: rgba(214, 183, 122, 0.03);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            border: 1px solid rgba(214, 183, 122, 0.3);
+            background: rgba(214, 183, 122, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card-title {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
+            font-weight: 500;
+        }
+
+        .feature-card-desc {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.6;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 7rem 0;
+            background: rgba(10, 4, 13, 0.5);
+            position: relative;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+
+        .process-header {
+            max-width: 600px;
+        }
+
+        .process-timeline {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 2rem;
+            padding-top: 1rem;
+        }
+
+        .process-timeline-line {
+            position: absolute;
+            top: 40px;
+            left: 5%;
+            width: 90%;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(214, 183, 122, 0.05) 0%, rgba(214, 183, 122, 0.3) 50%, rgba(214, 183, 122, 0.05) 100%);
+            z-index: 1;
+        }
+
+        .process-step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding: 0 1rem;
+        }
+
+        .process-step-node {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(214, 183, 122, 0.4);
+            background: #0c0510;
+            color: var(--color-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 0 20px rgba(18, 7, 23, 0.8);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .process-step:hover .process-step-node {
+            transform: scale(1.08);
+            border-color: var(--color-gold);
+            background: rgba(214, 183, 122, 0.08);
+            box-shadow: 0 0 25px rgba(214, 183, 122, 0.2);
+        }
+
+        .process-step-num {
+            display: block;
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--color-gold);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step-title {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            color: #ffffff;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+        }
+
+        .process-step-desc {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.6;
+        }
+
+        /* Portfolio Showcase Section */
+        .showcase-section {
+            padding: 7rem 0;
+            position: relative;
+            background: radial-gradient(circle at 85% 50%, rgba(138, 43, 226, 0.08) 0%, transparent 65%);
+        }
+
+        .showcase-layout {
+            display: grid;
+            grid-template-columns: 1fr 2.5fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .showcase-slider-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .showcase-card {
+            width: 100%;
+            background: rgba(18, 7, 23, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .showcase-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(214, 183, 122, 0.2);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .swiper-button-prev-custom, .swiper-button-next-custom {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .swiper-button-prev-custom:hover, .swiper-button-next-custom:hover {
+            border-color: var(--color-gold) !important;
+            background: rgba(214, 183, 122, 0.1) !important;
+            transform: scale(1.05);
+        }
+
+        /* Swiper Pagination Custom Styling */
+        .showcase-swiper-pagination {
+            position: static !important;
+            width: auto !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+
+        .showcase-swiper-pagination .swiper-pagination-bullet {
+            background: rgba(255, 255, 255, 0.25) !important;
+            opacity: 1 !important;
+            width: 8px;
+            height: 8px;
+            transition: all 0.3s ease;
+            margin: 0 !important;
+        }
+
+        .showcase-swiper-pagination .swiper-pagination-bullet-active {
+            background: var(--color-gold) !important;
+            width: 24px !important;
+            border-radius: 4px !important;
+        }
+
+        .showcase-card-img-wrap {
+            height: 220px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .showcase-card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .showcase-card:hover .showcase-card-img {
+            transform: scale(1.05);
+        }
+
+        .showcase-card-info {
+            padding: 1.5rem;
+        }
+
+        .showcase-card-tag {
+            font-family: var(--font-body);
+            font-size: 0.7rem;
+            color: var(--color-gold);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .showcase-card-title {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        /* FAQ and CTA section */
+        .faq-cta-section {
+            padding: 7rem 0 9rem;
+            position: relative;
+        }
+
+        .faq-cta-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 5rem;
+            align-items: flex-start;
+        }
+
+        .faq-accordion {
+            margin-top: 2rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.25rem !important;
+        }
+
+        .faq-question-btn {
+            background: none;
+            border: none;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #ffffff;
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            font-weight: 500;
+            text-align: left;
+            cursor: pointer;
+            padding: 0;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question-btn:hover {
+            color: var(--color-gold);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), margin-top 0.4s ease;
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            margin-top: 1rem;
+        }
+
+        .faq-icon-plus {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+
+        .faq-icon-plus::before, .faq-icon-plus::after {
+            content: '';
+            position: absolute;
+            background-color: var(--color-gold);
+            transition: transform 0.3s ease;
+        }
+
+        /* Horizontal line */
+        .faq-icon-plus::before {
+            top: 9px;
+            left: 2px;
+            width: 16px;
+            height: 2px;
+        }
+
+        /* Vertical line */
+        .faq-icon-plus::after {
+            top: 2px;
+            left: 9px;
+            width: 2px;
+            height: 16px;
+        }
+
+        .faq-item.active .faq-icon-plus::after {
+            transform: rotate(90deg) scaleY(0);
+        }
+
+        /* Gold Pill Button SELENGKAPNYA */
+        .btn-selengkapnya {
+            background: linear-gradient(135deg, #d6b77a, #a88a4c) !important;
+            color: #120717 !important;
+            font-family: var(--font-body) !important;
+            font-size: 0.85rem !important;
+            font-weight: 700 !important;
+            letter-spacing: 0.15em !important;
+            padding: 1.1rem 2.4rem !important;
+            border-radius: 50px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 0.8rem !important;
+            border: none !important;
+            box-shadow: 0 10px 25px rgba(214, 183, 122, 0.3) !important;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            text-transform: uppercase !important;
+        }
+
+        .btn-selengkapnya:hover {
+            transform: translateY(-3px) scale(1.02) !important;
+            box-shadow: 0 15px 35px rgba(214, 183, 122, 0.45) !important;
+            color: #120717 !important;
+        }
+
+        /* Detailed CTA Panel */
+        .cta-glowing-panel {
+            background: linear-gradient(135deg, rgba(26, 11, 38, 0.85) 0%, rgba(13, 5, 20, 0.95) 100%);
+            border: 1px solid rgba(214, 183, 122, 0.25);
+            border-radius: 24px;
+            padding: 3.5rem 3rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .cta-glowing-panel::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(138, 43, 226, 0.12) 0%, transparent 60%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .cta-panel-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-badge-logo {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gold);
+        }
+
+        .cta-panel-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--color-gold);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .cta-panel-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: #ffffff;
+            margin-bottom: 1.25rem;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        .cta-panel-desc {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+            max-width: 460px;
+            margin: 0 auto 2.25rem;
+        }
+
+        /* Responsive Details */
+        @media (max-width: 991px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+
+            .showcase-layout {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .faq-cta-grid {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+
+            .process-timeline-line {
+                display: none;
+            }
+
+            .process-timeline {
+                flex-direction: column;
+                gap: 3rem;
+                align-items: center;
+            }
+
+            .process-step {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .features-cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .detail-header-wrapper {
+                padding-top: 8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="header-nav" style="opacity: 0; transform: translateY(-20px);">
+        <a href="index.html" class="logo-container">
+            <svg class="logo-icon-svg" viewBox="0 0 40 40" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 2L38 34H2L20 2Z" stroke="#d6b77a" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M20 12L31 31H9L20 12Z" fill="#d6b77a" fill-opacity="0.3" stroke="#d6b77a" stroke-width="1.5"/>
+                <circle cx="20" cy="24" r="3" fill="#f6f1eb"/>
+            </svg>
+            <div>
+                <span class="logo-text">ABYNS</span>
+                <span class="logo-sub">STUDIO</span>
+            </div>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="about.html" class="nav-link">Tentang Kami</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-column">
+                            <h4>Profil Studio</h4>
+                            <ul class="mega-menu-list">
+                                <li class="mega-menu-item">
+                                    <a href="about.html#story">
+                                        <span class="mega-menu-title">Cerita Kami</span>
+                                        <span class="mega-menu-desc">Perjalanan membangun solusi digital berkelas.</span>
+                                    </a>
+                                </li>
+                                <li class="mega-menu-item">
+                                    <a href="about.html#founder">
+                                        <span class="mega-menu-title">Profil Founder</span>
+                                        <span class="mega-menu-desc">Visi kreatif dari pemimpin kami.</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h4>Mengapa Kami</h4>
+                            <ul class="mega-menu-list">
+                                <li class="mega-menu-item">
+                                    <a href="gallery.html">
+                                        <span class="mega-menu-title">Behind The Scene</span>
+                                        <span class="mega-menu-desc">Melihat cara kerja tim profesional kami.</span>
+                                    </a>
+                                </li>
+                                <li class="mega-menu-item">
+                                    <a href="testimonials.html">
+                                        <span class="mega-menu-title">Ulasan Klien</span>
+                                        <span class="mega-menu-desc">Apa kata brand ternama tentang kami.</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="services.html" class="nav-link active">Layanan</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portofolio</a></li>
+                <li><a href="products.html" class="nav-link">Produk</a></li>
+                <li><a href="pricing.html" class="nav-link">Harga</a></li>
+                <li><a href="contact.html" class="nav-link">Kontak</a></li>
+            </ul>
+        </nav>
+
+        <a href="contact.html" class="nav-cta-btn magnetic"><span class="magnetic-inner">Konsultasi Gratis</span></a>
+
+        <button class="mobile-menu-trigger" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="about.html" class="mobile-nav-link">Tentang Kami</a></li>
+            <li><a href="services.html" class="mobile-nav-link active">Layanan</a></li>
+            <li><a href="portfolio.html" class="mobile-nav-link">Portofolio</a></li>
+            <li><a href="products.html" class="mobile-nav-link">Produk</a></li>
+            <li><a href="pricing.html" class="mobile-nav-link">Harga</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Kontak</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2rem;">Konsultasi Gratis</a>
+    </div>
+
+    <!-- Details Header Wrapper (Hero Section) -->
+    <div class="detail-header-wrapper">
+        <section class="detail-hero-section hero">
+            <div class="container grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 4rem; align-items: center; text-align: left;">
+                
+                <!-- Left: Info -->
+                <div class="product-info" style="align-items: flex-start; text-align: left;">
+                    
+                    <!-- Breadcrumbs -->
+                    <div class="breadcrumbs">
+                        <a href="index.html">Beranda</a>
+                        <span>&gt;</span>
+                        <a href="services.html">Layanan</a>
+                        <span>&gt;</span>
+                        <span style="color: var(--color-gold);">Website Development</span>
+                    </div>
+
+                    <!-- Badge Box -->
+                    <div class="detail-badge-box">
+                        <div class="detail-badge-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        </div>
+                        <span class="detail-badge-text">LAYANAN KAMI</span>
+                    </div>
+
+                    <!-- Main Title -->
+                    <h1 class="text-reveal" style="font-family: var(--font-heading); font-size: clamp(2.25rem, 5vw, 3.75rem); line-height: 1.1; font-weight: 400; color: #ffffff; margin-bottom: 1.5rem; text-align: left; text-transform: uppercase;">
+                        Website<br>
+                        <span class="text-gold">Development</span>
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="hero-desc" style="opacity: 0; transform: translateY(30px); font-size: 0.95rem; color: rgba(255, 255, 255, 0.7); line-height: 1.8; max-width: 550px; margin-top: 1rem; text-align: left;">
+                        Solusi pembuatan website profesional yang dirancang untuk memberikan performa optimal, tampilan elegan, dan pengalaman pengguna terbaik.
+                    </p>
+
+                    <!-- Miniature features row -->
+                    <div class="mini-features-row hero-desc" style="opacity: 0; transform: translateY(30px);">
+                        <div class="mini-feature-item">
+                            <span class="mini-feature-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span>Desain Premium &amp; Responsif</span>
+                        </div>
+                        <div class="mini-feature-item">
+                            <span class="mini-feature-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span>SEO Friendly &amp; Optimal</span>
+                        </div>
+                        <div class="mini-feature-item">
+                            <span class="mini-feature-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </span>
+                            <span>Aman &amp; Performa Tinggi</span>
+                        </div>
+                    </div>
+
+                    <!-- Hero Buttons -->
+                    <div class="products-hero-buttons hero-ctas" style="justify-content: flex-start; margin-top: 2rem; width: 100%; display: flex; gap: 1.2rem;">
+                        <a href="contact.html" class="btn btn-primary magnetic" style="padding: 1.1rem 2.4rem;"><span class="magnetic-inner">KONSULTASI GRATIS ➔</span></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <div class="gold-divider-ring"></div>
+
+    <!-- Detailed Products Body (Why choose us + process + showcase + faq/cta) -->
+    <div class="products-body-wrapper">
+        
+        <!-- Features & Benefits Section -->
+        <section class="features-section">
+            <div class="container">
+                <div class="features-grid">
+                    
+                    <!-- Left: Header info -->
+                    <div class="features-header-info">
+                        <span class="product-tag" style="display: inline-block; margin-bottom: 1rem; color: var(--color-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;">APA YANG ANDA DAPATKAN</span>
+                        <h2 class="text-reveal" style="font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.2; font-weight: 400; color: #ffffff; margin-bottom: 1.5rem;">Fitur &amp; Keunggulan</h2>
+                        <p style="font-family: var(--font-body); font-size: 0.95rem; color: rgba(255, 255, 255, 0.6); line-height: 1.8; max-width: 420px;">
+                            Kami memastikan setiap website yang kami bangun tidak hanya indah dipandang, tetapi juga kuat dari segi fungsi dan performa.
+                        </p>
+                    </div>
+
+                    <!-- Right: Features Cards Grid -->
+                    <div class="features-cards-grid">
+                        
+                        <!-- Card 1 -->
+                        <div class="feature-card">
+                            <div class="feature-card-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            </div>
+                            <h3 class="feature-card-title">Desain Kustom &amp; Eksklusif</h3>
+                            <p class="feature-card-desc">Desain unik sesuai identitas brand yang elegan, berkelas, dan eksklusif.</p>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="feature-card">
+                            <div class="feature-card-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                            </div>
+                            <h3 class="feature-card-title">Responsif di Semua Perangkat</h3>
+                            <p class="feature-card-desc">Tampilan web selalu optimal di desktop, tablet, maupun layar smartphone.</p>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="feature-card">
+                            <div class="feature-card-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                            </div>
+                            <h3 class="feature-card-title">SEO Friendly</h3>
+                            <p class="feature-card-desc">Struktur kode web dioptimasi agar mendukung kenaikan peringkat di Google.</p>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="feature-card">
+                            <div class="feature-card-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                            </div>
+                            <h3 class="feature-card-title">Performa Cepat</h3>
+                            <p class="feature-card-desc">Website ringan, dimuat instan, dan memberikan kenyamanan bagi pengunjung.</p>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="feature-card">
+                            <div class="feature-card-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                            </div>
+                            <h3 class="feature-card-title">Keamanan Terjamin</h3>
+                            <p class="feature-card-desc">Proteksi SSL, pertahanan firewall, dan enkripsi data untuk menjamin keamanan web.</p>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="feature-card">
+                            <div class="feature-card-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            </div>
+                            <h3 class="feature-card-title">Mudah Dikelola</h3>
+                            <p class="feature-card-desc">Dashboard CMS admin yang ramah pengguna untuk memperbarui konten web.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process-section">
+            <div class="container">
+                <div class="process-grid">
+                    
+                    <div class="process-header">
+                        <span class="product-tag" style="display: inline-block; margin-bottom: 1rem; color: var(--color-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;">PROSES KERJA KAMI</span>
+                        <h2 class="text-reveal" style="font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.2; font-weight: 400; color: #ffffff; margin-bottom: 1.5rem;">Alur Pembuatan Website</h2>
+                    </div>
+
+                    <!-- Horizontal Timeline -->
+                    <div class="process-timeline-wrap">
+                        <div class="process-timeline">
+                            <div class="process-timeline-line"></div>
+
+                            <!-- Step 1 -->
+                            <div class="process-step">
+                                <div class="process-step-node">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                </div>
+                                <span class="process-step-num">01 / KONSULTASI</span>
+                                <h3 class="process-step-title">Konsultasi</h3>
+                                <p class="process-step-desc">Diskusi mendalam mengenai kebutuhan, tujuan bisnis, dan ide konsep awal proyek Anda.</p>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div class="process-step">
+                                <div class="process-step-node">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                </div>
+                                <span class="process-step-num">02 / PERENCANAAN</span>
+                                <h3 class="process-step-title">Perencanaan</h3>
+                                <p class="process-step-desc">Analisis teknis, perancangan struktur peta situs, wireframe tata letak, dan fitur fungsional.</p>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div class="process-step">
+                                <div class="process-step-node">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                </div>
+                                <span class="process-step-num">03 / PENGEMBANGAN</span>
+                                <h3 class="process-step-title">Pengembangan</h3>
+                                <p class="process-step-desc">Proses pengodean frontend/backend and desain grafis antarmuka UI/UX yang dinamis.</p>
+                            </div>
+
+                            <!-- Step 4 -->
+                            <div class="process-step">
+                                <div class="process-step-node">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                </div>
+                                <span class="process-step-num">04 / UJI COBA</span>
+                                <h3 class="process-step-title">Uji Coba</h3>
+                                <p class="process-step-desc">Pengujian performa beban halaman, kelancaran navigasi, responsivitas seluler, dan keamanan.</p>
+                            </div>
+
+                            <!-- Step 5 -->
+                            <div class="process-step">
+                                <div class="process-step-node">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                </div>
+                                <span class="process-step-num">05 / PELUNCURAN</span>
+                                <h3 class="process-step-title">Peluncuran</h3>
+                                <p class="process-step-desc">Website siap dipublikasikan secara online, didukung pemeliharaan berkala pasca-rilis.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Showcase Section -->
+        <section class="showcase-section">
+            <div class="container">
+                <div class="showcase-layout">
+                    
+                    <!-- Left: Header info -->
+                    <div class="showcase-info">
+                        <span class="product-tag" style="display: inline-block; margin-bottom: 1rem; color: var(--color-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;">HASIL KARYA KAMI</span>
+                        <h2 class="text-reveal" style="font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.2; font-weight: 400; color: #ffffff; margin-bottom: 1.5rem;">Website yang Telah Kami Bangun</h2>
+                        <p style="font-family: var(--font-body); font-size: 0.9rem; color: rgba(255, 255, 255, 0.5); line-height: 1.7;">
+                            Lihat bagaimana kami mentransformasi visi digital klien kami menjadi mahakarya web yang fungsional dan berdampak.
+                        </p>
+                    </div>                    <!-- Right: Swiper Slider -->
+                    <div class="showcase-slider-container swiper showcase-swiper">
+                        <div class="swiper-wrapper">
+                            
+                            <!-- Card 1 -->
+                            <div class="showcase-card swiper-slide">
+                                <div class="showcase-card-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop" alt="Luxury Hotel Website" class="showcase-card-img">
+                                </div>
+                                <div class="showcase-card-info">
+                                    <span class="showcase-card-tag">Website Company Profile</span>
+                                    <h4 class="showcase-card-title">Luxury Hotel &amp; Resort</h4>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="showcase-card swiper-slide">
+                                <div class="showcase-card-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop" alt="E-Commerce Skincare" class="showcase-card-img">
+                                </div>
+                                <div class="showcase-card-info">
+                                    <span class="showcase-card-tag">Website E-Commerce</span>
+                                    <h4 class="showcase-card-title">Nature Skincare</h4>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="showcase-card swiper-slide">
+                                <div class="showcase-card-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=800&auto=format&fit=crop" alt="Coffee Mobile App Landing" class="showcase-card-img">
+                                </div>
+                                <div class="showcase-card-info">
+                                    <span class="showcase-card-tag">Website Landing Page</span>
+                                    <h4 class="showcase-card-title">Aesthetic Cafe</h4>
+                                </div>
+                            </div>
+
+                            <!-- Card 4 -->
+                            <div class="showcase-card swiper-slide">
+                                <div class="showcase-card-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" alt="Architect SCBD Portfolio" class="showcase-card-img">
+                                </div>
+                                <div class="showcase-card-info">
+                                    <span class="showcase-card-tag">Website Agency Portfolio</span>
+                                    <h4 class="showcase-card-title">Vizion SCBD Office</h4>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Navigation Controls -->
+                        <div class="showcase-swiper-navigation" style="display: flex; gap: 1rem; margin-top: 2rem; position: relative; z-index: 10;">
+                            <div class="showcase-swiper-button-prev swiper-button-prev-custom" style="cursor: pointer; width: 44px; height: 44px; border: 1.5px solid rgba(214, 183, 122, 0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--color-gold); z-index: 10;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                            </div>
+                            <div class="showcase-swiper-button-next swiper-button-next-custom" style="cursor: pointer; width: 44px; height: 44px; border: 1.5px solid rgba(214, 183, 122, 0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--color-gold); z-index: 10;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </div>
+                            <div class="showcase-swiper-pagination swiper-pagination-custom" style="display: flex; align-items: center; gap: 0.5rem; margin-left: auto; z-index: 10;"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ and CTA Section -->
+        <section class="faq-cta-section">
+            <div class="container">
+                <div class="faq-cta-grid">
+                    
+                    <!-- Left: FAQ Accordion -->
+                    <div class="faq-accordion-block">
+                        <span class="product-tag" style="display: inline-block; margin-bottom: 1rem; color: var(--color-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;">PERTANYAAN YANG SERING DITANYAKAN</span>
+                        <h2 class="text-reveal" style="font-family: var(--font-heading); font-size: clamp(2rem, 3.5vw, 2.5rem); line-height: 1.2; font-weight: 400; color: #ffffff;">Pertanyaan Umum</h2>
+                        
+                        <div class="faq-accordion">
+                            
+                            <!-- FAQ Item 1 -->
+                            <div class="faq-item">
+                                <button class="faq-question-btn">
+                                    <span>Berapa lama waktu pembuatan website?</span>
+                                    <span class="faq-icon-plus"></span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Waktu pembuatan berkisar antara 2 hingga 6 minggu, tergantung dari kompleksitas fitur, jumlah halaman, dan kesiapan konten dari pihak klien. Kami akan memberikan estimasi linimasa yang detail di awal kesepakatan.</p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 2 -->
+                            <div class="faq-item">
+                                <button class="faq-question-btn">
+                                    <span>Apakah saya bisa request revisi desain?</span>
+                                    <span class="faq-icon-plus"></span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Tentu saja. Kami mengutamakan kepuasan klien. Oleh karena itu, kami memberikan jatah revisi desain sebanyak 3 kali pada tahap penyusunan tata letak (wireframe) dan desain antarmuka (UI) sebelum melangkah ke tahap pengodean akhir.</p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 3 -->
+                            <div class="faq-item">
+                                <button class="faq-question-btn">
+                                    <span>Apakah website yang dibuat sudah SEO Friendly?</span>
+                                    <span class="faq-icon-plus"></span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Ya, semua website yang kami kembangkan sudah menerapkan optimasi SEO dasar, seperti struktur heading teratur, optimasi kecepatan muat, ramah layar seluler, penyesuaian meta tag deskripsi, dan sitemap XML otomatis agar website mudah diindeks oleh mesin pencari Google.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <a href="faq.html" class="btn-selengkapnya magnetic" style="margin-top: 3.5rem !important; display: inline-flex;">LIHAT SEMUA FAQ ➔</a>
+                    </div>
+
+                    <!-- Right: Glowing CTA Panel -->
+                    <div class="cta-glowing-panel">
+                        <div class="cta-panel-content">
+                            <div class="cta-badge-logo">
+                                <svg class="logo-icon-svg" viewBox="0 0 40 40" width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 2L38 34H2L20 2Z" stroke="#d6b77a" stroke-width="2.5" stroke-linejoin="round"/>
+                                    <path d="M20 12L31 31H9L20 12Z" fill="#d6b77a" fill-opacity="0.3" stroke="#d6b77a" stroke-width="1.5"/>
+                                    <circle cx="20" cy="24" r="3" fill="#f6f1eb"/>
+                                </svg>
+                            </div>
+                            <span class="cta-panel-subtitle">SIAP MEMULAI PROYEK ANDA?</span>
+                            <h3 class="cta-panel-title">Wujudkan Website Impian Anda Sekarang!</h3>
+                            <p class="cta-panel-desc">Konsultasikan kebutuhan Anda bersama tim kami dan dapatkan solusi terbaik yang dirancang khusus untuk mempercepat pertumbuhan bisnis Anda.</p>
+                            <a href="contact.html" class="btn btn-primary magnetic" style="padding: 1.1rem 2.4rem;"><span class="magnetic-inner">KONSULTASI GRATIS ➔</span></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-main">
+      <!-- Upper Footer (Social Media & Newsletter) -->
+      <div class="footer-upper">
+        <!-- Left: Social Media -->
+        <div class="footer-social-section-new">
+          <div class="footer-social-title">IKUT KAMI DI MEDIA SOSIAL</div>
+          <div class="footer-social-icons-row">
+            <!-- Instagram -->
+            <a href="https://instagram.com" class="footer-social-item magnetic" target="_blank" rel="noopener">
+              <div class="footer-social-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </div>
+              <span>Instagram</span>
+            </a>
+            <!-- TikTok -->
+            <a href="https://tiktok.com" class="footer-social-item magnetic" target="_blank" rel="noopener">
+              <div class="footer-social-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                </svg>
+              </div>
+              <span>TikTok</span>
+            </a>
+            <!-- YouTube -->
+            <a href="https://youtube.com" class="footer-social-item magnetic" target="_blank" rel="noopener">
+              <div class="footer-social-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"></path>
+                  <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon>
+                </svg>
+              </div>
+              <span>YouTube</span>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com" class="footer-social-item magnetic" target="_blank" rel="noopener">
+              <div class="footer-social-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </div>
+              <span>LinkedIn</span>
+            </a>
+            <!-- Facebook -->
+            <a href="https://facebook.com" class="footer-social-item magnetic" target="_blank" rel="noopener">
+              <div class="footer-social-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </div>
+              <span>Facebook</span>
+            </a>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/6281234567890" class="footer-social-item magnetic" target="_blank" rel="noopener">
+              <div class="footer-social-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+              </div>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Newsletter -->
+        <div class="footer-newsletter-section-new">
+          <h4 class="footer-newsletter-title text-reveal-gold">Dapatkan Update & Insight Menarik</h4>
+          <p class="footer-newsletter-desc">
+            Berlangganan newsletter kami untuk mendapatkan tips digital, inspirasi desain, dan update terbaru.
+          </p>
+          <form class="newsletter-form-new" onsubmit="event.preventDefault(); alert('Terima kasih telah berlangganan newsletter kami.'); this.reset();">
+            <input type="email" placeholder="Masukkan email Anda" class="newsletter-input-new" required aria-label="Masukkan email Anda" />
+            <button type="submit" class="newsletter-btn-new magnetic"><span class="magnetic-inner">BERLANGGANAN</span></button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Middle Footer (5 columns) -->
+      <div class="footer-middle-grid">
+        <!-- Col 1: Logo & Tagline -->
+        <div class="footer-logo-col">
+          <a href="index.html" class="logo-container">
+            <svg class="logo-icon-svg" viewBox="0 0 40 40" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 2L38 34H2L20 2Z" stroke="#d6b77a" stroke-width="2.5" stroke-linejoin="round" />
+              <path d="M20 12L31 31H9L20 12Z" fill="#d6b77a" fill-opacity="0.3" stroke="#d6b77a" stroke-width="1.5" />
+              <circle cx="20" cy="24" r="3" fill="#f6f1eb" />
+            </svg>
+            <div>
+              <span class="logo-text">ABYNS</span>
+              <span class="logo-sub">STUDIO</span>
+            </div>
+          </a>
+          <p>
+            Digital Solutions That<br>
+            <span class="font-serif-italic" style="color: #d6b77a;">Elevate</span> Your Brand
+          </p>
+        </div>
+
+        <!-- Col 2: NAVIGASI -->
+        <div>
+          <h4 class="footer-title">NAVIGASI</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="services.html">Layanan</a></li>
+            <li><a href="portfolio.html">Portofolio</a></li>
+            <li><a href="products.html">Produk</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: LAYANAN -->
+        <div>
+          <h4 class="footer-title">LAYANAN</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#webdev">Web Development</a></li>
+            <li><a href="services.html#appdev">App Development</a></li>
+            <li><a href="services.html#uiux">UI/UX Design</a></li>
+            <li><a href="services.html#photography">Foto & Videography</a></li>
+            <li><a href="services.html#branding">Branding</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: INFORMASI -->
+        <div>
+          <h4 class="footer-title">INFORMASI</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="careers.html">Karir</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="terms.html">Syarat & Ketentuan</a></li>
+            <li><a href="privacy.html">Kebijakan Privasi</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: KONTAK -->
+        <div>
+          <h4 class="footer-title">KONTAK</h4>
+          
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span>Bandung, Indonesia</span>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <a href="tel:+6281234567890">+62 812 3456 7890</a>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <a href="mailto:hello@abynsstudio.com">hello@abynsstudio.com</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; 2026 ABYNS STUDIO. Hak Cipta Dilindungi Undang-Undang.
+        </div>
+
+        <div class="footer-socials">
+          <a href="https://instagram.com" class="footer-social-link magnetic" target="_blank" rel="noopener"><span class="magnetic-inner">ig</span></a>
+          <a href="https://linkedin.com" class="footer-social-link magnetic" target="_blank" rel="noopener"><span class="magnetic-inner">in</span></a>
+          <a href="https://youtube.com" class="footer-social-link magnetic" target="_blank" rel="noopener"><span class="magnetic-inner">yt</span></a>
+          <a href="https://facebook.com" class="footer-social-link magnetic" target="_blank" rel="noopener"><span class="magnetic-inner">fb</span></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Core Libraries (CDN URLs) -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Logic scripts -->
+    <script src="js/cursor.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/gsap.js"></script>
+    
+    <!-- FAQ Toggle Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const button = item.querySelector('.faq-question-btn');
+                
+                button.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all active items
+                    faqItems.forEach(i => i.classList.remove('active'));
+                    
+                    // Toggle current item
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+            // Initialize Showcase Swiper
+            try {
+                new Swiper('.showcase-swiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 24,
+                    grabCursor: true,
+                    speed: 600,
+                    loop: true,
+                    navigation: {
+                        nextEl: '.showcase-swiper-button-next',
+                        prevEl: '.showcase-swiper-button-prev',
+                    },
+                    pagination: {
+                        el: '.showcase-swiper-pagination',
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        576: {
+                            slidesPerView: 1.5,
+                            spaceBetween: 24,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 24,
+                        },
+                        1200: {
+                            slidesPerView: 2.2,
+                            spaceBetween: 24,
+                        }
+                    }
+                });
+            } catch (e) {
+                console.warn('Swiper initialization failed for showcase slider.', e);
+            }
+        });
+    </script>
+</body>
+</html>

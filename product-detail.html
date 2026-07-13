@@ -1,0 +1,2108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABYNS POS | ABYNS STUDIO</title>
+    <meta name="description" content="Detail produk ABYNS POS - Sistem kasir modern untuk bisnis premium dengan sinkronisasi offline, multi-outlet, dan laporan real-time.">
+    
+    <!-- Third Party CSS (Swiper) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <style>
+        body {
+            background-color: #0c0510 !important;
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+
+        /* Common components styles */
+        .breadcrumbs {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 2rem;
+            padding-top: 1rem;
+        }
+
+        .breadcrumbs a {
+            color: rgba(255, 255, 255, 0.6);
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumbs a:hover {
+            color: var(--color-gold);
+        }
+
+        .breadcrumbs span {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Detail Hero Section */
+        .product-hero-wrapper {
+            background: radial-gradient(circle at 50% -20%, rgba(138, 43, 226, 0.15) 0%, transparent 60%) !important;
+            padding-top: 9rem;
+            padding-bottom: 6rem;
+            position: relative;
+        }
+
+        .product-hero-section {
+            position: relative;
+            z-index: 5;
+        }
+
+        .product-badge-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            border: 1px solid rgba(214, 183, 122, 0.3);
+            background: rgba(214, 183, 122, 0.05);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-badge-text {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--color-gold);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .platform-availability {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .platform-icons {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--color-gold);
+        }
+
+        .platform-item {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        /* Stats Row */
+        .product-stats-row {
+            padding: 2.5rem 0;
+            border-top: 1.5px solid rgba(214, 183, 122, 0.1);
+            border-bottom: 1.5px solid rgba(214, 183, 122, 0.1);
+            background: rgba(18, 7, 23, 0.3);
+            margin-bottom: 5rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            align-items: center;
+            position: relative;
+        }
+
+        .stat-col {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            justify-content: center;
+            position: relative;
+        }
+
+        .stat-col:not(:last-child)::after {
+            content: '/';
+            position: absolute;
+            right: -1rem;
+            top: 50%;
+            transform: translateY(-50%) skewX(-15deg);
+            color: rgba(214, 183, 122, 0.2);
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        .stat-icon-box {
+            width: 48px;
+            height: 48px;
+            border: 1px solid var(--color-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gold);
+            background: rgba(214, 183, 122, 0.05);
+            border-radius: 4px;
+        }
+
+        .stat-info h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: #ffffff;
+            font-weight: 400;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-info p {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Left-Right Dual Sections */
+        .dual-showcase-section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .dual-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .dual-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .checklist-icon {
+            color: var(--color-gold);
+            display: flex;
+            align-items: center;
+        }
+
+        .mockup-laptop-container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .mockup-laptop-glow {
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            background: radial-gradient(circle, rgba(138, 43, 226, 0.2) 0%, transparent 70%);
+            z-index: 1;
+            filter: blur(30px);
+            pointer-events: none;
+        }
+
+        .mockup-laptop-img {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 580px;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+        }
+
+        /* Mobile Feature Grid */
+        .feature-icon-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem 1.5rem;
+            margin-top: 2.5rem;
+            width: 100%;
+        }
+
+        .icon-feature-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .icon-feature-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid rgba(214, 183, 122, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gold);
+            background: rgba(214, 183, 122, 0.05);
+            flex-shrink: 0;
+        }
+
+        .icon-feature-info h4 {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            color: #ffffff;
+            font-weight: 500;
+            margin-bottom: 0.4rem;
+        }
+
+        .icon-feature-info p {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.5;
+        }
+
+        .app-store-badges {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .store-badge-img {
+            height: 40px;
+            object-fit: contain;
+            opacity: 0.85;
+            transition: opacity 0.3s ease;
+        }
+
+        .store-badge-img:hover {
+            opacity: 1;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-section {
+            padding: 7rem 0;
+            background: radial-gradient(circle at 50% 50%, rgba(138, 43, 226, 0.08) 0%, transparent 60%);
+        }
+
+        .choose-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .choose-card {
+            background: rgba(18, 7, 23, 0.45);
+            border: 1px solid rgba(214, 183, 122, 0.1);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .choose-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(214, 183, 122, 0.3);
+            background: rgba(214, 183, 122, 0.03);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .choose-card-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            border: 1px solid rgba(214, 183, 122, 0.3);
+            background: rgba(214, 183, 122, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .choose-card-title {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
+            font-weight: 500;
+        }
+
+        .choose-card-desc {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.6;
+        }
+
+        /* Interactive Full Features Section */
+        .full-features-section {
+            padding: 7rem 0;
+            background: rgba(10, 4, 13, 0.5);
+        }
+
+        .features-showcase-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.8fr;
+            gap: 4rem;
+            align-items: flex-start;
+            margin-top: 3.5rem;
+        }
+
+        .tab-menu-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .tab-menu-item {
+            background: rgba(18, 7, 23, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            padding: 1.1rem 1.5rem;
+            border-radius: 12px;
+            color: rgba(255, 255, 255, 0.6);
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .tab-menu-item:hover {
+            color: #ffffff;
+            border-color: rgba(214, 183, 122, 0.2);
+            background: rgba(214, 183, 122, 0.03);
+        }
+
+        .tab-menu-item.active {
+            color: var(--color-gold);
+            border-color: rgba(214, 183, 122, 0.5);
+            background: rgba(214, 183, 122, 0.08);
+            box-shadow: 0 0 15px rgba(214, 183, 122, 0.1);
+        }
+
+        .tab-features-list {
+            margin-top: 2rem;
+            display: none;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .tab-features-list.active {
+            display: flex;
+            animation: fadeIn 0.4s ease forwards;
+        }
+
+        .mockup-display-wrapper {
+            position: relative;
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(214, 183, 122, 0.15);
+            background: rgba(18, 7, 23, 0.8);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+
+        .mockup-display-img {
+            width: 100%;
+            display: none;
+            transition: all 0.4s ease;
+        }
+
+        .mockup-display-img.active {
+            display: block;
+            animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Integrations Row Section */
+        .integrations-section {
+            padding: 5rem 0;
+            border-top: 1px solid rgba(214, 183, 122, 0.1);
+            border-bottom: 1px solid rgba(214, 183, 122, 0.1);
+            background: rgba(10, 4, 13, 0.3);
+            text-align: center;
+        }
+
+        .integrations-logos-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem 4rem;
+            margin-top: 3rem;
+        }
+
+        .integration-logo-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.5;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            height: 36px;
+        }
+
+        .integration-logo-item:hover {
+            opacity: 1;
+            transform: scale(1.08);
+        }
+
+        .integration-svg {
+            max-height: 100%;
+            width: auto;
+            max-width: 120px;
+        }
+
+        .integration-text-logo {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.05em;
+        }
+
+        /* Process Section (Cara Kerja) */
+        .work-process-section {
+            padding: 7rem 0;
+            position: relative;
+        }
+
+        .work-timeline-container {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 4rem;
+        }
+
+        .work-timeline-bar {
+            position: absolute;
+            top: 40px;
+            left: 5%;
+            width: 90%;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(214, 183, 122, 0.05) 0%, rgba(214, 183, 122, 0.3) 50%, rgba(214, 183, 122, 0.05) 100%);
+            z-index: 1;
+        }
+
+        .work-step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding: 0 1rem;
+        }
+
+        .work-step-node {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(214, 183, 122, 0.4);
+            background: #0c0510;
+            color: var(--color-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 0 20px rgba(18, 7, 23, 0.8);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .work-step-node::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(138, 43, 226, 0.4) 0%, transparent 70%);
+            opacity: 0.3;
+            transition: opacity 0.4s ease;
+        }
+
+        .work-step:hover .work-step-node {
+            transform: scale(1.08);
+            border-color: var(--color-gold);
+            box-shadow: 0 0 25px rgba(214, 183, 122, 0.2);
+        }
+
+        .work-step:hover .work-step-node::before {
+            opacity: 0.6;
+        }
+
+        .work-step-num {
+            display: block;
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--color-gold);
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .work-step-title {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            color: #ffffff;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .work-step-desc {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.6;
+        }
+
+        /* Swiper Screenshots Showcase */
+        .screenshots-section {
+            padding: 7rem 0;
+            background: rgba(10, 4, 13, 0.3);
+            position: relative;
+        }
+
+        .screenshot-swiper-wrap {
+            position: relative;
+            margin-top: 4rem;
+            overflow: hidden;
+        }
+
+        .screenshot-card {
+            background: rgba(18, 7, 23, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .screenshot-img-wrap {
+            height: 380px;
+            width: 100%;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .screenshot-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .screenshot-card:hover .screenshot-img {
+            transform: scale(1.04);
+        }
+
+        .swiper-nav-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .nav-arrow-custom {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(214, 183, 122, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gold);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-arrow-custom:hover {
+            border-color: var(--color-gold);
+            background: rgba(214, 183, 122, 0.1);
+            color: #ffffff;
+            transform: scale(1.05);
+        }
+
+        /* Swiper Pagination Styling */
+        .swiper-pagination-custom {
+            position: static !important;
+            width: auto !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+
+        .swiper-pagination-custom .swiper-pagination-bullet {
+            background: rgba(255, 255, 255, 0.25) !important;
+            opacity: 1 !important;
+            width: 8px;
+            height: 8px;
+            transition: all 0.3s ease;
+            margin: 0 !important;
+        }
+
+        .swiper-pagination-custom .swiper-pagination-bullet-active {
+            background: var(--color-gold) !important;
+            width: 24px !important;
+            border-radius: 4px !important;
+        }
+
+        /* Testimonials Swiper */
+        .testimonials-section {
+            padding: 7rem 0;
+            position: relative;
+            background: radial-gradient(circle at 10% 50%, rgba(138, 43, 226, 0.08) 0%, transparent 60%);
+        }
+
+        .testimonial-slider-wrap {
+            margin-top: 4rem;
+            overflow: hidden;
+        }
+
+        .testimonial-card-new {
+            background: rgba(18, 7, 23, 0.45);
+            border: 1px solid rgba(214, 183, 122, 0.1);
+            border-radius: 16px;
+            padding: 2.5rem;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .stars-row {
+            display: flex;
+            gap: 0.25rem;
+            color: var(--color-gold);
+            margin-bottom: 1.25rem;
+        }
+
+        .testimonial-text {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .client-profile-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: auto;
+        }
+
+        .client-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid rgba(214, 183, 122, 0.3);
+        }
+
+        .client-info h4 {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            color: #ffffff;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .client-info p {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* CTA Glowing Panel */
+        .cta-glowing-panel {
+            background: linear-gradient(135deg, rgba(26, 11, 38, 0.85) 0%, rgba(13, 5, 20, 0.95) 100%);
+            border: 1px solid rgba(214, 183, 122, 0.25);
+            border-radius: 24px;
+            padding: 3.5rem 3rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            margin: 4rem 0 7rem;
+        }
+
+        .cta-glowing-panel::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(138, 43, 226, 0.12) 0%, transparent 60%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .cta-panel-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-badge-logo {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gold);
+        }
+
+        .cta-panel-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--color-gold);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .cta-panel-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: #ffffff;
+            margin-bottom: 1.25rem;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        .cta-panel-desc {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+            max-width: 460px;
+            margin: 0 auto 2.25rem;
+        }
+
+        /* Gold Pill Button */
+        .btn-selengkapnya {
+            background: linear-gradient(135deg, #d6b77a, #a88a4c) !important;
+            color: #120717 !important;
+            font-family: var(--font-body) !important;
+            font-size: 0.85rem !important;
+            font-weight: 700 !important;
+            letter-spacing: 0.15em !important;
+            padding: 1.1rem 2.4rem !important;
+            border-radius: 50px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 0.8rem !important;
+            border: none !important;
+            box-shadow: 0 10px 25px rgba(214, 183, 122, 0.3) !important;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            text-transform: uppercase !important;
+        }
+
+        .btn-selengkapnya:hover {
+            transform: translateY(-3px) scale(1.02) !important;
+            box-shadow: 0 15px 35px rgba(214, 183, 122, 0.45) !important;
+            color: #120717 !important;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.96); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 991px) {
+            .dual-grid {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+
+            .choose-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .features-showcase-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem 2rem;
+            }
+
+            .stat-col:nth-child(even)::after {
+                display: none;
+            }
+
+            .work-timeline-bar {
+                display: none;
+            }
+
+            .work-timeline-container {
+                flex-direction: column;
+                gap: 3rem;
+                align-items: center;
+            }
+
+            .work-step {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .choose-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .integrations-logos-row {
+                gap: 2.5rem 3rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .stat-col::after {
+                display: none !important;
+            }
+
+            .feature-icon-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-hero-wrapper {
+                padding-top: 8rem;
+            }
+
+            .app-store-badges {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="header-nav" style="opacity: 0; transform: translateY(-20px);">
+        <a href="index.html" class="logo-container">
+            <svg class="logo-icon-svg" viewBox="0 0 40 40" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 2L38 34H2L20 2Z" stroke="#d6b77a" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M20 12L31 31H9L20 12Z" fill="#d6b77a" fill-opacity="0.3" stroke="#d6b77a" stroke-width="1.5"/>
+                <circle cx="20" cy="24" r="3" fill="#f6f1eb"/>
+            </svg>
+            <div>
+                <span class="logo-text">ABYNS</span>
+                <span class="logo-sub">STUDIO</span>
+            </div>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="about.html" class="nav-link">Tentang Kami</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-column">
+                            <h4>Profil Studio</h4>
+                            <ul class="mega-menu-list">
+                                <li class="mega-menu-item">
+                                    <a href="about.html#story">
+                                        <span class="mega-menu-title">Cerita Kami</span>
+                                        <span class="mega-menu-desc">Perjalanan membangun solusi digital berkelas.</span>
+                                    </a>
+                                </li>
+                                <li class="mega-menu-item">
+                                    <a href="about.html#founder">
+                                        <span class="mega-menu-title">Profil Founder</span>
+                                        <span class="mega-menu-desc">Visi kreatif dari pemimpin kami.</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-column">
+                            <h4>Mengapa Kami</h4>
+                            <ul class="mega-menu-list">
+                                <li class="mega-menu-item">
+                                    <a href="gallery.html">
+                                        <span class="mega-menu-title">Behind The Scene</span>
+                                        <span class="mega-menu-desc">Melihat cara kerja tim profesional kami.</span>
+                                    </a>
+                                </li>
+                                <li class="mega-menu-item">
+                                    <a href="testimonials.html">
+                                        <span class="mega-menu-title">Ulasan Klien</span>
+                                        <span class="mega-menu-desc">Apa kata brand ternama tentang kami.</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="services.html" class="nav-link">Layanan</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portofolio</a></li>
+                <li><a href="products.html" class="nav-link active">Produk</a></li>
+                <li><a href="pricing.html" class="nav-link">Harga</a></li>
+                <li><a href="contact.html" class="nav-link">Kontak</a></li>
+            </ul>
+        </nav>
+
+        <a href="contact.html" class="nav-cta-btn magnetic"><span class="magnetic-inner">Konsultasi Gratis</span></a>
+
+        <button class="mobile-menu-trigger" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="about.html" class="mobile-nav-link">Tentang Kami</a></li>
+            <li><a href="services.html" class="mobile-nav-link">Layanan</a></li>
+            <li><a href="portfolio.html" class="mobile-nav-link">Portofolio</a></li>
+            <li><a href="products.html" class="mobile-nav-link active">Produk</a></li>
+            <li><a href="pricing.html" class="mobile-nav-link">Harga</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Kontak</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2rem;">Konsultasi Gratis</a>
+    </div>
+
+    <!-- Product Hero Section -->
+    <div class="product-hero-wrapper">
+        <section class="product-hero-section hero">
+            <div class="container grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 4rem; align-items: center; text-align: left;">
+                
+                <!-- Left Content -->
+                <div class="product-info" style="align-items: flex-start; text-align: left;">
+                    
+                    <!-- Breadcrumbs -->
+                    <div class="breadcrumbs">
+                        <a href="index.html">Beranda</a>
+                        <span>&gt;</span>
+                        <a href="products.html">Produk</a>
+                        <span>&gt;</span>
+                        <span style="color: var(--color-gold);">ABYNS POS</span>
+                    </div>
+
+                    <!-- Badge -->
+                    <div class="product-badge-box">
+                        <span class="product-badge-text">ABYNS POS |</span>
+                    </div>
+
+                    <!-- Title Case Title -->
+                    <h1 class="text-reveal" style="font-family: var(--font-heading); font-size: clamp(2.25rem, 5vw, 3.5rem); line-height: 1.15; font-weight: 400; color: #ffffff; margin-bottom: 1.5rem; text-align: left;">
+                        Sistem Kasir Modern<br>
+                        Untuk <span class="text-gold">Bisnis Premium</span>
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="hero-desc" style="opacity: 0; transform: translateY(30px); font-size: 0.95rem; color: rgba(255, 255, 255, 0.7); line-height: 1.8; max-width: 550px; margin-top: 1rem; text-align: left;">
+                        Solusi kasir all-in-one yang dirancang untuk membantu bisnis Anda bekerja lebih efisien, terintegrasi, dan berkembang lebih cepat dengan teknologi terkini.
+                    </p>
+
+                    <!-- Buttons -->
+                    <div class="products-hero-buttons hero-ctas" style="justify-content: flex-start; margin-top: 2rem; width: 100%; display: flex; gap: 1.2rem; align-items: center;">
+                        <a href="contact.html?demo=pos" class="btn btn-primary magnetic" style="padding: 1.1rem 2.4rem;"><span class="magnetic-inner">LIHAT DEMO ➔</span></a>
+                        <a href="contact.html" class="nav-cta-btn magnetic" style="position: static; padding: 1.1rem 2.4rem; display: inline-flex; border: 1.5px solid rgba(214, 183, 122, 0.4); border-radius: 30px; color: var(--color-gold); font-family: var(--font-body); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; transition: all 0.3s ease;"><span class="magnetic-inner">KONSULTASI GRATIS</span></a>
+                    </div>
+
+                    <!-- Available Platforms -->
+                    <div class="platform-availability hero-desc" style="opacity: 0; transform: translateY(30px);">
+                        <span>Tersedia di semua perangkat:</span>
+                        <div class="platform-icons">
+                            <div class="platform-item">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                                <span>Web</span>
+                            </div>
+                            <div class="platform-item">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                                <span>Android</span>
+                            </div>
+                            <div class="platform-item">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                                <span>iOS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Device Mockups -->
+                <div class="product-mockup-wrapper" style="position: relative; width: 100%; display: flex; justify-content: center; align-items: center;">
+                    <div class="product-mockup-glow" style="position: absolute; width: 80%; height: 80%; background: radial-gradient(circle, rgba(138, 43, 226, 0.25) 0%, transparent 70%); z-index: 1; pointer-events: none; filter: blur(40px);"></div>
+                    <img src="assets/images/produk-1.png" alt="ABYNS POS Mockup" class="product-mockup-image" style="position: relative; z-index: 2; width: 100%; max-width: 600px; object-fit: contain; filter: drop-shadow(0 25px 50px rgba(0,0,0,0.6));">
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Stats Counter Row -->
+    <div class="product-stats-row">
+        <div class="container">
+            <div class="stats-grid">
+                
+                <!-- Stat 1 -->
+                <div class="stat-col">
+                    <div class="stat-icon-box">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                    </div>
+                    <div class="stat-info">
+                        <h3>50+</h3>
+                        <p>Outlet Aktif</p>
+                    </div>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="stat-col">
+                    <div class="stat-icon-box">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    </div>
+                    <div class="stat-info">
+                        <h3>15.000+</h3>
+                        <p>Transaksi Berhasil</p>
+                    </div>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="stat-col">
+                    <div class="stat-icon-box">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    </div>
+                    <div class="stat-info">
+                        <h3>99.9%</h3>
+                        <p>System Uptime</p>
+                    </div>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="stat-col">
+                    <div class="stat-icon-box">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Realtime</h3>
+                        <p>Cloud System</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Body Wrapper -->
+    <div class="products-body-wrapper">
+        
+        <!-- Dashboard Dual Showcase -->
+        <section class="dual-showcase-section">
+            <div class="container">
+                <div class="dual-grid">
+                    
+                    <!-- Left: Info -->
+                    <div class="dual-content">
+                        <span class="product-tag" style="display: inline-block; margin-bottom: 1rem; color: var(--color-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;">DASHBOARD |</span>
+                        <h2 style="font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.5rem); line-height: 1.25; font-weight: 400; color: #ffffff; margin-bottom: 1.5rem;">
+                            Kelola Bisnis Anda<br>
+                            dalam <span class="text-gold" style="font-style: italic; font-family: var(--font-serif-italic);">Satu Dashboard</span>
+                        </h2>
+                        <p style="font-family: var(--font-body); font-size: 0.95rem; color: rgba(255, 255, 255, 0.6); line-height: 1.8; max-width: 500px;">
+                            Semua data penting bisnis Anda ditampilkan secara real-time dan mudah dipahami, memberikan kendali penuh untuk keputusan strategis Anda.
+                        </p>
+                        
+                        <div class="checklist-grid">
+                            <div class="checklist-item">
+                                <span class="checklist-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <span>Monitoring penjualan real-time</span>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="checklist-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <span>Kelola produk &amp; stok terpusat</span>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="checklist-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <span>Laporan lengkap &amp; akurat otomatis</span>
+                            </div>
+                            <div class="checklist-item">
+                                <span class="checklist-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                <span>Multi-outlet &amp; multi-user access</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Dashboard Laptop Mockup -->
+                    <div class="mockup-laptop-container">
+                        <div class="mockup-laptop-glow"></div>
+                        <img src="assets/images/laptop_hp.png" alt="Laptop Dashboard Mockup" class="mockup-laptop-img">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Mobile App Dual Showcase -->
+        <section class="dual-showcase-section" style="background: rgba(10, 4, 13, 0.3);">
+            <div class="container">
+                <div class="dual-grid">
+                    
+                    <!-- Left: Smartphone Mockup -->
+                    <div class="mockup-laptop-container">
+                        <div class="mockup-laptop-glow" style="background: radial-gradient(circle, rgba(214, 183, 122, 0.15) 0%, transparent 70%);"></div>
+                        <img src="assets/images/item-3.png" alt="Smartphone App Mockup" class="mockup-laptop-img" style="max-width: 320px; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));">
+                    </div>
+
+                    <!-- Right: Features grid -->
+                    <div class="dual-content">
+                        <span class="product-tag" style="display: inline-block; margin-bottom: 1rem; color: var(--color-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;">MOBILE APP |</span>
+                        <h2 style="font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.5rem); line-height: 1.25; font-weight: 400; color: #ffffff; margin-bottom: 1.5rem;">
+                            Kelola Bisnis di Mana Saja<br>
+                            Dengan <span class="text-gold" style="font-style: italic; font-family: var(--font-serif-italic);">Aplikasi Mobile</span>
+                        </h2>
+                        <p style="font-family: var(--font-body); font-size: 0.95rem; color: rgba(255, 255, 255, 0.6); line-height: 1.8; max-width: 500px;">
+                            Pantau, kelola, dan terima transaksi secara efisien bahkan tanpa koneksi internet. Bisnis selalu berada di genggaman Anda.
+                        </p>
+
+                        <div class="feature-icon-grid">
+                            
+                            <!-- Item 1 -->
+                            <div class="icon-feature-card">
+                                <div class="icon-feature-circle">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 18H19V21H5V18ZM5 3H19V6H5V3ZM12 9V15M9 12H15" /></svg>
+                                </div>
+                                <div class="icon-feature-info">
+                                    <h4>Scan Barcode &amp; Produk</h4>
+                                    <p>Scan cepat kamera ponsel untuk input produk langsung.</p>
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="icon-feature-card">
+                                <div class="icon-feature-circle">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12H3M21 6H3M21 18H3" /></svg>
+                                </div>
+                                <div class="icon-feature-info">
+                                    <h4>Laporan Real-time</h4>
+                                    <p>Notifikasi transaksi penjualan instan di ponsel Anda.</p>
+                                </div>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="icon-feature-card">
+                                <div class="icon-feature-circle">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                                </div>
+                                <div class="icon-feature-info">
+                                    <h4>Input Penjualan Cepat</h4>
+                                    <p>Desain interface kasir yang ringkas &amp; mudah dipahami.</p>
+                                </div>
+                            </div>
+
+                            <!-- Item 4 -->
+                            <div class="icon-feature-card">
+                                <div class="icon-feature-circle">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" /></svg>
+                                </div>
+                                <div class="icon-feature-info">
+                                    <h4>Multi-Outlet</h4>
+                                    <p>Kelola banyak toko atau cabang langsung dari satu akun.</p>
+                                </div>
+                            </div>
+
+                            <!-- Item 5 -->
+                            <div class="icon-feature-card">
+                                <div class="icon-feature-circle">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 7a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" /></svg>
+                                </div>
+                                <div class="icon-feature-info">
+                                    <h4>Stock &amp; Inventory</h4>
+                                    <p>Pantau sisa bahan dan produk secara otomatis terpotong.</p>
+                                </div>
+                            </div>
+
+                            <!-- Item 6 -->
+                            <div class="icon-feature-card">
+                                <div class="icon-feature-circle">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+                                </div>
+                                <div class="icon-feature-info">
+                                    <h4>Notifikasi Transaksi</h4>
+                                    <p>Notifikasi instan untuk void, diskon, atau transaksi mencurigagar aman.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- App Store Badges -->
+                        <div class="app-store-badges">
+                            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="store-badge-img"></a>
+                            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" class="store-badge-img"></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-section">
+            <div class="container">
+                <div class="text-center" style="max-width: 600px; margin: 0 auto;">
+                    <span class="product-tag" style="display: inline-block; margin-bottom: 1rem; color: var(--color-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;">KEEFEKTIFAN |</span>
+                    <h2 class="text-reveal" style="font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.2; font-weight: 400; color: #ffffff;">Mengapa Memilih ABYNS POS?</h2>
+                </div>
+
+                <div class="choose-grid">
+                    
+                    <!-- Card 1 -->
+                    <div class="choose-card">
+                        <div class="choose-card-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h3 class="choose-card-title">Cloud System</h3>
+                        <p class="choose-card-desc">Data aman terenkripsi di server cloud and dapat diakses kapan saja dari mana saja.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="choose-card">
+                        <div class="choose-card-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                        </div>
+                        <h3 class="choose-card-title">Offline Mode</h3>
+                        <p class="choose-card-desc">Tetap lancar input transaksi tanpa koneksi internet. Data otomatis disinkronkan saat online.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="choose-card">
+                        <div class="choose-card-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <h3 class="choose-card-title">Real-time Report</h3>
+                        <p class="choose-card-desc">Pantau laporan profit-loss, performa kasir, dan grafik penjualan langsung saat itu juga.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="choose-card">
+                        <div class="choose-card-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect><line x1="12" y1="4" x2="12" y2="20"></line></svg>
+                        </div>
+                        <h3 class="choose-card-title">Multi Payment</h3>
+                        <p class="choose-card-desc">Terima kas, kartu kredit, transfer bank, dan e-wallet QRIS dinamis/statis secara instan.</p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="choose-card">
+                        <div class="choose-card-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="9"></line><line x1="9" y1="13" x2="15" y2="13"></line><line x1="9" y1="17" x2="13" y2="17"></line></svg>
+                        </div>
+                        <h3 class="choose-card-title">Printer &amp; Barcode</h3>
+                        <p class="choose-card-desc">Hubungkan dengan mudah ke berbagai printer thermal bluetooth/LAN dan scanner barcode.</p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="choose-card">
+                        <div class="choose-card-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        </div>
+                        <h3 class="choose-card-title">Aman &amp; Stabil</h3>
+                        <p class="choose-card-desc">Uptime tinggi yang andal didukung enkripsi SSL 256-bit demi perlindungan database keuangan.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Full Features Section -->
+        <section class="full-features-section">
+            <div class="container">
+                <div class="text-left" style="max-width: 600px;">
+                    <span class="product-tag" style="display: inline-block; margin-bottom: 1rem; color: var(--color-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;">FITUR LENGKAP |</span>
+                    <h2 class="text-reveal" style="font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.2; font-weight: 400; color: #ffffff;">Semua yang Anda Butuhkan Untuk Mengembangkan Bisnis</h2>
+                </div>
+
+                <div class="features-showcase-grid">
+                    
+                    <!-- Left: Interactive Tab list -->
+                    <div class="tabs-control-panel">
+                        <div class="tab-menu-list">
+                            <button class="tab-menu-item active" data-tab="penjualan">Penjualan (Cashier Portal)</button>
+                            <button class="tab-menu-item" data-tab="stok">Barang &amp; Stok</button>
+                            <button class="tab-menu-item" data-tab="layanan">Layanan &amp; Meja</button>
+                            <button class="tab-menu-item" data-tab="pelanggan">Pelanggan &amp; Promo</button>
+                            <button class="tab-menu-item" data-tab="user">Multi-User &amp; Akses</button>
+                            <button class="tab-menu-item" data-tab="kas">Kas &amp; Biaya Operational</button>
+                        </div>
+
+                        <!-- Checklists that swap in sync with tabs -->
+                        <div class="tab-content-details">
+                            
+                            <!-- Penjualan details -->
+                            <div class="tab-features-list active" data-tab-content="penjualan">
+                                <div class="checklist-item">
+                                    <span class="checklist-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                    <span>Transaksi cepat &amp; ringkas kurang dari 3 detik</span>
+                                </div>
+                                <div class="checklist-item">
+                                    <span class="checklist-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                    <span>Pencarian produk instan &amp; scan kamera barcode</span>
+                                </div>
+                                <div class="checklist-item">
+                                    <span class="checklist-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                    <span>Diskon otomatis, potongan manual, &amp; voucher belanja</span>
+                                </div>
+                                <div class="checklist-item">
+                                    <span class="checklist-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                    <span>Split bill (pisah tagihan) dan tag pembayaran ditahan</span>
+                                </div>
+                            </div>
+
+                            <!-- Stok details -->
+                            <div class="tab-features-list" data-tab-content="stok">
+                                <div class="checklist-item">
+                                    <span class="checklist-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                    <span>Manajemen inventory otomatis &amp; deteksi stok minimum</span>
+                                </div>
+                                <div class="checklist-item">
+                                    <span class="checklist-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                    <span>Kartu riwayat mutasi keluar-masuk stok detail</span>
+                                </div>
+                                <div class="checklist-item">
+                                    <span class="checklist-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                    <span>Manajemen bundle resep &amp; bahan baku (BOM)</span>
+                                </div>
+                            </div>
+
+                            <!-- Layanan details -->
+                            <div class="tab-features-list" data-tab-content="layanan">
+                                <div class="checklist-item">
+                                    <span class="checklist-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                    <span>Peta meja restoran dinamis &amp; status ketersediaan</span>
+                                </div>
+                                <div class="checklist-item">
+                                    <span class="checklist-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                    <span>Pencatatan jenis pesanan (dine-in, take away, gofood)</span>
+                                </div>
+                            </div>
+
+                            <!-- Pelanggan details -->
+                            <div class="tab-features-list" data-tab-content="pelanggan">
+                                <div class="checklist-item">
+                                    <span class="checklist-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                    <span>Database loyalitas pelanggan &amp; riwayat belanja</span>
+                                </div>
+                                <div class="checklist-item">
+                                    <span class="checklist-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                    <span>Point reward loyalty yang dapat ditukar produk</span>
+                                </div>
+                            </div>
+
+                            <!-- User details -->
+                            <div class="tab-features-list" data-tab-content="user">
+                                <div class="checklist-item">
+                                    <span class="checklist-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                    <span>Hak akses ketat (Owner, Manager, Supervisor, Kasir)</span>
+                                </div>
+                                <div class="checklist-item">
+                                    <span class="checklist-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                    <span>Log aktivitas krusial untuk mencegah fraud/kecurangan</span>
+                                </div>
+                            </div>
+
+                            <!-- Kas details -->
+                            <div class="tab-features-list" data-tab-content="kas">
+                                <div class="checklist-item">
+                                    <span class="checklist-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                    <span>Laporan kas masuk &amp; kas keluar (petty cash)</span>
+                                </div>
+                                <div class="checklist-item">
+                                    <span class="checklist-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                    <span>Pencatatan biaya pengeluaran operasional toko</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Right: Swapping Mockup Images -->
+                    <div class="mockup-display-wrapper">
+                        <!-- We use representational high quality unsplash screenshots for cashier layouts -->
+                        <img src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?q=80&w=800&auto=format&fit=crop" alt="POS interface mockup" class="mockup-display-img active" data-tab-img="penjualan">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="Inventory dashboard mockup" class="mockup-display-img" data-tab-img="stok">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Table map portal mockup" class="mockup-display-img" data-tab-img="layanan">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop" alt="Customers loyal database mockup" class="mockup-display-img" data-tab-img="pelanggan">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" alt="User roles settings mockup" class="mockup-display-img" data-tab-img="user">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=800&auto=format&fit=crop" alt="Finances balance portal mockup" class="mockup-display-img" data-tab-img="kas">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Integrations Section -->
+        <section class="integrations-section">
+            <div class="container">
+                <span class="product-tag" style="display: inline-block; margin-bottom: 1rem; color: var(--color-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;">INTEGRASI |</span>
+                <h2 style="font-family: var(--font-heading); font-size: clamp(1.8rem, 3.5vw, 2.5rem); line-height: 1.3; font-weight: 400; color: #ffffff;">Terintegrasi dengan Berbagai Layanan</h2>
+                
+                <div class="integrations-logos-row">
+                    
+                    <!-- QRIS -->
+                    <div class="integration-logo-item">
+                        <span class="integration-text-logo" style="color: #d6b77a;">QRIS</span>
+                    </div>
+
+                    <!-- Midtrans -->
+                    <div class="integration-logo-item">
+                        <span class="integration-text-logo">midtrans</span>
+                    </div>
+
+                    <!-- Xendit -->
+                    <div class="integration-logo-item">
+                        <span class="integration-text-logo" style="color: #ffffff; font-weight: 800; font-style: italic;">xendit</span>
+                    </div>
+
+                    <!-- WhatsApp -->
+                    <div class="integration-logo-item">
+                        <span class="integration-text-logo" style="color: #25d366;">WhatsApp</span>
+                    </div>
+
+                    <!-- Bluetooth -->
+                    <div class="integration-logo-item">
+                        <span class="integration-text-logo" style="color: #0082fc;">Bluetooth</span>
+                    </div>
+
+                    <!-- Zebra -->
+                    <div class="integration-logo-item">
+                        <span class="integration-text-logo" style="font-family: monospace; letter-spacing: 0.2em; font-weight: 900;">ZEBRA</span>
+                    </div>
+
+                    <!-- Firebase -->
+                    <div class="integration-logo-item">
+                        <span class="integration-text-logo" style="color: #ffca28;">Firebase</span>
+                    </div>
+
+                    <!-- AWS -->
+                    <div class="integration-logo-item">
+                        <span class="integration-text-logo" style="color: #ff9900;">aws</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Cara Kerja Timeline -->
+        <section class="work-process-section">
+            <div class="container">
+                <div class="text-center" style="max-width: 600px; margin: 0 auto;">
+                    <span class="product-tag" style="display: inline-block; margin-bottom: 1rem; color: var(--color-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;">CARA KERJA |</span>
+                    <h2 class="text-reveal" style="font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.2; font-weight: 400; color: #ffffff;">Alur Kerja yang Sederhana dan Efisien</h2>
+                </div>
+
+                <div class="work-timeline-container">
+                    <div class="work-timeline-bar"></div>
+
+                    <!-- Step 1 -->
+                    <div class="work-step">
+                        <div class="work-step-node">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 18H19V21H5V18ZM5 3H19V6H5V3ZM12 9V15M9 12H15" /></svg>
+                        </div>
+                        <span class="work-step-num">01 / INPUT PRODUK</span>
+                        <h3 class="work-step-title">Input Produk</h3>
+                        <p class="work-step-desc">Scan barcode atau pilih langsung item belanjaan di portal kasir.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="work-step">
+                        <div class="work-step-node">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <span class="work-step-num">02 / PROSES TRANSAKSI</span>
+                        <h3 class="work-step-title">Proses Transaksi</h3>
+                        <p class="work-step-desc">Sistem menghitung otomatis total tagihan belanjaan secara instan.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="work-step">
+                        <div class="work-step-node">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect><line x1="12" y1="4" x2="12" y2="20"></line></svg>
+                        </div>
+                        <span class="work-step-num">03 / PEMBAYARAN</span>
+                        <h3 class="work-step-title">Pembayaran</h3>
+                        <p class="work-step-desc">Pelanggan membayar dengan e-wallet QRIS, kartu, atau tunai kas.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="work-step">
+                        <div class="work-step-node">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                        </div>
+                        <span class="work-step-num">04 / CETAK STRUK</span>
+                        <h3 class="work-step-title">Cetak Struk</h3>
+                        <p class="work-step-desc">Struk fisik langsung dicetak atau struk digital dikirim via WhatsApp.</p>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="work-step">
+                        <div class="work-step-node">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 22 22 22"></polygon></svg>
+                        </div>
+                        <span class="work-step-num">05 / LAPORAN REAL-TIME</span>
+                        <h3 class="work-step-title">Laporan Real-time</h3>
+                        <p class="work-step-desc">Data omset terkirim langsung ke cloud untuk dipantau oleh pemilik toko.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- App Screenshots Showcase (Swiper) -->
+        <section class="screenshots-section">
+            <div class="container">
+                <div class="text-left" style="max-width: 600px;">
+                    <span class="product-tag" style="display: inline-block; margin-bottom: 1rem; color: var(--color-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;">TAMPILAN APLIKASI |</span>
+                    <h2 style="font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.2; font-weight: 400; color: #ffffff;">Tampilan Aplikasi yang Modern &amp; Intuitif</h2>
+                </div>
+
+                <div class="screenshot-swiper-wrap swiper screenshot-swiper">
+                    <div class="swiper-wrapper">
+                        
+                        <!-- Screenshot 1 -->
+                        <div class="screenshot-card swiper-slide">
+                            <div class="screenshot-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?q=80&w=800&auto=format&fit=crop" alt="Dashboard Interface Screenshot" class="screenshot-img">
+                            </div>
+                        </div>
+
+                        <!-- Screenshot 2 -->
+                        <div class="screenshot-card swiper-slide">
+                            <div class="screenshot-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="Transaction History Interface" class="screenshot-img">
+                            </div>
+                        </div>
+
+                        <!-- Screenshot 3 -->
+                        <div class="screenshot-card swiper-slide">
+                            <div class="screenshot-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Product Catalog Portal Layout" class="screenshot-img">
+                            </div>
+                        </div>
+
+                        <!-- Screenshot 4 -->
+                        <div class="screenshot-card swiper-slide">
+                            <div class="screenshot-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop" alt="Customers Database Screen" class="screenshot-img">
+                            </div>
+                        </div>
+
+                        <!-- Screenshot 5 -->
+                        <div class="screenshot-card swiper-slide">
+                            <div class="screenshot-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=800&auto=format&fit=crop" alt="Detailed Cashier Management Panel" class="screenshot-img">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Navigation controls row -->
+                    <div class="swiper-nav-row">
+                        <div class="nav-arrow-custom screenshot-swiper-prev">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        </div>
+                        <div class="nav-arrow-custom screenshot-swiper-next">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </div>
+                        <div class="swiper-pagination-custom screenshot-swiper-pagination" style="margin-left: auto;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="text-left" style="max-width: 600px;">
+                    <span class="product-tag" style="display: inline-block; margin-bottom: 1rem; color: var(--color-gold); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;">TESTIMONI |</span>
+                    <h2 style="font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.2; font-weight: 400; color: #ffffff;">Apa Kata Mereka?</h2>
+                </div>
+
+                <div class="testimonial-slider-wrap swiper testimonial-swiper">
+                    <div class="swiper-wrapper">
+                        
+                        <!-- Review 1 -->
+                        <div class="testimonial-card-new swiper-slide">
+                            <div>
+                                <div class="stars-row">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                </div>
+                                <p class="testimonial-text">
+                                    "ABYNS POS sangat membantu bisnis kami, laporan real-time dan fitur lengkap membuat operasional jauh lebih mudah, akurat, dan dapat diawasi kapan saja."
+                                </p>
+                            </div>
+                            <div class="client-profile-row">
+                                <img src="assets/images/hisyam_profile.jpg" alt="Rizky Pratama avatar" class="client-avatar">
+                                <div class="client-info">
+                                    <h4>Rizky Pratama</h4>
+                                    <p>Owner Coffee Shop</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="testimonial-card-new swiper-slide">
+                            <div>
+                                <div class="stars-row">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Sistemnya stabil, mudah digunakan, dan fitur offline sangat membantu saat internet bermasalah. Karyawan kasir kami pun langsung bisa memakainya."
+                                </p>
+                            </div>
+                            <div class="client-profile-row">
+                                <img src="assets/images/annisa_profile-2.jpg" alt="Siti Rahayu avatar" class="client-avatar">
+                                <div class="client-info">
+                                    <h4>Siti Rahayu</h4>
+                                    <p>Owner Boutique</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="testimonial-card-new swiper-slide">
+                            <div>
+                                <div class="stars-row">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Integrasi dengan QRIS dan WhatsApp membuat transaksi lebih cepat, modern, dan pelanggan lebih puas karena struk belanja langsung dikirim digital."
+                                </p>
+                            </div>
+                            <div class="client-profile-row">
+                                <img src="assets/images/annisa_profile.jpeg" alt="Andi Wijaya avatar" class="client-avatar">
+                                <div class="client-info">
+                                    <h4>Andi Wijaya</h4>
+                                    <p>Owner Minimarket</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 4 -->
+                        <div class="testimonial-card-new swiper-slide">
+                            <div>
+                                <div class="stars-row">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Fitur multi-outletnya luar biasa. Saya bisa memantau penjualan seluruh cabang franchise kuliner saya hanya dari satu akun pemilik di handphone."
+                                </p>
+                            </div>
+                            <div class="client-profile-row">
+                                <img src="assets/images/hisyam_profile.jpg" alt="Budi Santoso avatar" class="client-avatar">
+                                <div class="client-info">
+                                    <h4>Budi Santoso</h4>
+                                    <p>Owner Franchise Kuliner</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 5 -->
+                        <div class="testimonial-card-new swiper-slide">
+                            <div>
+                                <div class="stars-row">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Sangat puas dengan sistem manajemen inventory-nya. Stok terpotong otomatis secara real-time saat transaksi berhasil dilakukan."
+                                </p>
+                            </div>
+                            <div class="client-profile-row">
+                                <img src="assets/images/annisa_profile-2.jpg" alt="Dewi Lestari avatar" class="client-avatar">
+                                <div class="client-info">
+                                    <h4>Dewi Lestari</h4>
+                                    <p>Founder Retail Fashion</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Navigation controls row -->
+                    <div class="swiper-nav-row">
+                        <div class="nav-arrow-custom testimonial-swiper-prev">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        </div>
+                        <div class="nav-arrow-custom testimonial-swiper-next">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </div>
+                        <div class="swiper-pagination-custom testimonial-swiper-pagination" style="margin-left: auto;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Panel -->
+        <div class="container">
+            <div class="cta-glowing-panel">
+                <div class="cta-panel-content">
+                    <div class="cta-badge-logo">
+                        <svg class="logo-icon-svg" viewBox="0 0 40 40" width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 2L38 34H2L20 2Z" stroke="#d6b77a" stroke-width="2.5" stroke-linejoin="round"/>
+                            <path d="M20 12L31 31H9L20 12Z" fill="#d6b77a" fill-opacity="0.3" stroke="#d6b77a" stroke-width="1.5"/>
+                            <circle cx="20" cy="24" r="3" fill="#f6f1eb"/>
+                        </svg>
+                    </div>
+                    <span class="cta-panel-subtitle">SIAP MENGEMBANGKAN BISNIS ANDA?</span>
+                    <h3 class="cta-panel-title" style="text-transform: uppercase;">Siap Mengembangkan Bisnis Anda?</h3>
+                    <p class="cta-panel-desc">Konsultasikan kebutuhan Anda bersama tim kami dan wujudkan sistem manajemen kasir modern terbaik untuk brand premium Anda.</p>
+                    <a href="contact.html?product=pos" class="btn btn-primary magnetic" style="padding: 1.1rem 2.4rem;"><span class="magnetic-inner">JADWALKAN KONSULTASI ➔</span></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-main">
+      <!-- Upper Footer (Social Media & Newsletter) -->
+      <div class="footer-upper">
+        <!-- Left: Social Media -->
+        <div class="footer-social-section-new">
+          <div class="footer-social-title">IKUT KAMI DI MEDIA SOSIAL</div>
+          <div class="footer-social-icons-row">
+            <!-- Instagram -->
+            <a href="https://instagram.com" class="footer-social-item magnetic" target="_blank" rel="noopener">
+              <div class="footer-social-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </div>
+              <span>Instagram</span>
+            </a>
+            <!-- TikTok -->
+            <a href="https://tiktok.com" class="footer-social-item magnetic" target="_blank" rel="noopener">
+              <div class="footer-social-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                </svg>
+              </div>
+              <span>TikTok</span>
+            </a>
+            <!-- YouTube -->
+            <a href="https://youtube.com" class="footer-social-item magnetic" target="_blank" rel="noopener">
+              <div class="footer-social-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"></path>
+                  <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon>
+                </svg>
+              </div>
+              <span>YouTube</span>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com" class="footer-social-item magnetic" target="_blank" rel="noopener">
+              <div class="footer-social-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </div>
+              <span>LinkedIn</span>
+            </a>
+            <!-- Facebook -->
+            <a href="https://facebook.com" class="footer-social-item magnetic" target="_blank" rel="noopener">
+              <div class="footer-social-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </div>
+              <span>Facebook</span>
+            </a>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/6281234567890" class="footer-social-item magnetic" target="_blank" rel="noopener">
+              <div class="footer-social-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+              </div>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Newsletter -->
+        <div class="footer-newsletter-section-new">
+          <h4 class="footer-newsletter-title text-reveal-gold">Dapatkan Update &amp; Insight Menarik</h4>
+          <p class="footer-newsletter-desc">
+            Berlangganan newsletter kami untuk mendapatkan tips digital, inspirasi desain, dan update terbaru.
+          </p>
+          <form class="newsletter-form-new" onsubmit="event.preventDefault(); alert('Terima kasih telah berlangganan newsletter kami.'); this.reset();">
+            <input type="email" placeholder="Masukkan email Anda" class="newsletter-input-new" required aria-label="Masukkan email Anda" />
+            <button type="submit" class="newsletter-btn-new magnetic"><span class="magnetic-inner">BERLANGGANAN</span></button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Middle Footer (5 columns) -->
+      <div class="footer-middle-grid">
+        <!-- Col 1: Logo & Tagline -->
+        <div class="footer-logo-col">
+          <a href="index.html" class="logo-container">
+            <svg class="logo-icon-svg" viewBox="0 0 40 40" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 2L38 34H2L20 2Z" stroke="#d6b77a" stroke-width="2.5" stroke-linejoin="round" />
+              <path d="M20 12L31 31H9L20 12Z" fill="#d6b77a" fill-opacity="0.3" stroke="#d6b77a" stroke-width="1.5" />
+              <circle cx="20" cy="24" r="3" fill="#f6f1eb" />
+            </svg>
+            <div>
+              <span class="logo-text">ABYNS</span>
+              <span class="logo-sub">STUDIO</span>
+            </div>
+          </a>
+          <p>
+            Digital Solutions That<br>
+            <span class="font-serif-italic" style="color: #d6b77a;">Elevate</span> Your Brand
+          </p>
+        </div>
+
+        <!-- Col 2: NAVIGASI -->
+        <div>
+          <h4 class="footer-title">NAVIGASI</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="services.html">Layanan</a></li>
+            <li><a href="portfolio.html">Portofolio</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: LAYANAN -->
+        <div>
+          <h4 class="footer-title">LAYANAN</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#webdev">Web Development</a></li>
+            <li><a href="services.html#appdev">App Development</a></li>
+            <li><a href="services.html#uiux">UI/UX Design</a></li>
+            <li><a href="services.html#photography">Foto &amp; Videography</a></li>
+            <li><a href="services.html#branding">Branding</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: INFORMASI -->
+        <div>
+          <h4 class="footer-title">INFORMASI</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="careers.html">Karir</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="terms.html">Syarat &amp; Ketentuan</a></li>
+            <li><a href="privacy.html">Kebijakan Privasi</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: KONTAK -->
+        <div>
+          <h4 class="footer-title">KONTAK</h4>
+          
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span>Bandung, Indonesia</span>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <a href="tel:+6281234567890">+62 812 3456 7890</a>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <a href="mailto:hello@abynsstudio.com">hello@abynsstudio.com</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; 2026 ABYNS STUDIO. Hak Cipta Dilindungi Undang-Undang.
+        </div>
+
+        <div class="footer-socials">
+          <a href="https://instagram.com" class="footer-social-link magnetic" target="_blank" rel="noopener"><span class="magnetic-inner">ig</span></a>
+          <a href="https://linkedin.com" class="footer-social-link magnetic" target="_blank" rel="noopener"><span class="magnetic-inner">in</span></a>
+          <a href="https://youtube.com" class="footer-social-link magnetic" target="_blank" rel="noopener"><span class="magnetic-inner">yt</span></a>
+          <a href="https://facebook.com" class="footer-social-link magnetic" target="_blank" rel="noopener"><span class="magnetic-inner">fb</span></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Core Libraries (CDN URLs) -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Logic scripts -->
+    <script src="js/cursor.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/gsap.js"></script>
+    
+    <!-- Custom Page Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Interactive tabs switching logic
+            const tabButtons = document.querySelectorAll('.tab-menu-item');
+            const tabContents = document.querySelectorAll('.tab-features-list');
+            const tabImages = document.querySelectorAll('.mockup-display-img');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabName = button.getAttribute('data-tab');
+
+                    // Remove active state from all buttons & contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    tabImages.forEach(img => img.classList.remove('active'));
+
+                    // Add active state to clicked elements
+                    button.classList.add('active');
+                    
+                    const activeContent = document.querySelector(`[data-tab-content="${tabName}"]`);
+                    if(activeContent) activeContent.classList.add('active');
+                    
+                    const activeImage = document.querySelector(`[data-tab-img="${tabName}"]`);
+                    if(activeImage) activeImage.classList.add('active');
+                });
+            });
+
+            // Initialize App Screenshots Swiper
+            try {
+                new Swiper('.screenshot-swiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 24,
+                    grabCursor: true,
+                    speed: 600,
+                    loop: true,
+                    navigation: {
+                        nextEl: '.screenshot-swiper-next',
+                        prevEl: '.screenshot-swiper-prev',
+                    },
+                    pagination: {
+                        el: '.screenshot-swiper-pagination',
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        576: {
+                            slidesPerView: 1.5,
+                            spaceBetween: 24,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 24,
+                        },
+                        1200: {
+                            slidesPerView: 3,
+                            spaceBetween: 24,
+                        }
+                    }
+                });
+            } catch (e) {
+                console.warn('Swiper initialization failed for screenshot slider.', e);
+            }
+
+            // Initialize Testimonials Swiper
+            try {
+                new Swiper('.testimonial-swiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 24,
+                    grabCursor: true,
+                    speed: 600,
+                    loop: true,
+                    navigation: {
+                        nextEl: '.testimonial-swiper-next',
+                        prevEl: '.testimonial-swiper-prev',
+                    },
+                    pagination: {
+                        el: '.testimonial-swiper-pagination',
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 24,
+                        },
+                        1200: {
+                            slidesPerView: 3,
+                            spaceBetween: 24,
+                        }
+                    }
+                });
+            } catch (e) {
+                console.warn('Swiper initialization failed for testimonial slider.', e);
+            }
+        });
+    </script>
+</body>
+</html>

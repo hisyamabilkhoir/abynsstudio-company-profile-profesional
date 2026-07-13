@@ -56,6 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (portfolioCards.length > 0 && modal) {
         portfolioCards.forEach(card => {
             card.addEventListener('click', function(e) {
+                // If card has data-link attribute, redirect instead of opening modal
+                const directLink = this.getAttribute('data-link');
+                if (directLink) {
+                    window.location.href = directLink;
+                    return;
+                }
+
                 e.preventDefault();
                 
                 // Get project metadata
