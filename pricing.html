@@ -14,6 +14,15 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        body {
+            background-image: url('assets/images/bg-harga.png') !important;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            background-position: center top !important;
+            background-color: #07020a !important; /* fallback dark background */
+        }
+    </style>
 </head>
 <body>
 
@@ -105,24 +114,24 @@
         <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2rem;">Konsultasi Gratis</a>
     </div>
 
-    <!-- WebGL Canvas Container for Three.js Backdrop -->
-    <div id="canvas-3d-bg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 1; pointer-events: none; opacity: 0.75;"></div>
-
     <!-- Inner Page Header -->
-    <section class="section hero" style="min-height: 50vh; display: flex; align-items: center; padding-top: 10rem; z-index: 2;">
-        <div class="container flex" style="flex-direction: column; align-items: center; text-align: center;">
-            <div class="reveal-text-wrap" style="margin-bottom: 1.5rem;">
-                <span class="hero-title-reveal" style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4em; color: var(--color-gold); display: inline-block; transform: translateY(100%);">INVESTASI BRAND</span>
+    <section class="section hero" style="padding-top: 10rem; padding-bottom: 0 !important; z-index: 2;">
+        <div class="container flex" style="flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 5;">
+            <div class="reveal-text-wrap" style="margin-bottom: 1.5rem; overflow: hidden;">
+                <span class="hero-title-reveal" style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4em; color: var(--color-gold); display: inline-block; transform: translateY(100%);">— PAKET HARGA —</span>
             </div>
-            <h1 class="text-reveal">Paket Investasi <span class="text-gold font-serif-italic">Terbaik</span></h1>
-            <p class="hero-desc" style="opacity: 0; transform: translateY(30px); max-width: 700px; margin-top: 2rem;">
-                Transparansi penawaran investasi digital premium. Pilih opsi paket yang dirancang khusus untuk memenuhi standar prestise bisnis Anda.
+            <h1 class="text-reveal" style="font-family: var(--font-heading); font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.15; font-weight: 400; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff; margin-bottom: 1.5rem;">
+                Investasi Terbaik Untuk<br>
+                <span class="text-gold font-serif-italic" style="text-transform: none;">Bisnis Anda</span>
+            </h1>
+            <p class="hero-desc" style="opacity: 0; transform: translateY(30px); max-width: 600px; color: rgba(255, 255, 255, 0.75); line-height: 1.8; margin-top: 1.5rem;">
+                Pilih paket investasi digital yang paling sesuai untuk meningkatkan skala branding brand Anda.
             </p>
         </div>
     </section>
 
     <!-- Pricing Matrix Cards -->
-    <section class="section" style="z-index: 2; padding-top: 2rem;">
+    <section class="section" style="z-index: 2; padding-top: 0 !important; padding-bottom: 5rem;">
         <div class="container">
             
             <div class="grid pricing-grid">

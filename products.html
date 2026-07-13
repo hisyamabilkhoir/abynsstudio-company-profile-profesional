@@ -14,6 +14,406 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        body {
+            background-color: #0c0510 !important; /* solid dark background */
+        }
+        
+        a {
+            text-decoration: none !important; /* remove underlines from links and buttons */
+        }
+        
+        /* Custom styles for revamped products page */
+        .products-body-wrapper {
+            background-color: #0c0510 !important; /* solid dark purple background */
+            position: relative;
+            z-index: 2;
+            padding-bottom: 2rem;
+        }
+        
+        .products-header-wrapper {
+            background: url('assets/images/bg-list-produk.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat !important;
+            position: relative;
+            z-index: 2;
+            padding-top: 9rem;
+            padding-bottom: 0rem;
+        }
+        
+        .products-hero-section {
+            padding-top: 2rem;
+            padding-bottom: 4rem;
+            position: relative;
+            z-index: 5;
+        }
+        
+        .products-hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2.5rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s;
+        }
+
+        /* Stats Row */
+        .products-stats-row {
+            padding: 3rem 0;
+            border-top: 1px solid rgba(214, 183, 122, 0.15);
+            border-bottom: 1px solid rgba(214, 183, 122, 0.15);
+            margin-bottom: 6rem;
+            z-index: 5;
+            position: relative;
+        }
+
+        .products-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .products-stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .products-stat-num {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 3.5vw, 3.25rem);
+            color: var(--color-gold);
+            font-weight: 500;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .products-stat-label {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 0.05em;
+        }
+
+        /* Alternating Product Sections */
+        .product-section {
+            padding: 6rem 0;
+            position: relative;
+            z-index: 5;
+        }
+        
+        /* Spotlights for product sections */
+        .product-section:nth-child(odd) {
+            background: radial-gradient(circle at 80% 50%, rgba(138, 43, 226, 0.12) 0%, transparent 60%) !important;
+        }
+        
+        .product-section:nth-child(even) {
+            background: radial-gradient(circle at 20% 50%, rgba(138, 43, 226, 0.12) 0%, transparent 60%) !important;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .product-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .product-tag {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--color-gold);
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .product-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            line-height: 1.2;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-desc {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2rem;
+        }
+
+        /* Features List Checklist Style */
+        .product-features-checklist {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin-bottom: 3rem;
+            width: 100%;
+        }
+
+        .product-feature-check {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .product-feature-check svg {
+            width: 18px;
+            height: 18px;
+            color: var(--color-gold);
+            flex-shrink: 0;
+        }
+
+        /* Mockup Container */
+        .product-mockup-wrapper {
+            position: relative;
+            border-radius: 28px;
+            overflow: visible;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .product-mockup-wrapper:hover {
+            transform: translateY(-8px);
+        }
+
+        .product-mockup-image {
+            width: 100%;
+            height: auto;
+            border-radius: 28px;
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Glow decoration behind image */
+        .product-mockup-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            background: radial-gradient(circle, rgba(214, 183, 122, 0.18) 0%, transparent 70%);
+            z-index: 1;
+            pointer-events: none;
+            filter: blur(40px);
+        }
+
+        /* Gold Pill Button SELENGKAPNYA */
+        .btn-selengkapnya {
+            background: linear-gradient(135deg, #d6b77a, #a88a4c) !important;
+            color: #120717 !important;
+            font-family: var(--font-body) !important;
+            font-size: 0.85rem !important;
+            font-weight: 700 !important;
+            letter-spacing: 0.15em !important;
+            padding: 1.1rem 2.4rem !important;
+            border-radius: 50px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 0.8rem !important;
+            border: none !important;
+            box-shadow: 0 10px 25px rgba(214, 183, 122, 0.3) !important;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            text-transform: uppercase !important;
+        }
+
+        .btn-selengkapnya:hover {
+            transform: translateY(-3px) scale(1.02) !important;
+            box-shadow: 0 15px 35px rgba(214, 183, 122, 0.45) !important;
+            color: #120717 !important;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-section {
+            padding: 2rem 0;
+            position: relative;
+            z-index: 5;
+            background: radial-gradient(circle at center, rgba(138, 43, 226, 0.08) 0%, transparent 70%) !important;
+        }
+
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .why-choose-card {
+            background: rgba(19, 9, 26, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(214, 183, 122, 0.12);
+            border-radius: 20px;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .why-choose-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(214, 183, 122, 0.4);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 15px rgba(214, 183, 122, 0.1);
+        }
+
+        .why-choose-icon-wrapper {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            border: 1px solid rgba(214, 183, 122, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gold);
+            margin-bottom: 1.5rem;
+            background: rgba(214, 183, 122, 0.05);
+            transition: all 0.4s ease;
+        }
+
+        .why-choose-card:hover .why-choose-icon-wrapper {
+            background: var(--color-gold);
+            color: #120717;
+            transform: scale(1.05);
+        }
+
+        .why-choose-card-title {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
+        }
+
+        .why-choose-card-desc {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.55);
+            line-height: 1.6;
+        }
+
+        /* Bottom CTA Section */
+        .bottom-cta-section {
+            padding: 4rem 0 8rem;
+            position: relative;
+            z-index: 5;
+        }
+
+        .bottom-cta-panel {
+            background: rgba(19, 9, 26, 0.45);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(214, 183, 122, 0.2);
+            border-radius: 24px;
+            padding: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bottom-cta-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 80% 50%, rgba(214, 183, 122, 0.06) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .bottom-cta-text {
+            max-width: 60%;
+        }
+
+        .bottom-cta-title {
+            font-family: var(--font-heading);
+            font-size: 2.25rem;
+            font-weight: 400;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .bottom-cta-desc {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        .bottom-cta-btn-wrapper {
+            flex-shrink: 0;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .why-choose-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+            .product-features-checklist {
+                grid-template-columns: 1fr;
+            }
+            .products-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            .why-choose-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .bottom-cta-panel {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 2.5rem;
+                padding: 3rem;
+            }
+            .bottom-cta-text {
+                max-width: 100%;
+            }
+            .products-hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+            .products-hero-buttons .btn {
+                width: 100%;
+                max-width: 280px;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .why-choose-grid {
+                grid-template-columns: 1fr;
+            }
+            .products-stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -105,88 +505,320 @@
         <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2rem;">Konsultasi Gratis</a>
     </div>
 
-    <!-- WebGL Canvas Container for Three.js Backdrop -->
-    <div id="canvas-3d-bg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 1; pointer-events: none; opacity: 0.75;"></div>
-
-    <!-- Inner Page Header -->
-    <section class="section hero" style="min-height: 50vh; display: flex; align-items: center; padding-top: 10rem; z-index: 2;">
-        <div class="container flex" style="flex-direction: column; align-items: center; text-align: center;">
-            <div class="reveal-text-wrap" style="margin-bottom: 1.5rem;">
-                <span class="hero-title-reveal" style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4em; color: var(--color-gold); display: inline-block; transform: translateY(100%);">PRODUK DIGITAL</span>
+    <!-- Products Header Wrapper (Hero + Stats) -->
+    <div class="products-header-wrapper">
+        <!-- Hero Section -->
+        <section class="products-hero-section hero">
+            <div class="container grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 4rem; align-items: center; text-align: left;">
+                <!-- Left: Info -->
+                <div class="product-info" style="align-items: flex-start; text-align: left;">
+                    <!-- Subtitle -->
+                    <div class="reveal-text-wrap" style="margin-bottom: 1.5rem; overflow: hidden;">
+                        <span class="hero-title-reveal" style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--color-gold); letter-spacing: 0.3em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 1rem; transform: translateY(100%);">PRODUK DIGITAL <span style="font-weight: 300; opacity: 0.5;">|</span> <span style="width: 50px; height: 1px; background: var(--color-gold); display: inline-block; opacity: 0.5;"></span></span>
+                    </div>
+                    <!-- Main Title -->
+                    <h1 class="text-reveal" style="font-family: var(--font-heading); font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.15; font-weight: 400; color: #ffffff; margin-bottom: 1.5rem; text-align: left;">
+                        Aplikasi Premium<br>
+                        <span class="text-gold font-serif-italic">Siap Pakai</span> Untuk Bisnis
+                    </h1>
+                    <!-- Description -->
+                    <p class="hero-desc" style="opacity: 0; transform: translateY(30px); font-size: 0.95rem; color: rgba(255, 255, 255, 0.7); line-height: 1.8; max-width: 550px; margin-top: 1rem; text-align: left;">
+                        Solusi digital modern yang dirancang untuk membantu bisnis Anda bekerja lebih efisien, terintegrasi, dan berkembang lebih cepat.
+                    </p>
+                    <!-- Hero Buttons -->
+                    <div class="products-hero-buttons hero-ctas" style="justify-content: flex-start; margin-top: 2rem; width: 100%; display: flex; gap: 1.2rem;">
+                        <a href="#products-list" class="btn btn-primary magnetic" style="padding: 1.1rem 2.4rem;"><span class="magnetic-inner">LIHAT PRODUK ➔</span></a>
+                        <a href="contact.html" class="btn btn-outline magnetic" style="padding: 1.1rem 2.4rem;"><span class="magnetic-inner">HUBUNGI KAMI</span></a>
+                    </div>
+                </div>
+                <!-- Right: Spacer to let the background image's pre-rendered laptop show through -->
+                <div style="min-height: 480px; width: 100%;"></div>
             </div>
-            <h1 class="text-reveal">Aplikasi <span class="text-gold font-serif-italic">Siap Pakai</span> Kami</h1>
-            <p class="hero-desc" style="opacity: 0; transform: translateY(30px); max-width: 700px; margin-top: 2rem;">
-                Tingkatkan efisiensi administrasi operasional bisnis Anda melalui jajaran sistem aplikasi SaaS custom premium yang modular dan berkecepatan tinggi.
-            </p>
+        </section>
+
+        <!-- Stats Counter Row -->
+        <section class="products-stats-row" style="margin-bottom: 0 !important; background: none !important; backdrop-filter: none !important; border: none !important; padding: 2rem 0 4rem;">
+            <div class="container">
+                <div class="products-stats-grid" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; width: 100%; flex-wrap: wrap;">
+                    
+                    <!-- Stat 1 -->
+                    <div class="products-stat-item" style="display: flex; flex-direction: row; align-items: center; gap: 1.25rem; text-align: left;">
+                        <div style="width: 50px; height: 50px; border-radius: 12px; border: 1.5px solid rgba(214, 183, 122, 0.45); display: flex; align-items: center; justify-content: center; color: var(--color-gold); background: rgba(214, 183, 122, 0.05); flex-shrink: 0;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                        </div>
+                        <div>
+                            <span class="products-stat-num" style="display: block; font-family: var(--font-heading); font-size: 2.25rem; font-weight: 500; color: var(--color-gold); line-height: 1; margin-bottom: 0.25rem;">120+</span>
+                            <span class="products-stat-label" style="font-family: var(--font-body); font-size: 0.8rem; color: rgba(255, 255, 255, 0.6); letter-spacing: 0.02em;">Project Selesai</span>
+                        </div>
+                    </div>
+
+                    <!-- Divider 1 -->
+                    <div class="stats-divider-slash" style="font-family: var(--font-heading); font-size: 2rem; font-weight: 300; color: rgba(214, 183, 122, 0.25); transform: skewX(-15deg); margin: 0 1rem; user-select: none;">/</div>
+
+                    <!-- Stat 2 -->
+                    <div class="products-stat-item" style="display: flex; flex-direction: row; align-items: center; gap: 1.25rem; text-align: left;">
+                        <div style="width: 50px; height: 50px; border-radius: 12px; border: 1.5px solid rgba(214, 183, 122, 0.45); display: flex; align-items: center; justify-content: center; color: var(--color-gold); background: rgba(214, 183, 122, 0.05); flex-shrink: 0;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                        </div>
+                        <div>
+                            <span class="products-stat-num" style="display: block; font-family: var(--font-heading); font-size: 2.25rem; font-weight: 500; color: var(--color-gold); line-height: 1; margin-bottom: 0.25rem;">20+</span>
+                            <span class="products-stat-label" style="font-family: var(--font-body); font-size: 0.8rem; color: rgba(255, 255, 255, 0.6); letter-spacing: 0.02em;">Produk Digital</span>
+                        </div>
+                    </div>
+
+                    <!-- Divider 2 -->
+                    <div class="stats-divider-slash" style="font-family: var(--font-heading); font-size: 2rem; font-weight: 300; color: rgba(214, 183, 122, 0.25); transform: skewX(-15deg); margin: 0 1rem; user-select: none;">/</div>
+
+                    <!-- Stat 3 -->
+                    <div class="products-stat-item" style="display: flex; flex-direction: row; align-items: center; gap: 1.25rem; text-align: left;">
+                        <div style="width: 50px; height: 50px; border-radius: 12px; border: 1.5px solid rgba(214, 183, 122, 0.45); display: flex; align-items: center; justify-content: center; color: var(--color-gold); background: rgba(214, 183, 122, 0.05); flex-shrink: 0;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <div>
+                            <span class="products-stat-num" style="display: block; font-family: var(--font-heading); font-size: 2.25rem; font-weight: 500; color: var(--color-gold); line-height: 1; margin-bottom: 0.25rem;">95%</span>
+                            <span class="products-stat-label" style="font-family: var(--font-body); font-size: 0.8rem; color: rgba(255, 255, 255, 0.6); letter-spacing: 0.02em;">Kepuasan Klien</span>
+                        </div>
+                    </div>
+
+                    <!-- Divider 3 -->
+                    <div class="stats-divider-slash" style="font-family: var(--font-heading); font-size: 2rem; font-weight: 300; color: rgba(214, 183, 122, 0.25); transform: skewX(-15deg); margin: 0 1rem; user-select: none;">/</div>
+
+                    <!-- Stat 4 -->
+                    <div class="products-stat-item" style="display: flex; flex-direction: row; align-items: center; gap: 1.25rem; text-align: left;">
+                        <div style="width: 50px; height: 50px; border-radius: 12px; border: 1.5px solid rgba(214, 183, 122, 0.45); display: flex; align-items: center; justify-content: center; color: var(--color-gold); background: rgba(214, 183, 122, 0.05); flex-shrink: 0;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="12 8 13.09 10.22 15.5 10.57 13.75 12.28 14.16 14.68 12 13.54 9.84 14.68 10.25 12.28 8.5 10.57 10.91 10.22 12 8"></polygon></svg>
+                        </div>
+                        <div>
+                            <span class="products-stat-num" style="display: block; font-family: var(--font-heading); font-size: 2.25rem; font-weight: 500; color: var(--color-gold); line-height: 1; margin-bottom: 0.25rem;">7+</span>
+                            <span class="products-stat-label" style="font-family: var(--font-body); font-size: 0.8rem; color: rgba(255, 255, 255, 0.6); letter-spacing: 0.02em;">Tahun Pengalaman</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+     <div class="gold-divider-ring"></div>
+
+    <!-- Products Body Wrapper (Detailed Products List + Why Choose Us Grid) -->
+    <div class="products-body-wrapper">
+
+        <!-- Detailed Products List Section -->
+        <section id="products-list">
+        <!-- Product 1: ABYNS POS -->
+        <div class="product-section">
+            <div class="container">
+                <div class="product-grid">
+                    <!-- Left: Info -->
+                    <div class="product-info">
+                        <span class="product-tag">01 / SYSTEM KASIR</span>
+                        <h2 class="product-title">ABYNS POS<br><span class="text-gold font-serif-italic">(Kasir & Retail)</span></h2>
+                        <p class="product-desc">
+                            Aplikasi kasir all-in-one yang mudah digunakan, dilengkapi fitur lengkap untuk retail dan bisnis modern.
+                        </p>
+                        <!-- Checklist features -->
+                        <div class="product-features-checklist">
+                            <div class="product-feature-check">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Dashboard Analitik Real-Time</span>
+                            </div>
+                            <div class="product-feature-check">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Inventory Stock & Supplier</span>
+                            </div>
+                            <div class="product-feature-check">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Barcode & Scanner Integration</span>
+                            </div>
+                            <div class="product-feature-check">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Support Multi Toko & E-Payment</span>
+                            </div>
+                            <div class="product-feature-check">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Bluetooth Printer & Struk</span>
+                            </div>
+                        </div>
+                        <!-- CTA Selengkapnya -->
+                        <a href="contact.html?product=pos" class="btn-selengkapnya magnetic">SELENGKAPNYA ➔</a>
+                    </div>
+                    <!-- Right: Mockup Image -->
+                    <div class="product-mockup-wrapper">
+                        <div class="product-mockup-glow"></div>
+                        <img src="assets/images/produk-1.png" alt="Abyns POS Mockup" class="product-mockup-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 2: ABYNS Laundry -->
+        <div class="product-section" style="background: rgba(15, 6, 17, 0.35); border-top: 1px solid rgba(214, 183, 122, 0.05); border-bottom: 1px solid rgba(214, 183, 122, 0.05);">
+            <div class="container">
+                <div class="product-grid">
+                    <!-- Left: Mockup Image -->
+                    <div class="product-mockup-wrapper">
+                        <div class="product-mockup-glow"></div>
+                        <img src="assets/images/produk-1.png" alt="Abyns Laundry Mockup" class="product-mockup-image">
+                    </div>
+                    <!-- Right: Info -->
+                    <div class="product-info">
+                        <span class="product-tag">02 / OPERASIONAL LAUNDRY</span>
+                        <h2 class="product-title">ABYNS LAUNDRY<br><span class="text-gold font-serif-italic">(Timbangan & Status)</span></h2>
+                        <p class="product-desc">
+                            Sistem manajemen laundry dengan fitur timbangan digital, status cucian, notifikasi, dan laporan keuangan otomatis.
+                        </p>
+                        <!-- Checklist features -->
+                        <div class="product-features-checklist">
+                            <div class="product-feature-check">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Timbang Digital Akurat</span>
+                            </div>
+                            <div class="product-feature-check">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Tracking Status Cucian</span>
+                            </div>
+                            <div class="product-feature-check">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Notifikasi Otomatis</span>
+                            </div>
+                            <div class="product-feature-check">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Manajemen Karyawan & Kasir</span>
+                            </div>
+                            <div class="product-feature-check">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Laporan Keuangan Lengkap</span>
+                            </div>
+                        </div>
+                        <!-- CTA Selengkapnya -->
+                        <a href="contact.html?product=laundry" class="btn-selengkapnya magnetic">SELENGKAPNYA ➔</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 3: ABYNS CRM -->
+        <div class="product-section">
+            <div class="container">
+                <div class="product-grid">
+                    <!-- Left: Info -->
+                    <div class="product-info">
+                        <span class="product-tag">03 / SALES MANAGEMENT</span>
+                        <h2 class="product-title">ABYNS CRM<br><span class="text-gold font-serif-italic">(Leads & Customer Relation)</span></h2>
+                        <p class="product-desc">
+                            Kelola leads, pipeline, komunikasi, dan follow-up pelanggan lebih mudah dalam satu platform terintegrasi.
+                        </p>
+                        <!-- Checklist features -->
+                        <div class="product-features-checklist">
+                            <div class="product-feature-check">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Leads Pipeline & Management</span>
+                            </div>
+                            <div class="product-feature-check">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>WhatsApp Blast Integration</span>
+                            </div>
+                            <div class="product-feature-check">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Target Sales Tracking</span>
+                            </div>
+                            <div class="product-feature-check">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Dapat Data untuk ROT</span>
+                            </div>
+                        </div>
+                        <!-- CTA Selengkapnya -->
+                        <a href="contact.html?product=crm" class="btn-selengkapnya magnetic">SELENGKAPNYA ➔</a>
+                    </div>
+                    <!-- Right: Mockup Image -->
+                    <div class="product-mockup-wrapper">
+                        <div class="product-mockup-glow"></div>
+                        <img src="assets/images/produk-1.png" alt="Abyns CRM Mockup" class="product-mockup-image">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Detailed Products List -->
-    <!-- Product 1: POS -->
-    <section id="pos" class="section" style="z-index: 2; padding-top: 2rem;">
-        <div class="container grid" style="grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 5rem; align-items: center;">
-            <div>
-                <span style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--color-gold); letter-spacing: 0.2em; text-transform: uppercase;">01 / SYSTEM KASIR</span>
-                <h2 style="margin-top: 1rem;">ABYNS POS <span class="text-gold font-serif-italic">(Kasir & Retail)</span></h2>
-                <p style="margin-top: 2rem; font-size: 1.1rem; line-height: 1.8;">
-                    Aplikasi kasir multi-outlet premium untuk kafe, butik mode, toko retail, dan bisnis waralaba yang terhubung secara cloud.
-                </p>
-                <div style="margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>Dashboard Penjualan Real-time</div>
-                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>Inventory Stok & Supplier</div>
-                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>Barcode Scanner Integration</div>
-                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>Support Print Thermal & Bluetooth</div>
-                </div>
-                <a href="contact.html?product=pos" class="btn btn-primary magnetic" style="margin-top: 3rem;"><span class="magnetic-inner">Hubungi Representative</span></a>
+    <div class="gold-divider-ring"></div>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section">
+        <div class="container text-center">
+            <div class="reveal-text-wrap" style="margin-bottom: 1rem; overflow: hidden;">
+                <span class="hero-title-reveal" style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--color-gold); letter-spacing: 0.3em; text-transform: uppercase; display: inline-block; transform: translateY(100%);">MENGAPA MEMILIH PRODUK KAMI</span>
             </div>
-            <div class="img-reveal-mask" style="border-radius: 24px; overflow: hidden; border: 1px solid var(--color-border-glass); aspect-ratio: 16/10;">
-                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop" class="parallax-img" alt="Dasbor kasir ABYNS POS" style="width: 100%; height: 100%; object-fit: cover;">
+            <h2 class="text-reveal" style="font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.2; font-weight: 400; text-transform: uppercase; color: #ffffff;">
+                Dirancang untuk <span class="text-gold font-serif-italic" style="text-transform: none;">Hasil yang Nyata</span>
+            </h2>
+            
+            <div class="why-choose-grid">
+                <!-- Card 1 -->
+                <div class="why-choose-card">
+                    <div class="why-choose-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <h3 class="why-choose-card-title">Cloud Based</h3>
+                    <p class="why-choose-card-desc">Akses kapan saja di mana saja dengan aman dan stabil.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="why-choose-card">
+                    <div class="why-choose-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    </div>
+                    <h3 class="why-choose-card-title">Aman & Terpercaya</h3>
+                    <p class="why-choose-card-desc">Data bisnis Anda terlindungi dengan enkripsi terbaik.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="why-choose-card">
+                    <div class="why-choose-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                    </div>
+                    <h3 class="why-choose-card-title">Multi Platform</h3>
+                    <p class="why-choose-card-desc">Support Web, Android, iOS untuk semua perangkat.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="why-choose-card">
+                    <div class="why-choose-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    </div>
+                    <h3 class="why-choose-card-title">Performa Cepat</h3>
+                    <p class="why-choose-card-desc">Sistem ringan, stabil, dan siap digunakan kapan saja.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="why-choose-card">
+                    <div class="why-choose-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    </div>
+                    <h3 class="why-choose-card-title">Support Responsif</h3>
+                    <p class="why-choose-card-desc">Tim support siap membantu Anda setiap saat.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="why-choose-card">
+                    <div class="why-choose-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"></path><polyline points="17 6 23 6 23 12"></polyline></svg>
+                    </div>
+                    <h3 class="why-choose-card-title">Berkembang Bersama</h3>
+                    <p class="why-choose-card-desc">Fitur terus berkembang sesuai kebutuhan bisnis Anda.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Product 2: Laundry -->
-    <section id="laundry" class="section" style="z-index: 2; background: rgba(15, 6, 17, 0.5);">
-        <div class="container grid" style="grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 5rem; align-items: center;">
-            <div class="img-reveal-mask" style="border-radius: 24px; overflow: hidden; border: 1px solid var(--color-border-glass); aspect-ratio: 16/10;">
-                <img src="https://images.unsplash.com/photo-1545173159-bb11fb6002db?q=80&w=800&auto=format&fit=crop" class="parallax-img" alt="Sistem kasir ABYNS Laundry" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div>
-                <span style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--color-gold); letter-spacing: 0.2em; text-transform: uppercase;">02 / OPERASIONAL LAUNDRY</span>
-                <h2 style="margin-top: 1rem;">ABYNS Laundry <span class="text-gold font-serif-italic">(Timbangan & Status)</span></h2>
-                <p style="margin-top: 2rem; font-size: 1.1rem; line-height: 1.8;">
-                    Sistem pemeliharaan kasir laundry kiloan dan satuan. Membantu pelacakan pakaian hilang, timbangan cuci-setrika, dan WhatsApp otomatis ke pelanggan.
-                </p>
-                <div style="margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>Input Timbangan Kiloan</div>
-                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>WhatsApp Gateway Status</div>
-                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>Laporan Omset Bulanan</div>
-                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>Manajemen Karyawan Kasir</div>
-                </div>
-                <a href="contact.html?product=laundry" class="btn btn-primary magnetic" style="margin-top: 3rem;"><span class="magnetic-inner">Hubungi Representative</span></a>
-            </div>
-        </div>
-    </section>
+    </div>
 
-    <!-- Product 3: CRM -->
-    <section id="crm" class="section" style="z-index: 2;">
-        <div class="container grid" style="grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 5rem; align-items: center;">
-            <div>
-                <span style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--color-gold); letter-spacing: 0.2em; text-transform: uppercase;">03 / SALES MANAGEMENT</span>
-                <h2 style="margin-top: 1rem;">ABYNS CRM <span class="text-gold font-serif-italic">(Leads & Customer Relation)</span></h2>
-                <p style="margin-top: 2rem; font-size: 1.1rem; line-height: 1.8;">
-                    Dasbor pemantau hubungan pelanggan dan manajemen prospek (leads tracking) penjualan untuk tim marketing korporasi.
-                </p>
-                <div style="margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>Leads Pipeline Kan-ban</div>
-                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>WhatsApp Blast integration</div>
-                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>Target Sales Tracking</div>
-                    <div style="font-size: 0.95rem; color: var(--color-text-secondary);"><span style="color: var(--color-gold); margin-right: 0.5rem;">✦</span>Ekspor Data Excel & PDF</div>
+    <!-- Bottom CTA Section -->
+    <section class="bottom-cta-section">
+        <div class="container">
+            <div class="bottom-cta-panel">
+                <div class="bottom-cta-text">
+                    <h2 class="bottom-cta-title">Siap Mengembangkan Bisnis Anda?</h2>
+                    <p class="bottom-cta-desc">Konsultasikan kebutuhan bisnis Anda bersama tim kami dan temukan solusi digital terbaik untuk Anda.</p>
                 </div>
-                <a href="contact.html?product=crm" class="btn btn-primary magnetic" style="margin-top: 3rem;"><span class="magnetic-inner">Hubungi Representative</span></a>
-            </div>
-            <div class="img-reveal-mask" style="border-radius: 24px; overflow: hidden; border: 1px solid var(--color-border-glass); aspect-ratio: 16/10;">
-                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop" class="parallax-img" alt="Manajemen sales marketing ABYNS CRM" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="bottom-cta-btn-wrapper">
+                    <a href="contact.html" class="btn-selengkapnya magnetic">JADWALKAN KONSULTASI ➔</a>
+                </div>
             </div>
         </div>
     </section>
@@ -385,6 +1017,5 @@
     <script src="js/cursor.js"></script>
     <script src="js/app.js"></script>
     <script src="js/gsap.js"></script>
-    <script src="js/three-bg.js"></script>
 </body>
 </html>

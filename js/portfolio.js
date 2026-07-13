@@ -62,9 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const img = this.querySelector('.portfolio-img').src;
                 const title = this.querySelector('.portfolio-title').textContent;
                 const category = this.querySelector('.portfolio-category').textContent;
-                const client = this.getAttribute('data-client') || 'Premium Client';
-                const tech = this.getAttribute('data-tech') || 'Custom Solution';
-                const desc = this.getAttribute('data-desc') || 'A custom-built, luxury digital solution tailored to elevate brand prestige and engagement.';
+                const client = this.getAttribute('data-client') || this.parentElement.getAttribute('data-client') || 'Premium Client';
+                const tech = this.getAttribute('data-tech') || this.parentElement.getAttribute('data-tech') || 'Custom Solution';
+                const desc = this.getAttribute('data-desc') || this.parentElement.getAttribute('data-desc') || 'A custom-built, luxury digital solution tailored to elevate brand prestige and engagement.';
 
                 // Inject data into Modal
                 modalImage.src = img;

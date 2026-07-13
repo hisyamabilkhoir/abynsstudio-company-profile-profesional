@@ -4299,20 +4299,21 @@
 
 /* Services Page Horizontal Card */
 .services-page-card {
-  background: rgba(19, 9, 26, 0.4) !important;
-  backdrop-filter: blur(12px) !important;
+  background: rgba(19, 9, 26, 0.45) !important;
+  backdrop-filter: blur(15px) !important;
   border: 1px solid rgba(214, 183, 122, 0.18) !important;
   border-radius: 16px !important;
-  padding: 2.2rem 1.8rem !important;
-  display: flex;
-  flex-direction: row !important; /* Horizontal layout */
-  align-items: flex-start;
-  gap: 1.5rem !important;
-  min-height: 200px;
+  padding: 3.5rem 1.8rem 2.2rem !important; /* Top padding increased to make space for overlapping icon */
+  display: flex !important;
+  flex-direction: column !important; /* Changed to vertical column layout */
+  align-items: flex-start !important;
+  gap: 1.2rem !important;
+  min-height: 250px !important;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5) !important;
-  position: relative;
-  overflow: visible;
+  position: relative !important;
+  overflow: visible !important; /* Essential for overlapping icon visibility */
+  margin-top: 2.2rem !important; /* Add top spacing for overlapping icon */
 }
 
 .services-page-card:hover {
@@ -4324,11 +4325,11 @@
 }
 
 .services-page-icon-box {
-  width: 70px !important;
-  height: 70px !important;
+  width: 74px !important;
+  height: 74px !important;
   border-radius: 50% !important;
   border: 1.5px solid var(--color-gold) !important;
-  background: rgba(21, 10, 28, 0.8) !important;
+  background: rgba(18, 7, 23, 0.95) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -4338,10 +4339,15 @@
     inset 0 1px 2px rgba(255, 255, 255, 0.05) !important;
   flex-shrink: 0 !important;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: absolute !important; /* Position absolute to overlap top border */
+  top: 0 !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 5 !important;
 }
 
 .services-page-card:hover .services-page-icon-box {
-  transform: scale(1.08) !important;
+  transform: translate(-50%, -55%) scale(1.05) !important;
   border-color: #ffffff !important;
   color: #ffffff !important;
   box-shadow: 

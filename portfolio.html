@@ -14,6 +14,109 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        body {
+            background-image: url('assets/images/bg-portofolio-list.png') !important;
+            background-size: 100% auto !important;
+            background-repeat: no-repeat !important;
+            background-position: top center !important;
+            background-color: #07020a !important; /* fallback dark background */
+        }
+        
+        /* Make sure the page container displays with 4 columns matching the user's screenshot */
+        @media (min-width: 1200px) {
+            .grid.stagger-container {
+                grid-template-columns: repeat(4, 1fr) !important;
+                gap: 1.5rem !important;
+            }
+        }
+        
+        /* Stylized active tab to match screenshot */
+        .portfolio-filter-btn.active {
+            background: linear-gradient(135deg, rgba(214, 183, 122, 0.4) 0%, rgba(168, 138, 77, 0.6) 100%) !important;
+            border-color: var(--color-gold) !important;
+            color: var(--color-white) !important;
+            position: relative;
+        }
+        
+        .portfolio-filter-btn.active::before {
+            content: "•";
+            color: var(--color-gold);
+            margin-right: 0.5rem;
+            font-size: 1.1rem;
+            vertical-align: middle;
+        }
+
+        .portfolio-filter-btn {
+            background: rgba(19, 9, 23, 0.3) !important;
+            border: 1px solid rgba(214, 183, 122, 0.25) !important;
+            border-radius: 30px !important;
+            padding: 0.75rem 2rem !important;
+            color: rgba(255, 255, 255, 0.7) !important;
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            transition: var(--transition-fast) !important;
+        }
+
+        .portfolio-filter-btn:hover {
+            border-color: var(--color-gold) !important;
+            color: var(--color-white) !important;
+            background: rgba(214, 183, 122, 0.1) !important;
+        }
+
+        /* Customize cards for spaces/layout in screenshot */
+        .portfolio-card {
+            border-radius: 16px !important;
+            overflow: hidden;
+            background: rgba(19, 3, 22, 0.55) !important;
+            border: 1px solid rgba(214, 183, 122, 0.15) !important;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5) !important;
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(214, 183, 122, 0.4) !important;
+            box-shadow: 0 20px 40px rgba(84, 40, 92, 0.3) !important;
+        }
+
+        .portfolio-arrow-circle {
+            width: 36px;
+            height: 36px;
+            border: 1.5px solid rgba(214, 183, 122, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gold);
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.03);
+            flex-shrink: 0;
+        }
+
+        .portfolio-card:hover .portfolio-arrow-circle {
+            background: var(--color-gold);
+            color: #130314;
+            border-color: var(--color-gold);
+            transform: scale(1.05);
+        }
+
+        /* Adjust card image reveal aspect-ratio */
+        .portfolio-card .img-reveal-mask {
+            aspect-ratio: 1.45/1 !important; /* closer to standard horizontal */
+        }
+
+        /* Custom pagination button hover state */
+        .portfolio-pag-btn:hover {
+            border-color: var(--color-gold) !important;
+            color: var(--color-white) !important;
+            background: rgba(214, 183, 122, 0.1) !important;
+        }
+    </style>
 </head>
 <body>
 
@@ -105,47 +208,56 @@
         <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2rem;">Konsultasi Gratis</a>
     </div>
 
-    <!-- WebGL Canvas Container for Three.js Backdrop -->
-    <div id="canvas-3d-bg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 1; pointer-events: none; opacity: 0.75;"></div>
-
     <!-- Inner Page Header -->
-    <section class="section hero" style="min-height: 50vh; display: flex; align-items: center; padding-top: 10rem; z-index: 2;">
-        <div class="container flex" style="flex-direction: column; align-items: center; text-align: center;">
-            <div class="reveal-text-wrap" style="margin-bottom: 1.5rem;">
-                <span class="hero-title-reveal" style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4em; color: var(--color-gold); display: inline-block; transform: translateY(100%);">GALERI KARYA</span>
+    <section class="section hero" style="padding-top: 10rem; padding-bottom: 0 !important; z-index: 2;">
+        <div class="container" style="position: relative; z-index: 5;">
+            <div style="max-width: 650px; text-align: left; margin-left: 0; margin-right: auto;">
+                <div class="reveal-text-wrap" style="margin-bottom: 1.2rem; overflow: hidden;">
+                    <span class="hero-title-reveal" style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4em; color: var(--color-gold); display: inline-block; transform: translateY(100%);">— GALERI KARYA KAMI —</span>
+                </div>
+                <h1 class="text-reveal" style="font-family: var(--font-heading); font-size: clamp(2.5rem, 5vw, 4.2rem); line-height: 1.15; font-weight: 400; text-transform: uppercase; letter-spacing: 0.05em; color: #ffffff; margin-bottom: 1.2rem;">
+                    Portofolio <span class="text-gold font-serif-italic" style="text-transform: none;">Eksklusif</span> Kami
+                </h1>
+                <p class="hero-desc" style="opacity: 0; transform: translateY(30px); font-size: 0.95rem; color: rgba(255, 255, 255, 0.7); line-height: 1.8; max-width: 550px;">
+                    Menghadirkan karya seni digital terbaik yang dirancang khusus untuk mewakili nilai eksklusif bisnis dan meningkatkan citra serta branding brand Anda.
+                </p>
             </div>
-            <h1 class="text-reveal">Portofolio <span class="text-gold font-serif-italic">Eksklusif</span> Kami</h1>
-            <p class="hero-desc" style="opacity: 0; transform: translateY(30px); max-width: 700px; margin-top: 2rem;">
-                Menghadirkan karya seni digital unik yang dirancang khusus untuk mewakili nilai eksklusif bisnis dan meningkatkan skala branding brand Anda.
-            </p>
         </div>
     </section>
 
     <!-- Portfolio Gallery Section with tabs -->
-    <section class="section" style="z-index: 2; padding-top: 2rem;">
+    <section class="section" style="z-index: 2; padding-top: 0 !important; padding-bottom: 3rem;">
         <div class="container">
             
             <!-- Category Filter Tabs -->
-            <div class="flex" style="gap: 1rem; margin-bottom: 4rem; flex-wrap: wrap; justify-content: center;">
-                <button class="portfolio-filter-btn active" data-filter="all" style="background: none; border: 1px solid var(--color-border-glass); border-radius: 30px; padding: 0.75rem 2rem; color: var(--color-text-primary); font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; cursor: pointer; transition: var(--transition-fast);">Semua</button>
-                <button class="portfolio-filter-btn" data-filter="web" style="background: none; border: 1px solid var(--color-border-glass); border-radius: 30px; padding: 0.75rem 2rem; color: var(--color-text-primary); font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; cursor: pointer; transition: var(--transition-fast);">Website</button>
-                <button class="portfolio-filter-btn" data-filter="app" style="background: none; border: 1px solid var(--color-border-glass); border-radius: 30px; padding: 0.75rem 2rem; color: var(--color-text-primary); font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; cursor: pointer; transition: var(--transition-fast);">Aplikasi</button>
-                <button class="portfolio-filter-btn" data-filter="photo" style="background: none; border: 1px solid var(--color-border-glass); border-radius: 30px; padding: 0.75rem 2rem; color: var(--color-text-primary); font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; cursor: pointer; transition: var(--transition-fast);">Fotografi</button>
-                <button class="portfolio-filter-btn" data-filter="video" style="background: none; border: 1px solid var(--color-border-glass); border-radius: 30px; padding: 0.75rem 2rem; color: var(--color-text-primary); font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; cursor: pointer; transition: var(--transition-fast);">Videografi</button>
+            <div class="flex" style="gap: 1rem; margin-bottom: 4rem; flex-wrap: wrap; justify-content: flex-start;">
+                <button class="portfolio-filter-btn active" data-filter="all">SEMUA</button>
+                <button class="portfolio-filter-btn" data-filter="web">WEBSITE</button>
+                <button class="portfolio-filter-btn" data-filter="app">APLIKASI</button>
+                <button class="portfolio-filter-btn" data-filter="photo">FOTOGRAFI</button>
+                <button class="portfolio-filter-btn" data-filter="video">VIDEOGRAFI</button>
             </div>
 
-            <!-- Portfolio Grid (8 Items) -->
-            <div class="grid stagger-container" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
+            <!-- Portfolio Grid (8 Items in a 4-Column Responsive Grid) -->
+            <div class="grid stagger-container" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
                 
                 <!-- Project 1: Website -->
                 <div class="portfolio-item stagger-item" data-category="web" data-client="Aurelia Ritz Resort" data-tech="HTML5, GLSL Shader, GSAP, WebGL" data-desc="Website profil dan reservasi interaktif yang dirancang khusus untuk brand resor bintang lima, mengutamakan performa loading cepat dan kemewahan transisi antarmuka.">
                     <div class="glass-card portfolio-card gold-glow-border" style="padding: 0; cursor: pointer;">
-                        <div class="img-reveal-mask" style="aspect-ratio: 4/3; width: 100%;">
+                        <div class="img-reveal-mask" style="width: 100%;">
                             <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop" alt="Resor Luxury Hotel Website Mockup ABYNS STUDIO" class="portfolio-img" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                        <div style="padding: 2rem;">
-                            <span class="portfolio-category" style="font-size: 0.7rem; color: var(--color-gold); text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">Website Development</span>
-                            <h3 class="portfolio-title" style="margin-top: 0.5rem; font-size: 1.25rem;">Aurelia Ritz Resort</h3>
+                        <div style="padding: 1.4rem 1.6rem; display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <span class="portfolio-category" style="font-size: 0.7rem; color: var(--color-gold); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; display: block; margin-bottom: 0.25rem;">Website Development</span>
+                                <h3 class="portfolio-title" style="margin: 0; font-size: 1.15rem; font-family: var(--font-heading); color: #ffffff; font-weight: 400;">Aurelia Ritz Resort</h3>
+                            </div>
+                            <div class="portfolio-arrow-circle">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -153,12 +265,20 @@
                 <!-- Project 2: App -->
                 <div class="portfolio-item stagger-item" data-category="app" data-client="Veloce Fashion Store" data-tech="Flutter, Dart, Firebase, Node.js" data-desc="Aplikasi kasir (POS) premium yang terintegrasi dengan dasbor manajemen inventory toko butik mode kelas atas. Memiliki sinkronisasi data instan.">
                     <div class="glass-card portfolio-card gold-glow-border" style="padding: 0; cursor: pointer;">
-                        <div class="img-reveal-mask" style="aspect-ratio: 4/3; width: 100%;">
+                        <div class="img-reveal-mask" style="width: 100%;">
                             <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800&auto=format&fit=crop" alt="Butik Luxury Retail POS Mobile App ABYNS STUDIO" class="portfolio-img" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                        <div style="padding: 2rem;">
-                            <span class="portfolio-category" style="font-size: 0.7rem; color: var(--color-gold); text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">Mobile App</span>
-                            <h3 class="portfolio-title" style="margin-top: 0.5rem; font-size: 1.25rem;">Veloce Retail POS</h3>
+                        <div style="padding: 1.4rem 1.6rem; display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <span class="portfolio-category" style="font-size: 0.7rem; color: var(--color-gold); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; display: block; margin-bottom: 0.25rem;">Mobile App</span>
+                                <h3 class="portfolio-title" style="margin: 0; font-size: 1.15rem; font-family: var(--font-heading); color: #ffffff; font-weight: 400;">Veloce Retail POS</h3>
+                            </div>
+                            <div class="portfolio-arrow-circle">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -166,12 +286,20 @@
                 <!-- Project 3: Photography -->
                 <div class="portfolio-item stagger-item" data-category="photo" data-client="Opal Luxury Jewelry" data-tech="Sony A7R V, Studio lighting setup" data-desc="Sesi photoshoot produk eksklusif perhiasan berlian dengan penataan pencahayaan presisi yang menangkap kilauan logam mulia secara natural.">
                     <div class="glass-card portfolio-card gold-glow-border" style="padding: 0; cursor: pointer;">
-                        <div class="img-reveal-mask" style="aspect-ratio: 4/3; width: 100%;">
+                        <div class="img-reveal-mask" style="width: 100%;">
                             <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800&auto=format&fit=crop" alt="High Fashion Jewelry Editorial Photoshoot ABYNS STUDIO" class="portfolio-img" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                        <div style="padding: 2rem;">
-                            <span class="portfolio-category" style="font-size: 0.7rem; color: var(--color-gold); text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">Photography</span>
-                            <h3 class="portfolio-title" style="margin-top: 0.5rem; font-size: 1.25rem;">Opal Editorial Photoshoot</h3>
+                        <div style="padding: 1.4rem 1.6rem; display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <span class="portfolio-category" style="font-size: 0.7rem; color: var(--color-gold); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; display: block; margin-bottom: 0.25rem;">Photography</span>
+                                <h3 class="portfolio-title" style="margin: 0; font-size: 1.15rem; font-family: var(--font-heading); color: #ffffff; font-weight: 400;">Opal Editorial Photoshoot</h3>
+                            </div>
+                            <div class="portfolio-arrow-circle">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -179,12 +307,20 @@
                 <!-- Project 4: Videography -->
                 <div class="portfolio-item stagger-item" data-category="video" data-client="Estate Developer Group" data-tech="Red V-Raptor 8K, DJI Inspire 3 Drone" data-desc="Video komersial properti mewah yang menangkap keindahan arsitektur villa modern melalui aerial drone footage dan color grading sinematik kelas atas.">
                     <div class="glass-card portfolio-card gold-glow-border" style="padding: 0; cursor: pointer;">
-                        <div class="img-reveal-mask" style="aspect-ratio: 4/3; width: 100%;">
+                        <div class="img-reveal-mask" style="width: 100%;">
                             <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Modern Properti Villa Video Cinematic Promosi ABYNS STUDIO" class="portfolio-img" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                        <div style="padding: 2rem;">
-                            <span class="portfolio-category" style="font-size: 0.7rem; color: var(--color-gold); text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">Videography</span>
-                            <h3 class="portfolio-title" style="margin-top: 0.5rem; font-size: 1.25rem;">The Horizon Villa Promo</h3>
+                        <div style="padding: 1.4rem 1.6rem; display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <span class="portfolio-category" style="font-size: 0.7rem; color: var(--color-gold); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700;">Videography</span>
+                                <h3 class="portfolio-title" style="margin: 0; font-size: 1.15rem; font-family: var(--font-heading); color: #ffffff; font-weight: 400;">The Horizon Villa Promo</h3>
+                            </div>
+                            <div class="portfolio-arrow-circle">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -192,12 +328,20 @@
                 <!-- Project 5: App -->
                 <div class="portfolio-item stagger-item" data-category="app" data-client="Stella Coffee Co." data-tech="Flutter, Dart, GraphQL, Node.js" data-desc="Aplikasi pemesanan kopi digital dengan antarmuka dinamis, integrasi digital payment Gopay/Ovo, dan modul loyalitas kustom.">
                     <div class="glass-card portfolio-card gold-glow-border" style="padding: 0; cursor: pointer;">
-                        <div class="img-reveal-mask" style="aspect-ratio: 4/3; width: 100%;">
+                        <div class="img-reveal-mask" style="width: 100%;">
                             <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=800&auto=format&fit=crop" alt="Coffee Order Premium Mobile App Mockup ABYNS STUDIO" class="portfolio-img" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                        <div style="padding: 2rem;">
-                            <span class="portfolio-category" style="font-size: 0.7rem; color: var(--color-gold); text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">Mobile App</span>
-                            <h3 class="portfolio-title" style="margin-top: 0.5rem; font-size: 1.25rem;">Stella Premium Coffee App</h3>
+                        <div style="padding: 1.4rem 1.6rem; display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <span class="portfolio-category" style="font-size: 0.7rem; color: var(--color-gold); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; display: block; margin-bottom: 0.25rem;">Mobile App</span>
+                                <h3 class="portfolio-title" style="margin: 0; font-size: 1.15rem; font-family: var(--font-heading); color: #ffffff; font-weight: 400;">Stella Premium Coffee App</h3>
+                            </div>
+                            <div class="portfolio-arrow-circle">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -205,12 +349,20 @@
                 <!-- Project 6: Website -->
                 <div class="portfolio-item stagger-item" data-category="web" data-client="Lumina Beauty Lab" data-tech="HTML5, Canvas 2D, GSAP, Shopify API" data-desc="Platform e-commerce butik kosmetik yang memadukan keindahan katalog editorial visual dan kemudahan checkout cepat satu halaman.">
                     <div class="glass-card portfolio-card gold-glow-border" style="padding: 0; cursor: pointer;">
-                        <div class="img-reveal-mask" style="aspect-ratio: 4/3; width: 100%;">
+                        <div class="img-reveal-mask" style="width: 100%;">
                             <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop" alt="Luxury Skincare Premium E-Commerce Website ABYNS STUDIO" class="portfolio-img" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                        <div style="padding: 2rem;">
-                            <span class="portfolio-category" style="font-size: 0.7rem; color: var(--color-gold); text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">Website Development</span>
-                            <h3 class="portfolio-title" style="margin-top: 0.5rem; font-size: 1.25rem;">Lumina Skincare E-commerce</h3>
+                        <div style="padding: 1.4rem 1.6rem; display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <span class="portfolio-category" style="font-size: 0.7rem; color: var(--color-gold); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; display: block; margin-bottom: 0.25rem;">Website Development</span>
+                                <h3 class="portfolio-title" style="margin: 0; font-size: 1.15rem; font-family: var(--font-heading); color: #ffffff; font-weight: 400;">Lumina Skincare E-commerce</h3>
+                            </div>
+                            <div class="portfolio-arrow-circle">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -218,12 +370,20 @@
                 <!-- Project 7: Photography -->
                 <div class="portfolio-item stagger-item" data-category="photo" data-client="Apex Office Suites" data-tech="Canon EOS R5, HDR Architectural Setup" data-desc="Sesi pemotretan desain interior ruang kerja eksklusif di kawasan perkantoran elit SCBD Jakarta untuk penulisan buku profil perusahaan.">
                     <div class="glass-card portfolio-card gold-glow-border" style="padding: 0; cursor: pointer;">
-                        <div class="img-reveal-mask" style="aspect-ratio: 4/3; width: 100%;">
+                        <div class="img-reveal-mask" style="width: 100%;">
                             <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" alt="Interior Kantor Mewah SCBD Architect Photography ABYNS STUDIO" class="portfolio-img" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                        <div style="padding: 2rem;">
-                            <span class="portfolio-category" style="font-size: 0.7rem; color: var(--color-gold); text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">Photography</span>
-                            <h3 class="portfolio-title" style="margin-top: 0.5rem; font-size: 1.25rem;">Apex SCBD Office Suite</h3>
+                        <div style="padding: 1.4rem 1.6rem; display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <span class="portfolio-category" style="font-size: 0.7rem; color: var(--color-gold); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; display: block; margin-bottom: 0.25rem;">Photography</span>
+                                <h3 class="portfolio-title" style="margin: 0; font-size: 1.15rem; font-family: var(--font-heading); color: #ffffff; font-weight: 400;">Apex SCBD Office Suite</h3>
+                            </div>
+                            <div class="portfolio-arrow-circle">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -231,16 +391,44 @@
                 <!-- Project 8: Videography -->
                 <div class="portfolio-item stagger-item" data-category="video" data-client="Chronos Horology" data-tech="Red Ranger 8K, Macro probes" data-desc="Iklan promosi video komersial jam tangan pintar edisi terbatas dengan detail shoot perputaran jarum mekanik secara sinematik makro.">
                     <div class="glass-card portfolio-card gold-glow-border" style="padding: 0; cursor: pointer;">
-                        <div class="img-reveal-mask" style="aspect-ratio: 4/3; width: 100%;">
+                        <div class="img-reveal-mask" style="width: 100%;">
                             <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=800&auto=format&fit=crop" alt="Jam Tangan Mewah Cinematic Macro Video Promo ABYNS STUDIO" class="portfolio-img" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                        <div style="padding: 2rem;">
-                            <span class="portfolio-category" style="font-size: 0.7rem; color: var(--color-gold); text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">Videography</span>
-                            <h3 class="portfolio-title" style="margin-top: 0.5rem; font-size: 1.25rem;">Chronos Luxury Watch Promo</h3>
+                        <div style="padding: 1.4rem 1.6rem; display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <span class="portfolio-category" style="font-size: 0.7rem; color: var(--color-gold); text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">Videography</span>
+                                <h3 class="portfolio-title" style="margin: 0; font-size: 1.15rem; font-family: var(--font-heading); color: #ffffff; font-weight: 400;">Chronos Luxury Watch Promo</h3>
+                            </div>
+                            <div class="portfolio-arrow-circle">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+            </div>
+
+            <!-- Pagination block -->
+            <div class="flex" style="justify-content: center; align-items: center; gap: 0.5rem; margin-top: 5rem;">
+                <button class="portfolio-pag-btn" style="background: none; border: 1px solid rgba(214, 183, 122, 0.25); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; color: var(--color-text-secondary); cursor: pointer; transition: all 0.3s ease;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="portfolio-pag-btn active" style="background: var(--color-gold); border: 1px solid var(--color-gold); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; color: #130314; font-weight: 700; cursor: pointer;">1</button>
+                <button class="portfolio-pag-btn" style="background: none; border: 1px solid rgba(214, 183, 122, 0.2); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; color: var(--color-text-secondary); cursor: pointer; transition: all 0.3s ease;">2</button>
+                <button class="portfolio-pag-btn" style="background: none; border: 1px solid rgba(214, 183, 122, 0.2); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; color: var(--color-text-secondary); cursor: pointer; transition: all 0.3s ease;">3</button>
+                <button class="portfolio-pag-btn" style="background: none; border: 1px solid rgba(214, 183, 122, 0.2); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; color: var(--color-text-secondary); cursor: pointer; transition: all 0.3s ease;">4</button>
+                <span style="color: rgba(255,255,255,0.4); margin: 0 0.25rem;">...</span>
+                <button class="portfolio-pag-btn" style="background: none; border: 1px solid rgba(214, 183, 122, 0.2); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; color: var(--color-text-secondary); cursor: pointer; transition: all 0.3s ease;">8</button>
+                <button class="portfolio-pag-btn" style="background: none; border: 1px solid rgba(214, 183, 122, 0.25); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; color: var(--color-text-secondary); cursor: pointer; transition: all 0.3s ease;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
             </div>
 
         </div>
